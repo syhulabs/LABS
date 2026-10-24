@@ -1,0 +1,19 @@
+# Flutter / Dart
+account-hub/.dart_tool/
+account-hub/build/
+account-hub/.flutter-plugins
+account-hub/.flutter-plugins-dependencies
+account-hub/.packages
+account-hub/*.iml
+account-hub/.idea/
+account-hub/android/.gradle/
+account-hub/android/local.properties
+account-hub/android/key.properties
+account-hub/ios/Pods/
+account-hub/ios/.symlinks/
+account-hub/macos/Pods/
+account-hub/linux/flutter/ephemeral/
+account-hub/macos/Flutter/ephemeral/
+account-hub/ios/Flutter/ephemeral/
+account-hub/**/GeneratedPluginRegistrant.*
+.DS_Store
