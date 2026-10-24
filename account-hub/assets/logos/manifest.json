@@ -85,9 +85,9 @@
  },
  "adobe-audition": {
   "file": "assets/logos/adobe-audition.png",
-  "tone": "light",
-  "source": "site",
-  "url": "https://www.adobe.com/apple-touch-icon-precomposed.png"
+  "tone": "color",
+  "source": "alias:adobe-creative-cloud",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/adobe-icon.svg"
  },
  "adobe-creative-cloud": {
   "file": "assets/logos/adobe-creative-cloud.png",
@@ -97,9 +97,9 @@
  },
  "adobe-express": {
   "file": "assets/logos/adobe-express.png",
-  "tone": "light",
-  "source": "site",
-  "url": "https://www.adobe.com/apple-touch-icon-precomposed.png"
+  "tone": "color",
+  "source": "alias:adobe-creative-cloud",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/adobe-icon.svg"
  },
  "adobe-firefly": {
   "file": "assets/logos/adobe-firefly.png",
@@ -139,9 +139,9 @@
  },
  "adobe-substance-3d": {
   "file": "assets/logos/adobe-substance-3d.png",
-  "tone": "light",
-  "source": "site",
-  "url": "https://www.adobe.com/apple-touch-icon-precomposed.png"
+  "tone": "color",
+  "source": "alias:adobe-creative-cloud",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/adobe-icon.svg"
  },
  "aegis-authenticator": {
   "file": "assets/logos/aegis-authenticator.png",
