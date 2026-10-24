@@ -1,0 +1,2582 @@
+{
+ "1password": {
+  "file": "assets/logos/1password.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/1password.svg"
+ },
+ "2fas": {
+  "file": "assets/logos/2fas.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://2fas.com/assets/apple-touch-icon-1024x1024.png"
+ },
+ "ableton": {
+  "file": "assets/logos/ableton.png",
+  "tone": "dark",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/ableton.svg"
+ },
+ "adobe-after-effects": {
+  "file": "assets/logos/adobe-after-effects.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/adobe-after-effects.svg"
+ },
+ "adobe-creative-cloud": {
+  "file": "assets/logos/adobe-creative-cloud.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/adobe-icon.svg"
+ },
+ "adobe-firefly": {
+  "file": "assets/logos/adobe-firefly.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/adobefirefly-color.svg"
+ },
+ "adobe-illustrator": {
+  "file": "assets/logos/adobe-illustrator.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/adobe-illustrator.svg"
+ },
+ "adobe-photoshop": {
+  "file": "assets/logos/adobe-photoshop.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/adobe-photoshop.svg"
+ },
+ "adobe-premiere-pro": {
+  "file": "assets/logos/adobe-premiere-pro.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/adobe-premiere.svg"
+ },
+ "aegis-authenticator": {
+  "file": "assets/logos/aegis-authenticator.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://getaegis.app/assets/static/icon.zQelnL_w.png"
+ },
+ "affinity": {
+  "file": "assets/logos/affinity.png",
+  "tone": "color",
+  "source": "svgl",
+  "url": "https://svgl.app/library/affinity_designer.svg"
+ },
+ "airbnb": {
+  "file": "assets/logos/airbnb.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/airbnb-icon.svg"
+ },
+ "aiva": {
+  "file": "assets/logos/aiva.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://aiva.ai/assets/img/favicon.ico"
+ },
+ "ajio": {
+  "file": "assets/logos/ajio.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/49/4c/63/494c639e-768f-05f3-8137-4814deee02d2/AppIcon-0-0-1x_U007emarketing-0-10-0-sRGB-85-220.png/512x512bb.jpg",
+  "app": "AJIO Online Shopping App",
+  "seller": "Reliance Retail Limited"
+ },
+ "aliexpress": {
+  "file": "assets/logos/aliexpress.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/aliexpress.svg"
+ },
+ "amazon": {
+  "file": "assets/logos/amazon.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/amazon.svg"
+ },
+ "amazon-kindle": {
+  "file": "assets/logos/amazon-kindle.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/58/40/e1/5840e157-a998-d207-e2b0-5298295ba1cf/AppIcon-0-0-1x_U007emarketing-0-7-0-sRGB-0-0-85-220.png/512x512bb.jpg",
+  "app": "Amazon Kindle: Reading App",
+  "seller": "AMZN Mobile LLC"
+ },
+ "amazon-music": {
+  "file": "assets/logos/amazon-music.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://m.media-amazon.com/images/G/01/music/logo/1.0/smile_256x256.png"
+ },
+ "amazon-prime-video": {
+  "file": "assets/logos/amazon-prime-video.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/prime-video.svg"
+ },
+ "amazon-seller-central": {
+  "file": "assets/logos/amazon-seller-central.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/amazon.svg"
+ },
+ "american-express": {
+  "file": "assets/logos/american-express.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/amex.svg"
+ },
+ "amuse": {
+  "file": "assets/logos/amuse.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f0/0e/ca/f00eca80-f15c-8f51-3522-c90228928e9e/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg",
+  "app": "Amuse Music Distribution",
+  "seller": "Amuseio AB"
+ },
+ "anthropic-console": {
+  "file": "assets/logos/anthropic-console.png",
+  "tone": "dark",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/anthropic.svg"
+ },
+ "app-store": {
+  "file": "assets/logos/app-store.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/app-store.svg"
+ },
+ "app-store-connect": {
+  "file": "assets/logos/app-store-connect.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/app-store.svg"
+ },
+ "apple-account": {
+  "file": "assets/logos/apple-account.png",
+  "tone": "dark",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/apple.svg"
+ },
+ "apple-arcade": {
+  "file": "assets/logos/apple-arcade.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b0/cb/0c/b0cb0c46-e2cf-b36c-677e-0a729c468b06/gamesCalistoga-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+  "app": "Apple Games",
+  "seller": "Apple Inc."
+ },
+ "apple-books": {
+  "file": "assets/logos/apple-books.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d3/c1/14/d3c1140b-f2a5-9e50-cacb-aa9b77516f55/booksCalistoga-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Apple Books",
+  "seller": "Apple Inc."
+ },
+ "apple-calendar": {
+  "file": "assets/logos/apple-calendar.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ca/5a/cd/ca5acd85-c64d-f468-00f9-50fdc4819e59/calendarCalistoga-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Calendar",
+  "seller": "Apple Inc."
+ },
+ "apple-developer-program": {
+  "file": "assets/logos/apple-developer-program.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/16/8d/2b/168d2bf6-bb3b-bd94-782d-caf1224dc8d6/AppIcon-Release-0-1x_U007epad-0-0-0-1-0-sRGB-85-220-0.png/512x512bb.jpg",
+  "app": "Apple Developer",
+  "seller": "Apple Inc."
+ },
+ "apple-fitness-plus": {
+  "file": "assets/logos/apple-fitness-plus.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5b/48/75/5b487566-14e4-804f-609b-1a57e7d69c78/fitnessCalistoga-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+  "app": "Apple Fitness",
+  "seller": "Apple Inc."
+ },
+ "apple-music": {
+  "file": "assets/logos/apple-music.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/apple-music.svg"
+ },
+ "apple-music-for-artists": {
+  "file": "assets/logos/apple-music-for-artists.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/apple-music.svg"
+ },
+ "apple-notes": {
+  "file": "assets/logos/apple-notes.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/bc/b1/1c/bcb11c9d-ea61-089f-3b84-0f8911dd175d/notesCalistoga-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+  "app": "Notes",
+  "seller": "Apple Inc."
+ },
+ "apple-passwords": {
+  "file": "assets/logos/apple-passwords.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/26/0b/aa/260baa30-47e3-7c3e-220f-9a3efff5728b/passwordsCalistoga-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+  "app": "Passwords",
+  "seller": "Apple Inc."
+ },
+ "apple-photos": {
+  "file": "assets/logos/apple-photos.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/72/6e/79/726e7943-4a7d-091d-3c55-1d46477cdf08/photosCalistoga-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Photos",
+  "seller": "Apple Inc."
+ },
+ "apple-podcasts": {
+  "file": "assets/logos/apple-podcasts.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e9/44/84/e94484bf-b003-2f78-1abd-7274f6dd3a19/podcastsCalistoga-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Apple Podcasts",
+  "seller": "Apple Inc."
+ },
+ "apple-reminders": {
+  "file": "assets/logos/apple-reminders.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4b/b4/39/4bb43986-4714-adc7-459a-1b7c7aafff1d/remindersCalistoga-0-0-1x_U007epad-0-1-0-0-85-220.png/512x512bb.jpg",
+  "app": "Reminders",
+  "seller": "Apple Inc."
+ },
+ "apple-tv-plus": {
+  "file": "assets/logos/apple-tv-plus.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a2/74/61/a274610a-1537-0429-df1b-afacfad5a478/tvCalistoga-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+  "app": "Apple TV",
+  "seller": "Apple Inc."
+ },
+ "appwrite": {
+  "file": "assets/logos/appwrite.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/appwrite.svg"
+ },
+ "asana": {
+  "file": "assets/logos/asana.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/asana.svg"
+ },
+ "ascap": {
+  "file": "assets/logos/ascap.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/66/00/07/660007c4-9f93-8ef8-70ed-389f9f44afaf/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/512x512bb.jpg",
+  "app": "ASCAP",
+  "seller": "ASCAP"
+ },
+ "audible": {
+  "file": "assets/logos/audible.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/54/19/61541922-d40d-069f-de65-d3d7ed694cd7/AppIcon-0-0-1x_U007emarketing-0-0-0-8-0-0-0-85-220.png/512x512bb.jpg",
+  "app": "Audible: Audiobooks & Podcasts",
+  "seller": "Audible, Inc."
+ },
+ "audiomack": {
+  "file": "assets/logos/audiomack.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/86/23/8a/86238aea-c7dc-c96b-8669-83037b121aaf/AppIcon-1-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg",
+  "app": "Audiomack - Play Music Offline",
+  "seller": "Audiomack, Inc."
+ },
+ "authy": {
+  "file": "assets/logos/authy.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/authy.svg"
+ },
+ "aws": {
+  "file": "assets/logos/aws.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/aws.svg"
+ },
+ "azure-devops": {
+  "file": "assets/logos/azure-devops.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/azure-devops.svg"
+ },
+ "backblaze": {
+  "file": "assets/logos/backblaze.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/backblaze.svg"
+ },
+ "bandcamp": {
+  "file": "assets/logos/bandcamp.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/bandcamp.svg"
+ },
+ "bank-of-america": {
+  "file": "assets/logos/bank-of-america.png",
+  "tone": "light",
+  "source": "site",
+  "url": "https://www.bankofamerica.com/homepage/spa-assets/images/assets-images-global-favicon-android-chrome-192x192-CSXafb7d716.png"
+ },
+ "bank-of-baroda": {
+  "file": "assets/logos/bank-of-baroda.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a7/d2/9a/a7d29ad1-7374-7532-078e-4afc5dcc4244/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.jpeg/512x512bb.jpg",
+  "app": "bob World:Banking & Experience",
+  "seller": "Bank of Baroda"
+ },
+ "battle-net": {
+  "file": "assets/logos/battle-net.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b0/97/fe/b097feb6-276a-e77c-dcb5-97fa054c5bda/AppIconGlass-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+  "app": "Battle.net",
+  "seller": "Blizzard Entertainment, Inc."
+ },
+ "beacons": {
+  "file": "assets/logos/beacons.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f1/88/e7/f188e774-0bd3-e4e7-a0c3-c5323e41c8d9/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg",
+  "app": "Beacons: Creator Tools",
+  "seller": "Beacons AI, Inc."
+ },
+ "beatport": {
+  "file": "assets/logos/beatport.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/93/44/16/934416da-da9a-7e28-892b-0fb3521f2c3b/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Beatport: Music for DJs App",
+  "seller": "Beatport, LLC"
+ },
+ "believe": {
+  "file": "assets/logos/believe.png",
+  "tone": "dark",
+  "source": "site",
+  "url": "https://www.believe.com/wp-content/uploads/2026/01/cropped-favicon-192x192.png"
+ },
+ "bhim": {
+  "file": "assets/logos/bhim.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/db/d4/7b/dbd47b12-94b4-075e-572c-94f508107493/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+  "app": "BHIM Bharat's Own Payments App",
+  "seller": "National Payments Corporation of India"
+ },
+ "bitbucket": {
+  "file": "assets/logos/bitbucket.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/bitbucket.svg"
+ },
+ "bitwarden": {
+  "file": "assets/logos/bitwarden.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/bitwarden.svg"
+ },
+ "blender": {
+  "file": "assets/logos/blender.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/blender.svg"
+ },
+ "blinkit": {
+  "file": "assets/logos/blinkit.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f7/62/eb/f762eb72-f9a5-fada-762c-ab67f4df2a5c/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+  "app": "Blinkit: Groceries & more",
+  "seller": "BLINK COMMERCE PRIVATE LIMITED"
+ },
+ "blogger": {
+  "file": "assets/logos/blogger.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/blogger.svg"
+ },
+ "bluesky": {
+  "file": "assets/logos/bluesky.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/bluesky.svg"
+ },
+ "bmi": {
+  "file": "assets/logos/bmi.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.google.com/s2/favicons?domain=www.bmi.com&sz=256"
+ },
+ "bolt-new": {
+  "file": "assets/logos/bolt-new.png",
+  "tone": "dark",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/bolt-icon.svg"
+ },
+ "booking-com": {
+  "file": "assets/logos/booking-com.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/92/11/2f/92112f5a-d119-c08b-e230-6ecdc58b619e/AppIcon-0-0-1x_U007epad-0-9-0-85-220.jpeg/512x512bb.jpg",
+  "app": "Booking.com: Hotels & Travel",
+  "seller": "Booking.com B.V."
+ },
+ "box": {
+  "file": "assets/logos/box.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/box.svg"
+ },
+ "brilliant": {
+  "file": "assets/logos/brilliant.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/76/56/5d/76565d81-091b-3619-97fe-f10a20efa9d0/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Brilliant: Learn Math & Coding",
+  "seller": "Brilliant Worldwide, Inc"
+ },
+ "buffer": {
+  "file": "assets/logos/buffer.png",
+  "tone": "dark",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/buffer.svg"
+ },
+ "canara-bank": {
+  "file": "assets/logos/canara-bank.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/dc/27/a5/dc27a50c-2a72-0734-61ac-3429a2b53bc3/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg",
+  "app": "Canara ai1- Mobile Banking App",
+  "seller": "CANARA BANK"
+ },
+ "canva": {
+  "file": "assets/logos/canva.png",
+  "tone": "color",
+  "source": "svgl",
+  "url": "https://svgl.app/library/canva.svg"
+ },
+ "carrd": {
+  "file": "assets/logos/carrd.png",
+  "tone": "color",
+  "source": "svgl",
+  "url": "https://svgl.app/library/carrd.svg"
+ },
+ "cashfree-payments": {
+  "file": "assets/logos/cashfree-payments.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://cdn.prod.website-files.com/6a60525e5f4d2e4f1faed952/6a9071adf2e50b884a7b33d0_Icon.png"
+ },
+ "cd-baby": {
+  "file": "assets/logos/cd-baby.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://cdbaby.com/wp-content/themes/cdbaby_theme/images/favicon/android-chrome-192x192.png"
+ },
+ "celtx": {
+  "file": "assets/logos/celtx.png",
+  "tone": "dark",
+  "source": "site",
+  "url": "https://qwd6g7sp.media.zestyio.com/Celtx-Favicon.png"
+ },
+ "character-ai": {
+  "file": "assets/logos/character-ai.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b2/e6/a6/b2e6a6a8-cd3e-5f09-c19a-da0186b7ead7/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg",
+  "app": "Character AI: Chat, Talk, Text",
+  "seller": "Character Technologies, Inc."
+ },
+ "chase": {
+  "file": "assets/logos/chase.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.chase.com/etc/designs/chase-ux/favicon-152.png"
+ },
+ "chatgpt": {
+  "file": "assets/logos/chatgpt.png",
+  "tone": "dark",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/openai.svg"
+ },
+ "cinema-4d": {
+  "file": "assets/logos/cinema-4d.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.maxon.net/app-icons/favicon-196x196.png"
+ },
+ "citibank": {
+  "file": "assets/logos/citibank.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.citi.com/cbol-hp-static-assets/assets/favicon.ico"
+ },
+ "claude": {
+  "file": "assets/logos/claude.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/claude-color.svg"
+ },
+ "claude-code": {
+  "file": "assets/logos/claude-code.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/claudecode-color.svg"
+ },
+ "clickup": {
+  "file": "assets/logos/clickup.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/clickup.svg"
+ },
+ "cloudflare": {
+  "file": "assets/logos/cloudflare.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/cloudflare.svg"
+ },
+ "cloudflare-warp": {
+  "file": "assets/logos/cloudflare-warp.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/cloudflare-zero-trust.svg"
+ },
+ "cocos": {
+  "file": "assets/logos/cocos.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.google.com/s2/favicons?domain=www.cocos.com&sz=256"
+ },
+ "codeberg": {
+  "file": "assets/logos/codeberg.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/codeberg.svg"
+ },
+ "codecademy": {
+  "file": "assets/logos/codecademy.png",
+  "tone": "dark",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/code-cademy.svg"
+ },
+ "codex": {
+  "file": "assets/logos/codex.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/codex-color.svg"
+ },
+ "construct": {
+  "file": "assets/logos/construct.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.google.com/s2/favicons?domain=www.construct.net&sz=256"
+ },
+ "coursera": {
+  "file": "assets/logos/coursera.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/coursera.svg"
+ },
+ "crunchyroll": {
+  "file": "assets/logos/crunchyroll.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/crunchyroll.svg"
+ },
+ "cryengine": {
+  "file": "assets/logos/cryengine.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.cryengine.com/icon-apple-touch-icon.png"
+ },
+ "cubase": {
+  "file": "assets/logos/cubase.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.steinberg.net/apple-touch-icon.png"
+ },
+ "curseforge": {
+  "file": "assets/logos/curseforge.png",
+  "tone": "dark",
+  "source": "svgl",
+  "url": "https://svgl.app/library/curseforge.svg"
+ },
+ "cursor": {
+  "file": "assets/logos/cursor.png",
+  "tone": "dark",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/cursor.svg"
+ },
+ "dailymotion": {
+  "file": "assets/logos/dailymotion.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0f/4f/4c/0f4f4c50-19ef-dcf8-7837-d5e9c661aa4c/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+  "app": "Dailymotion: Social Videos",
+  "seller": "Dailymotion"
+ },
+ "dashlane": {
+  "file": "assets/logos/dashlane.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/dashlane-icon.svg"
+ },
+ "datacamp": {
+  "file": "assets/logos/datacamp.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8b/bb/e0/8bbbe06e-20ea-dd97-bbf7-146a65877a3b/AppIcon-0-0-1x_U007epad-0-1-sRGB-85-220.png/512x512bb.jpg",
+  "app": "DataCamp: Learn Data, AI, Code",
+  "seller": "Datacamp inc."
+ },
+ "davinci-resolve": {
+  "file": "assets/logos/davinci-resolve.png",
+  "tone": "dark",
+  "source": "site",
+  "url": "https://www.blackmagicdesign.com/apple-touch-icon.png"
+ },
+ "deepseek": {
+  "file": "assets/logos/deepseek.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/deepseek-color.svg"
+ },
+ "deezer": {
+  "file": "assets/logos/deezer.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/deezer.svg"
+ },
+ "digitalocean": {
+  "file": "assets/logos/digitalocean.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/digital-ocean.svg"
+ },
+ "discogs": {
+  "file": "assets/logos/discogs.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.google.com/s2/favicons?domain=www.discogs.com&sz=256"
+ },
+ "discord": {
+  "file": "assets/logos/discord.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/discord.svg"
+ },
+ "disney-plus": {
+  "file": "assets/logos/disney-plus.png",
+  "tone": "dark",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/disney-plus.svg"
+ },
+ "distrokid": {
+  "file": "assets/logos/distrokid.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://distrokid.com/apple-touch-icon.png"
+ },
+ "ditto-music": {
+  "file": "assets/logos/ditto-music.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f1/2c/fc/f12cfcc1-f48e-04f9-544a-0f384119fb17/AppIcon-1x_U007epad-0-1-85-220-0.png/512x512bb.jpg",
+  "app": "Ditto Music",
+  "seller": "Ditto Limited"
+ },
+ "dnsimple": {
+  "file": "assets/logos/dnsimple.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/dnsimple.svg"
+ },
+ "docker-hub": {
+  "file": "assets/logos/docker-hub.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/docker.svg"
+ },
+ "docusign": {
+  "file": "assets/logos/docusign.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/docusign.svg"
+ },
+ "dreamstudio": {
+  "file": "assets/logos/dreamstudio.png",
+  "tone": "dark",
+  "source": "site",
+  "url": "https://dreamstudio.ai/bs-favicon-light.png"
+ },
+ "dropbox": {
+  "file": "assets/logos/dropbox.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/dropbox.svg"
+ },
+ "duolingo": {
+  "file": "assets/logos/duolingo.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/duolingo.svg"
+ },
+ "ea-app": {
+  "file": "assets/logos/ea-app.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/41/d1/84/41d18457-ec03-6812-f0a7-8a83686c6009/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+  "app": "EA SPORTS FC Soccer Mobile 27",
+  "seller": "EA Swiss Sarl"
+ },
+ "ebay": {
+  "file": "assets/logos/ebay.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/ebay.svg"
+ },
+ "edx": {
+  "file": "assets/logos/edx.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/cb/8e/7f/cb8e7ffb-9114-ace6-d5f9-789b79c2eff4/AppIcon-0-0-1x_U007epad-0-1-85-220.jpeg/512x512bb.jpg",
+  "app": "edX online learning",
+  "seller": "edX LLC"
+ },
+ "elevenlabs": {
+  "file": "assets/logos/elevenlabs.png",
+  "tone": "dark",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/elevenlabs.svg"
+ },
+ "epic-games": {
+  "file": "assets/logos/epic-games.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/epic-games.svg"
+ },
+ "etsy": {
+  "file": "assets/logos/etsy.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/de/a5/d7/dea5d705-44c0-01cb-3470-e1f9f55b40c8/BOEAppIcon-0-0-1x_U007epad-0-1-0-0-0-0-GLES2_U002c0-85-220.png/512x512bb.jpg",
+  "app": "Etsy: Shop from Real People",
+  "seller": "Etsy, Inc."
+ },
+ "fab": {
+  "file": "assets/logos/fab.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.google.com/s2/favicons?domain=www.fab.com&sz=256"
+ },
+ "facebook": {
+  "file": "assets/logos/facebook.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/facebook.svg"
+ },
+ "figma": {
+  "file": "assets/logos/figma.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/figma.svg"
+ },
+ "final-cut-pro": {
+  "file": "assets/logos/final-cut-pro.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/57/ef/32/57ef326a-f2ef-9b63-3080-4d64e4ee45d3/finalcutcamera-0-1x_U007ephone-0-0-0-1-0-0-P3-0-85-220-0.png/512x512bb.jpg",
+  "app": "Final Cut Camera",
+  "seller": "Apple Inc."
+ },
+ "final-draft": {
+  "file": "assets/logos/final-draft.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.finaldraft.com/media/favicon/websites/1/FD13-Favicon.png"
+ },
+ "find-my": {
+  "file": "assets/logos/find-my.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4d/ac/0e/4dac0e4f-cf5b-0f7a-e1be-0e5ec3f19469/findmyCalistoga-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+  "app": "Find My",
+  "seller": "Apple Inc."
+ },
+ "firebase": {
+  "file": "assets/logos/firebase.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/firebase.svg"
+ },
+ "firefox-relay": {
+  "file": "assets/logos/firefox-relay.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/firefox.svg"
+ },
+ "fl-studio": {
+  "file": "assets/logos/fl-studio.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.image-line.com/apple-touch-icon.png"
+ },
+ "flipkart": {
+  "file": "assets/logos/flipkart.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ff/21/f3/ff21f3d2-6cb6-7c22-6ca7-0922aafb51e8/AppIcon-fk-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Flipkart - Online Shopping App",
+  "seller": "Flipkart Internet Private Limited"
+ },
+ "fly-io": {
+  "file": "assets/logos/fly-io.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/fly-io.svg"
+ },
+ "framer": {
+  "file": "assets/logos/framer.png",
+  "tone": "dark",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/framer.svg"
+ },
+ "freecodecamp": {
+  "file": "assets/logos/freecodecamp.png",
+  "tone": "dark",
+  "source": "site",
+  "url": "https://www.google.com/s2/favicons?domain=www.freecodecamp.org&sz=256"
+ },
+ "freepik": {
+  "file": "assets/logos/freepik.png",
+  "tone": "dark",
+  "source": "site",
+  "url": "https://www.google.com/s2/favicons?domain=www.freepik.com&sz=256"
+ },
+ "freshbooks": {
+  "file": "assets/logos/freshbooks.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/freshbooks.svg"
+ },
+ "freshsales": {
+  "file": "assets/logos/freshsales.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.google.com/s2/favicons?domain=www.freshworks.com&sz=256"
+ },
+ "gamemaker": {
+  "file": "assets/logos/gamemaker.png",
+  "tone": "light",
+  "source": "site",
+  "url": "https://gamemaker.io/next/images/icons/apple-touch-icon.png"
+ },
+ "garageband": {
+  "file": "assets/logos/garageband.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2d/dd/3a/2ddd3a7e-61ce-6b9a-f503-b05f8a236e78/AppIcon-0-1x_U007epad-0-0-0-1-0-0-P3-85-220-0.png/512x512bb.jpg",
+  "app": "GarageBand",
+  "seller": "Apple Inc."
+ },
+ "gdevelop": {
+  "file": "assets/logos/gdevelop.png",
+  "tone": "dark",
+  "source": "site",
+  "url": "https://gdevelop.io/favicons/apple-touch-icon.png"
+ },
+ "gemini": {
+  "file": "assets/logos/gemini.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/gemini-color.svg"
+ },
+ "ghost": {
+  "file": "assets/logos/ghost.png",
+  "tone": "dark",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/ghost.svg"
+ },
+ "github": {
+  "file": "assets/logos/github.png",
+  "tone": "dark",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/github.svg"
+ },
+ "github-copilot": {
+  "file": "assets/logos/github-copilot.png",
+  "tone": "dark",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/githubcopilot.svg"
+ },
+ "gitlab": {
+  "file": "assets/logos/gitlab.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/gitlab.svg"
+ },
+ "gmail": {
+  "file": "assets/logos/gmail.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/gmail.svg"
+ },
+ "godaddy": {
+  "file": "assets/logos/godaddy.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/godaddy.svg"
+ },
+ "godot-engine": {
+  "file": "assets/logos/godot-engine.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/godot.svg"
+ },
+ "gog": {
+  "file": "assets/logos/gog.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.gog.com/apple-touch-icon.png"
+ },
+ "google-account": {
+  "file": "assets/logos/google-account.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google.svg"
+ },
+ "google-ads": {
+  "file": "assets/logos/google-ads.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/google-ads.svg"
+ },
+ "google-adsense": {
+  "file": "assets/logos/google-adsense.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/google-adsense.svg"
+ },
+ "google-ai-studio": {
+  "file": "assets/logos/google-ai-studio.png",
+  "tone": "dark",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/google-aistudio.svg"
+ },
+ "google-analytics": {
+  "file": "assets/logos/google-analytics.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-analytics.svg"
+ },
+ "google-calendar": {
+  "file": "assets/logos/google-calendar.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-calendar.svg"
+ },
+ "google-chat": {
+  "file": "assets/logos/google-chat.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-chat.svg"
+ },
+ "google-cloud": {
+  "file": "assets/logos/google-cloud.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-cloud.svg"
+ },
+ "google-contacts": {
+  "file": "assets/logos/google-contacts.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-contacts.svg"
+ },
+ "google-docs": {
+  "file": "assets/logos/google-docs.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-docs.svg"
+ },
+ "google-drive": {
+  "file": "assets/logos/google-drive.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-drive.svg"
+ },
+ "google-forms": {
+  "file": "assets/logos/google-forms.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-forms.svg"
+ },
+ "google-keep": {
+  "file": "assets/logos/google-keep.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-keep.svg"
+ },
+ "google-maps": {
+  "file": "assets/logos/google-maps.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-maps.svg"
+ },
+ "google-meet": {
+  "file": "assets/logos/google-meet.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-meet.svg"
+ },
+ "google-one": {
+  "file": "assets/logos/google-one.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-one.svg"
+ },
+ "google-pay": {
+  "file": "assets/logos/google-pay.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-pay.svg"
+ },
+ "google-photos": {
+  "file": "assets/logos/google-photos.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-photos.svg"
+ },
+ "google-play": {
+  "file": "assets/logos/google-play.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-play.svg"
+ },
+ "google-play-console": {
+  "file": "assets/logos/google-play-console.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/google-play-icon.svg"
+ },
+ "google-search-console": {
+  "file": "assets/logos/google-search-console.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-search-console.svg"
+ },
+ "google-sheets": {
+  "file": "assets/logos/google-sheets.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-sheets.svg"
+ },
+ "google-slides": {
+  "file": "assets/logos/google-slides.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-slides.svg"
+ },
+ "google-tasks": {
+  "file": "assets/logos/google-tasks.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-tasks.svg"
+ },
+ "google-wallet": {
+  "file": "assets/logos/google-wallet.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-wallet.svg"
+ },
+ "grok": {
+  "file": "assets/logos/grok.png",
+  "tone": "dark",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/grok.svg"
+ },
+ "gumroad": {
+  "file": "assets/logos/gumroad.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/gumroad.svg"
+ },
+ "hackerrank": {
+  "file": "assets/logos/hackerrank.png",
+  "tone": "dark",
+  "source": "site",
+  "url": "https://www.hackerrank.com/_sherpa/assets/static/apple-touch-icon.png"
+ },
+ "hdfc-bank": {
+  "file": "assets/logos/hdfc-bank.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f9/02/39/f90239f5-97e2-f1b3-2181-a53f10b0a680/AppIcon-0-0-1x_U007ephone-0-0-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+  "app": "HDFC Bank App: Banking & Cards",
+  "seller": "HDFC Bank Ltd"
+ },
+ "heroku": {
+  "file": "assets/logos/heroku.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/heroku-icon.svg"
+ },
+ "heygen": {
+  "file": "assets/logos/heygen.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ca/dd/21/cadd216e-dbc1-fdae-c872-32e9e8eb3779/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "AI Avatar Generator - HeyGen",
+  "seller": "HeyGen Technology Inc."
+ },
+ "higgsfield": {
+  "file": "assets/logos/higgsfield.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://higgsfield.ai/apple-touch-icon.png"
+ },
+ "homebrew": {
+  "file": "assets/logos/homebrew.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/homebrew.svg"
+ },
+ "hootsuite": {
+  "file": "assets/logos/hootsuite.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/hootsuite-icon.svg"
+ },
+ "hostinger": {
+  "file": "assets/logos/hostinger.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/hostinger.svg"
+ },
+ "hsbc": {
+  "file": "assets/logos/hsbc.png",
+  "tone": "light",
+  "source": "site",
+  "url": "https://www.hsbc.com/apple-touch-icon.png"
+ },
+ "hubspot": {
+  "file": "assets/logos/hubspot.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/hubspot.svg"
+ },
+ "hugging-face": {
+  "file": "assets/logos/hugging-face.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/huggingface-color.svg"
+ },
+ "icici-bank": {
+  "file": "assets/logos/icici-bank.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.icicibank.com/apple-touch-icon.png"
+ },
+ "icloud": {
+  "file": "assets/logos/icloud.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/icloud.svg"
+ },
+ "icloud-drive": {
+  "file": "assets/logos/icloud-drive.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/35/df/6a/35df6a7a-b5e0-9221-4a90-1dee835fe6ca/filesCalistoga-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Files",
+  "seller": "Apple Inc."
+ },
+ "icloud-mail": {
+  "file": "assets/logos/icloud-mail.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6e/20/b2/6e20b217-8f80-9b20-136f-50ee09e2937c/mailCalistoga-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Mail",
+  "seller": "Apple Inc."
+ },
+ "ideogram": {
+  "file": "assets/logos/ideogram.png",
+  "tone": "dark",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/ideogram.svg"
+ },
+ "idfc-first-bank": {
+  "file": "assets/logos/idfc-first-bank.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f5/eb/c7/f5ebc751-e2a0-229a-aae7-0fe7d090441f/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg",
+  "app": "IDFC FIRST Bank: MobileBanking",
+  "seller": "IDFC FIRST BANK LTD"
+ },
+ "idrive": {
+  "file": "assets/logos/idrive.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/idrive.svg"
+ },
+ "ifttt": {
+  "file": "assets/logos/ifttt.png",
+  "tone": "dark",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/ifttt.svg"
+ },
+ "indian-bank": {
+  "file": "assets/logos/indian-bank.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/75/e8/12/75e812f7-43ea-0bd9-c5c3-b9a5a870c83b/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+  "app": "IndSMART IndianBank Mobile App",
+  "seller": "Indian Bank"
+ },
+ "insomnia": {
+  "file": "assets/logos/insomnia.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/insomnia.svg"
+ },
+ "instagram": {
+  "file": "assets/logos/instagram.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/instagram.svg"
+ },
+ "irctc": {
+  "file": "assets/logos/irctc.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2f/d5/2b/2fd52b58-a949-d983-a918-dddeb09d851f/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/512x512bb.jpg",
+  "app": "IRCTC Rail Connect",
+  "seller": "Indian Railway Catering and Tourism Corporation Limited"
+ },
+ "jetbrains": {
+  "file": "assets/logos/jetbrains.png",
+  "tone": "dark",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/jetbrains-icon.svg"
+ },
+ "jiohotstar": {
+  "file": "assets/logos/jiohotstar.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.google.com/s2/favicons?domain=www.hotstar.com&sz=256"
+ },
+ "jira": {
+  "file": "assets/logos/jira.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/jira.svg"
+ },
+ "keepassxc": {
+  "file": "assets/logos/keepassxc.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/keepassxc.svg"
+ },
+ "keeper": {
+  "file": "assets/logos/keeper.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/keeper-security.svg"
+ },
+ "khan-academy": {
+  "file": "assets/logos/khan-academy.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/khan_academy-icon.svg"
+ },
+ "kick": {
+  "file": "assets/logos/kick.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/kick.svg"
+ },
+ "kimi": {
+  "file": "assets/logos/kimi.png",
+  "tone": "dark",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/kimi-color.svg"
+ },
+ "kling-ai": {
+  "file": "assets/logos/kling-ai.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/kling-color.svg"
+ },
+ "kotak-mahindra-bank": {
+  "file": "assets/logos/kotak-mahindra-bank.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/bc/ce/f5/bccef59a-e6ba-17f7-300c-eb553c46959b/AppIcon-0-0-1x_U007ephone-0-11-0-85-220.png/512x512bb.jpg",
+  "app": "Kotak Bank (New)",
+  "seller": "Kotak Mahindra Bank Ltd."
+ },
+ "krea": {
+  "file": "assets/logos/krea.png",
+  "tone": "dark",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/krea.svg"
+ },
+ "krita": {
+  "file": "assets/logos/krita.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://krita.org/apple-touch-icon.png"
+ },
+ "landr": {
+  "file": "assets/logos/landr.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a5/f3/00/a5f3007d-d17b-e99d-8d78-e56d32512c71/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+  "app": "LANDR - For Music Makers",
+  "seller": "LANDR Audio Inc."
+ },
+ "leetcode": {
+  "file": "assets/logos/leetcode.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/leetcode.svg"
+ },
+ "leonardo-ai": {
+  "file": "assets/logos/leonardo-ai.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/99/17/be/9917bece-f76f-eb59-1709-0575d9a0dc64/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+  "app": "Leonardo.Ai - Image Generator",
+  "seller": "Leonardo Interactive Pty Ltd"
+ },
+ "line": {
+  "file": "assets/logos/line.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a2/97/5b/a2975bc8-e0e9-eb68-30c1-4d12741ed065/basic_default-0-0-1x_U007epad-0-6-0-0-sRGB-0-85-220.png/512x512bb.jpg",
+  "app": "LINE",
+  "seller": "LY Corporation"
+ },
+ "linear": {
+  "file": "assets/logos/linear.png",
+  "tone": "dark",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/linear.svg"
+ },
+ "linkedin": {
+  "file": "assets/logos/linkedin.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/linkedin.svg"
+ },
+ "linkedin-learning": {
+  "file": "assets/logos/linkedin-learning.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/linkedin.svg"
+ },
+ "linktree": {
+  "file": "assets/logos/linktree.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://linktr.ee/_marketing/images/creators/link-in-bio-tool-everything-you-are-in-one-simple-link-f22b2ecd.png"
+ },
+ "lm-studio": {
+  "file": "assets/logos/lm-studio.png",
+  "tone": "dark",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/lmstudio.svg"
+ },
+ "logic-pro": {
+  "file": "assets/logos/logic-pro.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e0/e5/e2/e0e5e28a-7e99-8d62-8dbd-9cc5ad3f408b/AppIcon-0-1x_U007epad-0-0-0-1-0-0-sRGB-85-220-0.png/512x512bb.jpg",
+  "app": "Logic Remote",
+  "seller": "Apple Inc."
+ },
+ "lovable": {
+  "file": "assets/logos/lovable.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/lovable-color.svg"
+ },
+ "luma-ai": {
+  "file": "assets/logos/luma-ai.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/luma-color.svg"
+ },
+ "magnific": {
+  "file": "assets/logos/magnific.png",
+  "tone": "dark",
+  "source": "site",
+  "url": "https://www.google.com/s2/favicons?domain=magnific.ai&sz=256"
+ },
+ "make": {
+  "file": "assets/logos/make.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/make-color.svg"
+ },
+ "makemytrip": {
+  "file": "assets/logos/makemytrip.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.google.com/s2/favicons?domain=www.makemytrip.com&sz=256"
+ },
+ "mastercard": {
+  "file": "assets/logos/mastercard.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/mastercard.svg"
+ },
+ "mastodon": {
+  "file": "assets/logos/mastodon.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/mastodon.svg"
+ },
+ "meesho": {
+  "file": "assets/logos/meesho.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d5/e5/87/d5e587ea-bd9f-929a-5836-1ad9503fb0ec/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Meesho: Online Shopping",
+  "seller": "Meesho Inc."
+ },
+ "mega": {
+  "file": "assets/logos/mega.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/mega-nz.svg"
+ },
+ "meshy": {
+  "file": "assets/logos/meshy.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/meshy-color.svg"
+ },
+ "messenger": {
+  "file": "assets/logos/messenger.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/facebook-messenger.svg"
+ },
+ "meta-ai": {
+  "file": "assets/logos/meta-ai.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/meta-color.svg"
+ },
+ "microsoft-365": {
+  "file": "assets/logos/microsoft-365.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft-365.svg"
+ },
+ "microsoft-account": {
+  "file": "assets/logos/microsoft-account.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft.svg"
+ },
+ "microsoft-authenticator": {
+  "file": "assets/logos/microsoft-authenticator.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/14/75/48/14754808-d06b-705b-0e4c-d2bd6865d697/AppIcon-0-1x_U007emarketing-0-11-0-sRGB-85-220-0.png/512x512bb.jpg",
+  "app": "Microsoft Authenticator",
+  "seller": "Microsoft Corporation"
+ },
+ "microsoft-azure": {
+  "file": "assets/logos/microsoft-azure.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/azure.svg"
+ },
+ "microsoft-copilot": {
+  "file": "assets/logos/microsoft-copilot.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/copilot-color.svg"
+ },
+ "microsoft-entra-id": {
+  "file": "assets/logos/microsoft-entra-id.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.google.com/s2/favicons?domain=entra.microsoft.com&sz=256"
+ },
+ "microsoft-excel": {
+  "file": "assets/logos/microsoft-excel.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft-excel.svg"
+ },
+ "microsoft-powerpoint": {
+  "file": "assets/logos/microsoft-powerpoint.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft-powerpoint.svg"
+ },
+ "microsoft-teams": {
+  "file": "assets/logos/microsoft-teams.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft-teams.svg"
+ },
+ "microsoft-to-do": {
+  "file": "assets/logos/microsoft-to-do.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft-to-do.svg"
+ },
+ "microsoft-word": {
+  "file": "assets/logos/microsoft-word.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft-word.svg"
+ },
+ "midjourney": {
+  "file": "assets/logos/midjourney.png",
+  "tone": "dark",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/midjourney.svg"
+ },
+ "milanote": {
+  "file": "assets/logos/milanote.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/52/ea/90/52ea9049-5728-0d10-e5ad-415f4e5abc9e/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Milanote",
+  "seller": "Milanote Pty Ltd"
+ },
+ "minecraft": {
+  "file": "assets/logos/minecraft.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/minecraft.svg"
+ },
+ "mistral-le-chat": {
+  "file": "assets/logos/mistral-le-chat.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/mistral-color.svg"
+ },
+ "moddb": {
+  "file": "assets/logos/moddb.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.moddb.com/apple-touch-icon.png"
+ },
+ "monday-com": {
+  "file": "assets/logos/monday-com.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/monday-icon.svg"
+ },
+ "mongodb-atlas": {
+  "file": "assets/logos/mongodb-atlas.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/mongodb.svg"
+ },
+ "mubert": {
+  "file": "assets/logos/mubert.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/b1/b0/94/b1b094df-0739-c4d4-44ee-1767dace439c/AppIcon-0-0-1x_U007emarketing-0-10-0-0-85-220.png/512x512bb.jpg",
+  "app": "Mubert: AI Music Streaming",
+  "seller": "Mubert Inc."
+ },
+ "mubi": {
+  "file": "assets/logos/mubi.png",
+  "tone": "dark",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/mubi.svg"
+ },
+ "mullvad": {
+  "file": "assets/logos/mullvad.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/mullvad.svg"
+ },
+ "musicbrainz": {
+  "file": "assets/logos/musicbrainz.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/musicbrainz.svg"
+ },
+ "myntra": {
+  "file": "assets/logos/myntra.png",
+  "tone": "light",
+  "source": "site",
+  "url": "https://www.google.com/s2/favicons?domain=www.myntra.com&sz=256"
+ },
+ "n8n": {
+  "file": "assets/logos/n8n.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/n8n.svg"
+ },
+ "namecheap": {
+  "file": "assets/logos/namecheap.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/namecheap.svg"
+ },
+ "neon": {
+  "file": "assets/logos/neon.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/neon-tech.svg"
+ },
+ "netflix": {
+  "file": "assets/logos/netflix.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/netflix.svg"
+ },
+ "netlify": {
+  "file": "assets/logos/netlify.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/netlify.svg"
+ },
+ "nexus-mods": {
+  "file": "assets/logos/nexus-mods.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.google.com/s2/favicons?domain=www.nexusmods.com&sz=256"
+ },
+ "nintendo-account": {
+  "file": "assets/logos/nintendo-account.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/nintendo-switch.svg"
+ },
+ "nordvpn": {
+  "file": "assets/logos/nordvpn.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/nordvpn.svg"
+ },
+ "notebooklm": {
+  "file": "assets/logos/notebooklm.png",
+  "tone": "dark",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/notebooklm.svg"
+ },
+ "notion": {
+  "file": "assets/logos/notion.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/notion.svg"
+ },
+ "npm": {
+  "file": "assets/logos/npm.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/npm.svg"
+ },
+ "obs-studio": {
+  "file": "assets/logos/obs-studio.png",
+  "tone": "color",
+  "source": "svgl",
+  "url": "https://svgl.app/library/obs.svg"
+ },
+ "odysee": {
+  "file": "assets/logos/odysee.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/odysee.svg"
+ },
+ "ola": {
+  "file": "assets/logos/ola.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/63/5b/23/635b23d6-afe3-4d3d-66e8-bcc303131434/AppIcon-0-0-1x_U007emarketing-0-5-0-sRGB-0-85-220.png/512x512bb.jpg",
+  "app": "Ola: Book Cab, Auto, Bike Taxi",
+  "seller": "ANI Technologies Pvt. Ltd."
+ },
+ "ollama": {
+  "file": "assets/logos/ollama.png",
+  "tone": "dark",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/ollama.svg"
+ },
+ "onedrive": {
+  "file": "assets/logos/onedrive.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft-onedrive.svg"
+ },
+ "onenote": {
+  "file": "assets/logos/onenote.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft-onenote.svg"
+ },
+ "openai-platform": {
+  "file": "assets/logos/openai-platform.png",
+  "tone": "dark",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/openai.svg"
+ },
+ "openrouter": {
+  "file": "assets/logos/openrouter.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/openrouter-color.svg"
+ },
+ "oracle-cloud": {
+  "file": "assets/logos/oracle-cloud.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/oracle.svg"
+ },
+ "outlook": {
+  "file": "assets/logos/outlook.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft-outlook.svg"
+ },
+ "paypal": {
+  "file": "assets/logos/paypal.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/paypal.svg"
+ },
+ "payu": {
+  "file": "assets/logos/payu.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/39/30/e9/3930e959-9979-aead-dd64-81561216fa18/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/512x512bb.jpg",
+  "app": "PayU Payments for Business",
+  "seller": "PayU Payments Private Limited"
+ },
+ "pcloud": {
+  "file": "assets/logos/pcloud.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/pcloud.svg"
+ },
+ "perplexity": {
+  "file": "assets/logos/perplexity.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/perplexity-color.svg"
+ },
+ "phonepe": {
+  "file": "assets/logos/phonepe.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/41/9b/ae/419bae30-2847-4387-58dd-7fc1fabf58fb/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg",
+  "app": "PhonePe UPI, Payment, Recharge",
+  "seller": "PHONEPE PRIVATE LIMITED"
+ },
+ "pi": {
+  "file": "assets/logos/pi.png",
+  "tone": "dark",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/pi.svg"
+ },
+ "pika": {
+  "file": "assets/logos/pika.png",
+  "tone": "dark",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/pika.svg"
+ },
+ "pinterest": {
+  "file": "assets/logos/pinterest.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/pinterest.svg"
+ },
+ "pipedrive": {
+  "file": "assets/logos/pipedrive.png",
+  "tone": "dark",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/pipedrive.svg"
+ },
+ "planetscale": {
+  "file": "assets/logos/planetscale.png",
+  "tone": "dark",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/planetscale.svg"
+ },
+ "playstation-network": {
+  "file": "assets/logos/playstation-network.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/playstation.svg"
+ },
+ "pluralsight": {
+  "file": "assets/logos/pluralsight.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/pluralsight.svg"
+ },
+ "poe": {
+  "file": "assets/logos/poe.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/poe-color.svg"
+ },
+ "porkbun": {
+  "file": "assets/logos/porkbun.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://porkbun.com/images/favicons/android-icon-192x192.png"
+ },
+ "postman": {
+  "file": "assets/logos/postman.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/postman.svg"
+ },
+ "power-automate": {
+  "file": "assets/logos/power-automate.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft-power-automate.svg"
+ },
+ "power-bi": {
+  "file": "assets/logos/power-bi.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/powerbi.svg"
+ },
+ "procreate": {
+  "file": "assets/logos/procreate.png",
+  "tone": "dark",
+  "source": "site",
+  "url": "https://procreate-assets-cdn.procreate.com/_nuxt/android-icon-192x192.CWLrxfXY.png"
+ },
+ "proton-drive": {
+  "file": "assets/logos/proton-drive.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/proton-drive.svg"
+ },
+ "proton-pass": {
+  "file": "assets/logos/proton-pass.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/proton-pass.svg"
+ },
+ "proton-vpn": {
+  "file": "assets/logos/proton-vpn.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/proton-vpn.svg"
+ },
+ "punjab-national-bank": {
+  "file": "assets/logos/punjab-national-bank.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/43/c2/da/43c2da22-bd39-13de-5d1c-47be708ecbf6/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+  "app": "PNB ONE",
+  "seller": "Punjab National Bank"
+ },
+ "pypi": {
+  "file": "assets/logos/pypi.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/pypi.svg"
+ },
+ "qnap": {
+  "file": "assets/logos/qnap.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/qnap.svg"
+ },
+ "quickbooks": {
+  "file": "assets/logos/quickbooks.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://quickbooks.intuit.com/cas/dam/IMAGE/A7mjJ5rpg/apple-touch-icon-196x196.png"
+ },
+ "qwen": {
+  "file": "assets/logos/qwen.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/qwen-color.svg"
+ },
+ "railway": {
+  "file": "assets/logos/railway.png",
+  "tone": "dark",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/railway.svg"
+ },
+ "rapido": {
+  "file": "assets/logos/rapido.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/54/66/16/54661691-bdea-cc68-6a44-8585bd13bbd9/AppIcon-0-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg",
+  "app": "Rapido: Bike-Taxi, Auto & Cabs",
+  "seller": "Roppen Transportation Services Private Limited"
+ },
+ "razorpay": {
+  "file": "assets/logos/razorpay.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://razorpay.com/apple-touch-icon.png"
+ },
+ "recraft": {
+  "file": "assets/logos/recraft.png",
+  "tone": "dark",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/recraft.svg"
+ },
+ "reddit": {
+  "file": "assets/logos/reddit.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/reddit.svg"
+ },
+ "render": {
+  "file": "assets/logos/render.png",
+  "tone": "dark",
+  "source": "svgl",
+  "url": "https://svgl.app/library/render_black.svg"
+ },
+ "replicate": {
+  "file": "assets/logos/replicate.png",
+  "tone": "dark",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/replicate.svg"
+ },
+ "replit": {
+  "file": "assets/logos/replit.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/replit-color.svg"
+ },
+ "restream": {
+  "file": "assets/logos/restream.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://restream.io/apple-touch-icon.png"
+ },
+ "roblox": {
+  "file": "assets/logos/roblox.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/64/ff/27/64ff277d-2576-c0c9-2aae-dfd792464411/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Roblox",
+  "seller": "Roblox Corporation"
+ },
+ "routenote": {
+  "file": "assets/logos/routenote.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://routenote.com/_assets/icons/favicon-192x192.png"
+ },
+ "rpg-maker": {
+  "file": "assets/logos/rpg-maker.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://cdn.prod.website-files.com/5efc0159f9a97ba05a8b2902/5f3382397667cec2524a1d81_rpg-maker-web-icon-large.png"
+ },
+ "rumble": {
+  "file": "assets/logos/rumble.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/rumble.svg"
+ },
+ "runway": {
+  "file": "assets/logos/runway.png",
+  "tone": "dark",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/runway.svg"
+ },
+ "safari": {
+  "file": "assets/logos/safari.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9b/4a/12/9b4a12c2-7ea9-9e38-4d4f-f1342b310519/safariCalistoga-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Safari",
+  "seller": "Apple Inc."
+ },
+ "salesforce": {
+  "file": "assets/logos/salesforce.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/salesforce.svg"
+ },
+ "scrivener": {
+  "file": "assets/logos/scrivener.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/03/53/53/03535336-8087-e172-bc96-6c4d7e0b833c/AppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/512x512bb.jpg",
+  "app": "Scrivener",
+  "seller": "Literature & Latte Ltd"
+ },
+ "sentry": {
+  "file": "assets/logos/sentry.png",
+  "tone": "dark",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/sentry.svg"
+ },
+ "sharepoint": {
+  "file": "assets/logos/sharepoint.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft-sharepoint.svg"
+ },
+ "shazam": {
+  "file": "assets/logos/shazam.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a6/e3/8a/a6e38a72-31d3-fa19-8733-d71f38edcf62/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+  "app": "Shazam: Find Music & Concerts",
+  "seller": "Apple Inc."
+ },
+ "shopify": {
+  "file": "assets/logos/shopify.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/shopify.svg"
+ },
+ "signal": {
+  "file": "assets/logos/signal.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/signal.svg"
+ },
+ "simplelogin": {
+  "file": "assets/logos/simplelogin.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/simplelogin.svg"
+ },
+ "skillshare": {
+  "file": "assets/logos/skillshare.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.skillshare.com/apple-touch-icon.png"
+ },
+ "slack": {
+  "file": "assets/logos/slack.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/slack.svg"
+ },
+ "snapchat": {
+  "file": "assets/logos/snapchat.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/snapchat.svg"
+ },
+ "songtrust": {
+  "file": "assets/logos/songtrust.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.songtrust.com/hubfs/pink-01%20(1).png"
+ },
+ "sonyliv": {
+  "file": "assets/logos/sonyliv.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.google.com/s2/favicons?domain=www.sonyliv.com&sz=256"
+ },
+ "sora": {
+  "file": "assets/logos/sora.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/sora-color.svg"
+ },
+ "soundcloud": {
+  "file": "assets/logos/soundcloud.png",
+  "tone": "dark",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/soundcloud.svg"
+ },
+ "soundexchange": {
+  "file": "assets/logos/soundexchange.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/71/f6/ae/71f6aee3-0790-2183-6f33-c1e2daa5cceb/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+  "app": "SoundExchange",
+  "seller": "SoundExchange, Inc."
+ },
+ "soundraw": {
+  "file": "assets/logos/soundraw.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e5/85/0f/e5850f65-d1e8-4400-fd61-13c04593ae33/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg",
+  "app": "SOUNDRAW Grid: Beat Maker",
+  "seller": "SOUNDRAW Inc."
+ },
+ "spotify": {
+  "file": "assets/logos/spotify.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/spotify.svg"
+ },
+ "spotify-for-artists": {
+  "file": "assets/logos/spotify-for-artists.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/spotify.svg"
+ },
+ "sprout-social": {
+  "file": "assets/logos/sprout-social.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/bd/d9/43/bdd943f9-2803-7f75-ea2e-7dc2938860ac/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+  "app": "Sprout Social",
+  "seller": "Sprout Social, Inc."
+ },
+ "squarespace": {
+  "file": "assets/logos/squarespace.png",
+  "tone": "dark",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/squarespace.svg"
+ },
+ "stability-ai": {
+  "file": "assets/logos/stability-ai.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/stability-color.svg"
+ },
+ "state-bank-of-india": {
+  "file": "assets/logos/state-bank-of-india.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/01/d7/00/01d700e0-33d8-1c3f-c082-7433685a899c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+  "app": "YONO SBI: Banking, UPI & Pay",
+  "seller": "State Bank of India"
+ },
+ "steam": {
+  "file": "assets/logos/steam.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/steam.svg"
+ },
+ "steamworks": {
+  "file": "assets/logos/steamworks.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/steam.svg"
+ },
+ "storytel": {
+  "file": "assets/logos/storytel.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0f/d0/52/0fd05264-2fb7-9e86-8224-4fb5997ae9e2/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Storytel - Audiobooks Library",
+  "seller": "Storytel Sweden AB"
+ },
+ "streamlabs": {
+  "file": "assets/logos/streamlabs.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://cdn.streamlabs.com/static/imgs/streamlabs-logos/favicon/apple-touch-icon.png"
+ },
+ "streamyard": {
+  "file": "assets/logos/streamyard.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c1/b8/3d/c1b83d0c-79f9-cf5c-c5ca-bab0b9ecd8ee/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+  "app": "StreamYard Guest",
+  "seller": "STREAMYARD, INC"
+ },
+ "stripe": {
+  "file": "assets/logos/stripe.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/stripe.svg"
+ },
+ "suno": {
+  "file": "assets/logos/suno.png",
+  "tone": "dark",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/suno.svg"
+ },
+ "supabase": {
+  "file": "assets/logos/supabase.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/supabase.svg"
+ },
+ "surfshark": {
+  "file": "assets/logos/surfshark.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/surfshark.svg"
+ },
+ "swiggy": {
+  "file": "assets/logos/swiggy.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/0a/e4/d2/0ae4d238-cbf8-6f80-81a5-ef2fcc6569e1/AppIcon_Instamart-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Instamart: Groceries & more",
+  "seller": "Swiggy Instamart Private Limited"
+ },
+ "symphonic-distribution": {
+  "file": "assets/logos/symphonic-distribution.png",
+  "tone": "dark",
+  "source": "site",
+  "url": "https://symphonic.com/wp-content/uploads/2023/05/cropped-SymPhoNic_Logo_Square_BGblack_WhiteText-192x192.jpg"
+ },
+ "sync-com": {
+  "file": "assets/logos/sync-com.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.sync.com/hubfs/assets-meta/apple-touch-icon.png"
+ },
+ "synology": {
+  "file": "assets/logos/synology.png",
+  "tone": "dark",
+  "source": "site",
+  "url": "https://fileres.synology.com/images/common/favicon/syno/icon-180x180.png"
+ },
+ "synthesia": {
+  "file": "assets/logos/synthesia.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/6618fd69d436784c0bba5e9e_webclip.png"
+ },
+ "tabnine": {
+  "file": "assets/logos/tabnine.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.google.com/s2/favicons?domain=www.tabnine.com&sz=256"
+ },
+ "tally": {
+  "file": "assets/logos/tally.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://tallysolutions.com/wp-content/themes/tally/assets/images/Tally_Favicon/android-icon-192x192.png"
+ },
+ "telegram": {
+  "file": "assets/logos/telegram.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/telegram.svg"
+ },
+ "testflight": {
+  "file": "assets/logos/testflight.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b3/ed/fb/b3edfb91-3ac2-080e-f4a1-49b5f93c7f31/AppIcon-0-1x_U007epad-0-1-0-P3-85-220-0.png/512x512bb.jpg",
+  "app": "TestFlight",
+  "seller": "Apple Inc."
+ },
+ "threads": {
+  "file": "assets/logos/threads.png",
+  "tone": "dark",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/threads.svg"
+ },
+ "tidal": {
+  "file": "assets/logos/tidal.png",
+  "tone": "dark",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/tidal.svg"
+ },
+ "tiktok": {
+  "file": "assets/logos/tiktok.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/tiktok.svg"
+ },
+ "trello": {
+  "file": "assets/logos/trello.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/atlassian-trello.svg"
+ },
+ "tripo-ai": {
+  "file": "assets/logos/tripo-ai.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/tripo-color.svg"
+ },
+ "tubebuddy": {
+  "file": "assets/logos/tubebuddy.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.tubebuddy.com/wp-content/themes/luis/assets/images/favicon.svg"
+ },
+ "tumblr": {
+  "file": "assets/logos/tumblr.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/tumblr.svg"
+ },
+ "twitch": {
+  "file": "assets/logos/twitch.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/twitch.svg"
+ },
+ "uber": {
+  "file": "assets/logos/uber.png",
+  "tone": "dark",
+  "source": "svgl",
+  "url": "https://svgl.app/library/uber_light.svg"
+ },
+ "ubisoft-connect": {
+  "file": "assets/logos/ubisoft-connect.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/47/70/b6/4770b665-b0db-ed88-f784-09978115d38a/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+  "app": "Rainbow Six Mobile",
+  "seller": "Ubisoft Nova"
+ },
+ "udemy": {
+  "file": "assets/logos/udemy.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/udemy.svg"
+ },
+ "udio": {
+  "file": "assets/logos/udio.png",
+  "tone": "color",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/udio-color.svg"
+ },
+ "union-bank-of-india": {
+  "file": "assets/logos/union-bank-of-india.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/80/5a/fe/805afe7d-167a-365b-b32a-14273dda7411/AppIcon-0-0-1x_U007ephone-0-11-0-85-220.png/512x512bb.jpg",
+  "app": "Union ease - Mobile Banking",
+  "seller": "Union Bank of India"
+ },
+ "unitedmasters": {
+  "file": "assets/logos/unitedmasters.png",
+  "tone": "dark",
+  "source": "site",
+  "url": "https://v.fastcdn.co/u/2676f833/63414244-0-favicon.svg"
+ },
+ "unity": {
+  "file": "assets/logos/unity.png",
+  "tone": "dark",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/unity.svg"
+ },
+ "unity-asset-store": {
+  "file": "assets/logos/unity-asset-store.png",
+  "tone": "dark",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/unity.svg"
+ },
+ "unreal-engine": {
+  "file": "assets/logos/unreal-engine.png",
+  "tone": "dark",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/unreal-engine.svg"
+ },
+ "upstash": {
+  "file": "assets/logos/upstash.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/upstash-icon.svg"
+ },
+ "v0": {
+  "file": "assets/logos/v0.png",
+  "tone": "dark",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/v0.svg"
+ },
+ "vercel": {
+  "file": "assets/logos/vercel.png",
+  "tone": "dark",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/vercel.svg"
+ },
+ "vidiq": {
+  "file": "assets/logos/vidiq.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://vidiq.com/favicons/android-icon-192x192.png"
+ },
+ "vimeo": {
+  "file": "assets/logos/vimeo.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/vimeo-icon.svg"
+ },
+ "visa": {
+  "file": "assets/logos/visa.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/visa.svg"
+ },
+ "visual-studio": {
+  "file": "assets/logos/visual-studio.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/visual-studio.svg"
+ },
+ "visual-studio-code": {
+  "file": "assets/logos/visual-studio-code.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/visual-studio-code.svg"
+ },
+ "webflow": {
+  "file": "assets/logos/webflow.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/webflow.svg"
+ },
+ "wechat": {
+  "file": "assets/logos/wechat.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/wechat.svg"
+ },
+ "wells-fargo": {
+  "file": "assets/logos/wells-fargo.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www17.wellsfargomedia.com/assets/images/icons/icon-hires_192x192.png"
+ },
+ "whatsapp": {
+  "file": "assets/logos/whatsapp.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/whatsapp.svg"
+ },
+ "whatsapp-business": {
+  "file": "assets/logos/whatsapp-business.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/whatsapp.svg"
+ },
+ "windsurf": {
+  "file": "assets/logos/windsurf.png",
+  "tone": "dark",
+  "source": "lobe",
+  "url": "@lobehub/icons-static-svg icons/windsurf.svg"
+ },
+ "wise": {
+  "file": "assets/logos/wise.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://wise.com/public-resources/assets/icons/wise-personal/apple_touch_icon.png"
+ },
+ "wix": {
+  "file": "assets/logos/wix.png",
+  "tone": "dark",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/wix.svg"
+ },
+ "woocommerce": {
+  "file": "assets/logos/woocommerce.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/woocommerce.svg"
+ },
+ "wordpress-org": {
+  "file": "assets/logos/wordpress-org.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/wordpress.svg"
+ },
+ "x": {
+  "file": "assets/logos/x.png",
+  "tone": "dark",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/x.svg"
+ },
+ "xbox": {
+  "file": "assets/logos/xbox.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/xbox.svg"
+ },
+ "xbox-game-pass": {
+  "file": "assets/logos/xbox-game-pass.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/xbox-game-pass.svg"
+ },
+ "xcode": {
+  "file": "assets/logos/xcode.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/xcode.svg"
+ },
+ "xero": {
+  "file": "assets/logos/xero.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/xero.svg"
+ },
+ "youtube": {
+  "file": "assets/logos/youtube.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/youtube.svg"
+ },
+ "youtube-music": {
+  "file": "assets/logos/youtube-music.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/youtube-music.svg"
+ },
+ "youtube-premium": {
+  "file": "assets/logos/youtube-premium.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/youtube.svg"
+ },
+ "youtube-studio": {
+  "file": "assets/logos/youtube-studio.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/youtube.svg"
+ },
+ "zapier": {
+  "file": "assets/logos/zapier.png",
+  "tone": "dark",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/zapier.svg"
+ },
+ "zee5": {
+  "file": "assets/logos/zee5.png",
+  "tone": "dark",
+  "source": "site",
+  "url": "https://www.zee5.com/webapp-assets/images/apple-touch-icon-180x180.png?ver=7.2.1"
+ },
+ "zepto": {
+  "file": "assets/logos/zepto.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.google.com/s2/favicons?domain=www.zeptonow.com&sz=256"
+ },
+ "zoho": {
+  "file": "assets/logos/zoho.png",
+  "tone": "color",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/zoho.svg"
+ },
+ "zomato": {
+  "file": "assets/logos/zomato.png",
+  "tone": "color",
+  "source": "site",
+  "url": "https://www.google.com/s2/favicons?domain=www.zomato.com&sz=256"
+ }
+}
