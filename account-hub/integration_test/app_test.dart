@@ -45,7 +45,9 @@ void main() {
     await tester.tap(find.text('Explore').first);
     await settle(tester, 12);
     expect(await container.read(platformRepositoryProvider).watchMyWorld().first, isEmpty);
-    await tester.tap(find.widgetWithText(FilledButton, 'Add').first);
+    final add = find.widgetWithText(FilledButton, 'Add').first;
+    await tester.ensureVisible(add);
+    await tester.tap(add);
     await settle(tester, 12);
     final mine = await container.read(platformRepositoryProvider).watchMyWorld().first;
     expect(mine.length, 1, reason: 'exactly one platform added');
@@ -68,7 +70,10 @@ void main() {
     await tester.enterText(label, 'Studio');
     await tester.enterText(find.widgetWithText(TextFormField, 'Username / handle'), 'syhu-labs');
     await settle(tester, 2);
-    await tester.tap(find.widgetWithText(FilledButton, 'Save'));
+    final save = find.widgetWithText(FilledButton, 'Save');
+    await tester.ensureVisible(save);
+    await settle(tester, 2);
+    await tester.tap(save);
     await settle(tester, 12);
     final accounts = await container.read(accountRepositoryProvider).watchAll().first;
     expect(accounts.length, 1);
