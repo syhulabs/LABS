@@ -16,11 +16,22 @@ class PlatformLogo extends StatelessWidget {
   final double? radius;
 
   static Set<String>? _availableLogos;
+  static Map<String, String> _tones = const {};
 
   /// Called once at startup with the asset manifest so missing files never
   /// trigger image errors.
   static void setAvailableLogos(Iterable<String> assetKeys) {
-    _availableLogos = assetKeys.where((k) => k.startsWith('assets/logos/')).toSet();
+    _availableLogos = assetKeys.where((k) => k.startsWith('assets/logos/') && !k.endsWith('.json') && !k.endsWith('.md')).toSet();
+  }
+
+  /// Loads assets/logos/manifest.json (written by tool/fetch_logos.py): the
+  /// tone of each mark decides the tile behind it so dark marks stay visible
+  /// in dark mode and white marks stay visible in light mode.
+  static void setToneManifest(Map<String, dynamic> manifest) {
+    _tones = {
+      for (final e in manifest.entries)
+        if (e.value is Map && (e.value as Map)['tone'] is String) e.key: (e.value as Map)['tone'] as String,
+    };
   }
 
   String? get _logoPath {
@@ -47,7 +58,14 @@ class PlatformLogo extends StatelessWidget {
     Widget child;
     Color bg;
     if (logo != null) {
-      bg = colors.surfaceAlt;
+      final tone = _tones[platform.id];
+      final isDark = Theme.of(context).brightness == Brightness.dark;
+      // Dark monochrome marks sit on a light tile in dark mode; white marks on a dark tile in light mode.
+      bg = tone == 'dark' && isDark
+          ? const Color(0xFFF3F4F8)
+          : tone == 'light' && !isDark
+              ? const Color(0xFF1F2430)
+              : colors.surfaceAlt;
       final inner = logo.endsWith('.svg')
           ? SvgPicture.asset(logo, width: size * 0.62, height: size * 0.62)
           : Image.asset(logo, width: size * 0.62, height: size * 0.62, fit: BoxFit.contain, errorBuilder: (_, _, _) => _monogram(size));

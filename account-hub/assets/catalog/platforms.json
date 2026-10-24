@@ -1,5 +1,5 @@
 {
- "version": 1,
+ "version": 2,
  "generated": "2026-10-24",
  "categories": [
   {
@@ -15177,6 +15177,447 @@
    "vendor": "microsoft",
    "icon": null,
    "description": "Retired."
+  },
+  {
+   "id": "pi",
+   "name": "Pi",
+   "categories": [
+    "ai_assistants"
+   ],
+   "website": "https://pi.ai",
+   "type": "service",
+   "vendor": null,
+   "icon": null,
+   "description": "Inflection's personal AI."
+  },
+  {
+   "id": "qwen",
+   "name": "Qwen",
+   "categories": [
+    "ai_assistants",
+    "ai_dev"
+   ],
+   "website": "https://chat.qwen.ai",
+   "type": "service",
+   "vendor": null,
+   "icon": null,
+   "description": "Alibaba's Qwen chat and models."
+  },
+  {
+   "id": "kimi",
+   "name": "Kimi",
+   "categories": [
+    "ai_assistants"
+   ],
+   "website": "https://www.kimi.com",
+   "type": "service",
+   "vendor": null,
+   "icon": null,
+   "description": "Moonshot AI assistant."
+  },
+  {
+   "id": "claude-code",
+   "name": "Claude Code",
+   "categories": [
+    "ai_dev",
+    "developer"
+   ],
+   "website": "https://claude.com/product/claude-code",
+   "type": "service",
+   "vendor": null,
+   "icon": "claude",
+   "description": "Anthropic's agentic coding tool."
+  },
+  {
+   "id": "tabnine",
+   "name": "Tabnine",
+   "categories": [
+    "ai_dev",
+    "developer"
+   ],
+   "website": "https://www.tabnine.com",
+   "type": "service",
+   "vendor": null,
+   "icon": null,
+   "description": "AI code assistant."
+  },
+  {
+   "id": "dreamstudio",
+   "name": "DreamStudio",
+   "categories": [
+    "ai_creative"
+   ],
+   "website": "https://dreamstudio.ai",
+   "type": "service",
+   "vendor": null,
+   "icon": "stabilityai",
+   "description": "Stability AI's image studio."
+  },
+  {
+   "id": "magnific",
+   "name": "Magnific",
+   "categories": [
+    "ai_creative"
+   ],
+   "website": "https://magnific.ai",
+   "type": "service",
+   "vendor": null,
+   "icon": null,
+   "description": "AI upscaler and enhancer."
+  },
+  {
+   "id": "higgsfield",
+   "name": "Higgsfield",
+   "categories": [
+    "ai_creative",
+    "video"
+   ],
+   "website": "https://higgsfield.ai",
+   "type": "service",
+   "vendor": null,
+   "icon": null,
+   "description": "AI video generation."
+  },
+  {
+   "id": "aiva",
+   "name": "AIVA",
+   "categories": [
+    "ai_creative",
+    "artist"
+   ],
+   "website": "https://www.aiva.ai",
+   "type": "service",
+   "vendor": null,
+   "icon": null,
+   "description": "AI music composition."
+  },
+  {
+   "id": "soundraw",
+   "name": "Soundraw",
+   "categories": [
+    "ai_creative",
+    "artist"
+   ],
+   "website": "https://soundraw.io",
+   "type": "service",
+   "vendor": null,
+   "icon": null,
+   "description": "AI music generator."
+  },
+  {
+   "id": "mubert",
+   "name": "Mubert",
+   "categories": [
+    "ai_creative",
+    "artist"
+   ],
+   "website": "https://mubert.com",
+   "type": "service",
+   "vendor": null,
+   "icon": null,
+   "description": "AI generative music."
+  },
+  {
+   "id": "kits-ai",
+   "name": "Kits AI",
+   "categories": [
+    "ai_creative",
+    "artist"
+   ],
+   "website": "https://www.kits.ai",
+   "type": "service",
+   "vendor": null,
+   "icon": null,
+   "description": "AI voice models for music."
+  },
+  {
+   "id": "streamyard",
+   "name": "StreamYard",
+   "categories": [
+    "streaming",
+    "video"
+   ],
+   "website": "https://streamyard.com",
+   "type": "service",
+   "vendor": null,
+   "icon": null,
+   "description": "Browser live streaming studio."
+  },
+  {
+   "id": "homebrew",
+   "name": "Homebrew",
+   "categories": [
+    "developer"
+   ],
+   "website": "https://brew.sh",
+   "type": "service",
+   "vendor": null,
+   "icon": "homebrew",
+   "description": "macOS package manager."
+  },
+  {
+   "id": "dnsimple",
+   "name": "DNSimple",
+   "categories": [
+    "domains"
+   ],
+   "website": "https://dnsimple.com",
+   "type": "service",
+   "vendor": null,
+   "icon": null,
+   "description": "Domains and DNS."
+  },
+  {
+   "id": "google-contacts",
+   "name": "Google Contacts",
+   "categories": [
+    "productivity",
+    "google"
+   ],
+   "website": "https://contacts.google.com",
+   "type": "service",
+   "vendor": "google",
+   "icon": "google",
+   "description": "Contacts."
+  },
+  {
+   "id": "google-tasks",
+   "name": "Google Tasks",
+   "categories": [
+    "productivity",
+    "google"
+   ],
+   "website": "https://tasks.google.com",
+   "type": "service",
+   "vendor": "google",
+   "icon": "googletasks",
+   "description": "Tasks."
+  },
+  {
+   "id": "icloud-drive",
+   "name": "iCloud Drive",
+   "categories": [
+    "storage",
+    "apple"
+   ],
+   "website": "https://www.icloud.com/iclouddrive",
+   "type": "service",
+   "vendor": "apple",
+   "icon": "icloud",
+   "description": "Files in iCloud."
+  },
+  {
+   "id": "apple-calendar",
+   "name": "Apple Calendar",
+   "categories": [
+    "productivity",
+    "apple"
+   ],
+   "website": "https://www.icloud.com/calendar",
+   "type": "service",
+   "vendor": "apple",
+   "icon": "apple",
+   "description": "Calendar."
+  },
+  {
+   "id": "safari",
+   "name": "Safari",
+   "categories": [
+    "utilities",
+    "apple"
+   ],
+   "website": "https://www.apple.com/safari/",
+   "type": "app",
+   "vendor": "apple",
+   "icon": "safari",
+   "description": "Browser."
+  },
+  {
+   "id": "microsoft-word",
+   "name": "Microsoft Word",
+   "categories": [
+    "productivity",
+    "microsoft"
+   ],
+   "website": "https://www.microsoft.com/microsoft-365/word",
+   "type": "service",
+   "vendor": "microsoft",
+   "icon": null,
+   "description": "Documents."
+  },
+  {
+   "id": "microsoft-excel",
+   "name": "Microsoft Excel",
+   "categories": [
+    "productivity",
+    "microsoft"
+   ],
+   "website": "https://www.microsoft.com/microsoft-365/excel",
+   "type": "service",
+   "vendor": "microsoft",
+   "icon": null,
+   "description": "Spreadsheets."
+  },
+  {
+   "id": "microsoft-powerpoint",
+   "name": "Microsoft PowerPoint",
+   "categories": [
+    "productivity",
+    "microsoft"
+   ],
+   "website": "https://www.microsoft.com/microsoft-365/powerpoint",
+   "type": "service",
+   "vendor": "microsoft",
+   "icon": null,
+   "description": "Presentations."
+  },
+  {
+   "id": "moddb",
+   "name": "ModDB",
+   "categories": [
+    "gaming"
+   ],
+   "website": "https://www.moddb.com",
+   "type": "service",
+   "vendor": null,
+   "icon": null,
+   "description": "Mods and indie games."
+  },
+  {
+   "id": "amazon-kindle",
+   "name": "Amazon Kindle",
+   "categories": [
+    "news",
+    "shopping"
+   ],
+   "website": "https://www.amazon.com/kindle",
+   "type": "service",
+   "vendor": null,
+   "icon": "amazon",
+   "description": "Kindle books and devices."
+  },
+  {
+   "id": "storytel",
+   "name": "Storytel",
+   "categories": [
+    "streaming",
+    "news"
+   ],
+   "website": "https://www.storytel.com",
+   "type": "service",
+   "vendor": null,
+   "icon": null,
+   "description": "Audiobooks."
+  },
+  {
+   "id": "keeper",
+   "name": "Keeper",
+   "categories": [
+    "security"
+   ],
+   "website": "https://www.keepersecurity.com",
+   "type": "service",
+   "vendor": null,
+   "icon": null,
+   "description": "Password manager."
+  },
+  {
+   "id": "2fas",
+   "name": "2FAS",
+   "categories": [
+    "security"
+   ],
+   "website": "https://2fas.com",
+   "type": "service",
+   "vendor": null,
+   "icon": null,
+   "description": "Open-source 2FA app."
+  },
+  {
+   "id": "aegis-authenticator",
+   "name": "Aegis Authenticator",
+   "categories": [
+    "security"
+   ],
+   "website": "https://getaegis.app",
+   "type": "service",
+   "vendor": null,
+   "icon": null,
+   "description": "Open-source Android 2FA."
+  },
+  {
+   "id": "surfshark",
+   "name": "Surfshark",
+   "categories": [
+    "security"
+   ],
+   "website": "https://surfshark.com",
+   "type": "service",
+   "vendor": null,
+   "icon": null,
+   "description": "VPN."
+  },
+  {
+   "id": "cloudflare-warp",
+   "name": "Cloudflare WARP",
+   "categories": [
+    "security"
+   ],
+   "website": "https://one.one.one.one",
+   "type": "service",
+   "vendor": null,
+   "icon": "cloudflare",
+   "description": "1.1.1.1 with WARP."
+  },
+  {
+   "id": "qnap",
+   "name": "QNAP",
+   "categories": [
+    "storage"
+   ],
+   "website": "https://www.qnap.com",
+   "type": "service",
+   "vendor": null,
+   "icon": null,
+   "description": "NAS account."
+  },
+  {
+   "id": "freshsales",
+   "name": "Freshsales",
+   "categories": [
+    "business"
+   ],
+   "website": "https://www.freshworks.com/crm/sales/",
+   "type": "service",
+   "vendor": null,
+   "icon": null,
+   "description": "Freshworks CRM."
+  },
+  {
+   "id": "datacamp",
+   "name": "DataCamp",
+   "categories": [
+    "education",
+    "developer"
+   ],
+   "website": "https://www.datacamp.com",
+   "type": "service",
+   "vendor": null,
+   "icon": "datacamp",
+   "description": "Data skills courses."
+  },
+  {
+   "id": "hackerrank",
+   "name": "HackerRank",
+   "categories": [
+    "education",
+    "developer"
+   ],
+   "website": "https://www.hackerrank.com",
+   "type": "service",
+   "vendor": null,
+   "icon": "hackerrank",
+   "description": "Coding practice."
   }
  ]
 }

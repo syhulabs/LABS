@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -22,6 +24,10 @@ Future<void> bootstrap(ProviderContainer container, {bool notifications = true})
   } catch (_) {
     PlatformLogo.setAvailableLogos(const []);
   }
+  try {
+    final raw = await rootBundle.loadString('assets/logos/manifest.json');
+    PlatformLogo.setToneManifest(jsonDecode(raw) as Map<String, dynamic>);
+  } catch (_) {}
   try {
     final settings = container.read(settingsRepositoryProvider);
     final enabled = await settings.get<bool>(SettingsRepository.kLockEnabled) ?? false;

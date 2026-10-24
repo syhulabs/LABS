@@ -1220,6 +1220,43 @@ add("KakaoTalk", ["communication"], "https://www.kakaocorp.com", icon="kakaotalk
 add("Truecaller", ["communication","utilities"], "https://www.truecaller.com", desc="Caller ID.")
 add("Skype for Business", ["communication","microsoft"], "https://www.skype.com/business/", vendor="microsoft", desc="Retired.", id="skype-business")
 
+# ---------------- Additions requested for the logo library ----------------
+add("Pi", ["ai_assistants"], "https://pi.ai", desc="Inflection's personal AI.")
+add("Qwen", ["ai_assistants","ai_dev"], "https://chat.qwen.ai", desc="Alibaba's Qwen chat and models.")
+add("Kimi", ["ai_assistants"], "https://www.kimi.com", desc="Moonshot AI assistant.")
+add("Claude Code", ["ai_dev","developer"], "https://claude.com/product/claude-code", icon="claude", desc="Anthropic's agentic coding tool.")
+add("Tabnine", ["ai_dev","developer"], "https://www.tabnine.com", desc="AI code assistant.")
+add("DreamStudio", ["ai_creative"], "https://dreamstudio.ai", icon="stabilityai", desc="Stability AI's image studio.")
+add("Magnific", ["ai_creative"], "https://magnific.ai", desc="AI upscaler and enhancer.")
+add("Higgsfield", ["ai_creative","video"], "https://higgsfield.ai", desc="AI video generation.")
+add("AIVA", ["ai_creative","artist"], "https://www.aiva.ai", desc="AI music composition.")
+add("Soundraw", ["ai_creative","artist"], "https://soundraw.io", desc="AI music generator.")
+add("Mubert", ["ai_creative","artist"], "https://mubert.com", desc="AI generative music.")
+add("Kits AI", ["ai_creative","artist"], "https://www.kits.ai", desc="AI voice models for music.")
+add("StreamYard", ["streaming","video"], "https://streamyard.com", desc="Browser live streaming studio.")
+add("Homebrew", ["developer"], "https://brew.sh", icon="homebrew", desc="macOS package manager.")
+add("DNSimple", ["domains"], "https://dnsimple.com", desc="Domains and DNS.")
+add("Google Contacts", ["productivity","google"], "https://contacts.google.com", vendor="google", icon="google", desc="Contacts.")
+add("Google Tasks", ["productivity","google"], "https://tasks.google.com", vendor="google", icon="googletasks", desc="Tasks.")
+add("iCloud Drive", ["storage","apple"], "https://www.icloud.com/iclouddrive", vendor="apple", icon="icloud", desc="Files in iCloud.")
+add("Apple Calendar", ["productivity","apple"], "https://www.icloud.com/calendar", vendor="apple", icon="apple", desc="Calendar.")
+add("Safari", ["utilities","apple"], "https://www.apple.com/safari/", vendor="apple", typ="app", icon="safari", desc="Browser.")
+add("Microsoft Word", ["productivity","microsoft"], "https://www.microsoft.com/microsoft-365/word", vendor="microsoft", desc="Documents.")
+add("Microsoft Excel", ["productivity","microsoft"], "https://www.microsoft.com/microsoft-365/excel", vendor="microsoft", desc="Spreadsheets.")
+add("Microsoft PowerPoint", ["productivity","microsoft"], "https://www.microsoft.com/microsoft-365/powerpoint", vendor="microsoft", desc="Presentations.")
+add("ModDB", ["gaming"], "https://www.moddb.com", desc="Mods and indie games.")
+add("Amazon Kindle", ["news","shopping"], "https://www.amazon.com/kindle", icon="amazon", desc="Kindle books and devices.")
+add("Storytel", ["streaming","news"], "https://www.storytel.com", desc="Audiobooks.")
+add("Keeper", ["security"], "https://www.keepersecurity.com", desc="Password manager.")
+add("2FAS", ["security"], "https://2fas.com", desc="Open-source 2FA app.")
+add("Aegis Authenticator", ["security"], "https://getaegis.app", desc="Open-source Android 2FA.")
+add("Surfshark", ["security"], "https://surfshark.com", desc="VPN.")
+add("Cloudflare WARP", ["security"], "https://one.one.one.one", icon="cloudflare", desc="1.1.1.1 with WARP.")
+add("QNAP", ["storage"], "https://www.qnap.com", desc="NAS account.")
+add("Freshsales", ["business"], "https://www.freshworks.com/crm/sales/", desc="Freshworks CRM.")
+add("DataCamp", ["education","developer"], "https://www.datacamp.com", icon="datacamp", desc="Data skills courses.")
+add("HackerRank", ["education","developer"], "https://www.hackerrank.com", icon="hackerrank", desc="Coding practice.")
+
 # dedupe & validate
 P = [p for p in P if p]
 seen = {}
@@ -1230,7 +1267,7 @@ for p in P:
     for c in p["categories"]:
         assert c in CATEGORIES, (p["id"], c)
 
-out = {"version": 1, "generated": "2026-10-24", "categories": [{"id": k, "label": v} for k, v in CATEGORIES.items()], "platforms": P}
+out = {"version": 2, "generated": "2026-10-24", "categories": [{"id": k, "label": v} for k, v in CATEGORIES.items()], "platforms": P}
 root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 dst = os.path.join(root, "assets", "catalog", "platforms.json")
 with open(dst, "w") as f:
