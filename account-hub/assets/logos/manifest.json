@@ -8,8 +8,10 @@
  "2fas": {
   "file": "assets/logos/2fas.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://2fas.com/assets/apple-touch-icon-1024x1024.png"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2f/11/39/2f1139ea-24a6-199a-12fb-05a536a1c468/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "2FA Authenticator (2FAS)",
+  "seller": "Two Factor Authentication Service, Inc."
  },
  "ableton": {
   "file": "assets/logos/ableton.png",
@@ -74,8 +76,10 @@
  "aiva": {
   "file": "assets/logos/aiva.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://aiva.ai/assets/img/favicon.ico"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5d/67/39/5d67398b-23c5-c21a-e2b6-2bf88fdc3850/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+  "app": "Aiva Assistant",
+  "seller": "Aiva, Inc."
  },
  "ajio": {
   "file": "assets/logos/ajio.png",
@@ -309,6 +313,14 @@
   "source": "dash",
   "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/aws.svg"
  },
+ "axis-bank": {
+  "file": "assets/logos/axis-bank.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/07/2d/94/072d94a2-f3f0-1217-3d02-e42f09d19ca0/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/512x512bb.jpg",
+  "app": "Axis Bank Mobile Banking",
+  "seller": "Axis Bank Limited"
+ },
  "azure-devops": {
   "file": "assets/logos/azure-devops.png",
   "tone": "color",
@@ -379,6 +391,14 @@
   "app": "BHIM Bharat's Own Payments App",
   "seller": "National Payments Corporation of India"
  },
+ "bigbasket": {
+  "file": "assets/logos/bigbasket.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/66/08/ba/6608badc-e850-8b22-61bc-597ef7aaf2f5/AppIcon-0-0-1x_U007emarketing-0-9-0-sRGB-85-220.png/512x512bb.jpg",
+  "app": "bigbasket: Groceries and more",
+  "seller": "SUPERMARKET GROCERY SUPPLIES PRIVATE LIMITED"
+ },
  "bitbucket": {
   "file": "assets/logos/bitbucket.png",
   "tone": "color",
@@ -420,8 +440,10 @@
  "bmi": {
   "file": "assets/logos/bmi.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.google.com/s2/favicons?domain=www.bmi.com&sz=256"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ca/2b/4a/ca2b4ad0-0e15-3c4f-9477-914242d4ad13/appicon-1x_U007emarketing-0-8-0-85-220-0.png/512x512bb.jpg",
+  "app": "BMI Online Services",
+  "seller": "Broadcast Music Inc."
  },
  "bolt-new": {
   "file": "assets/logos/bolt-new.png",
@@ -480,8 +502,10 @@
  "cashfree-payments": {
   "file": "assets/logos/cashfree-payments.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://cdn.prod.website-files.com/6a60525e5f4d2e4f1faed952/6a9071adf2e50b884a7b33d0_Icon.png"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4e/5a/6b/4e5a6b84-082c-379a-67cc-3597096fc7ce/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+  "app": "Cashfree Payments Business App",
+  "seller": "CASHFREE PAYMENTS INDIA PRIVATE LIMITED"
  },
  "cd-baby": {
   "file": "assets/logos/cd-baby.png",
@@ -593,6 +617,14 @@
   "source": "gil",
   "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/coursera.svg"
  },
+ "cred": {
+  "file": "assets/logos/cred.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/13/c5/cf/13c5cf76-2353-36a7-6621-9612bf8f7ee3/AppIcon-0-0-1x_U007emarketing-0-11-0-sRGB-85-220.png/512x512bb.jpg",
+  "app": "CRED: Credit Cards, Bills, UPI",
+  "seller": "Dreamplug Technologies Private Limited"
+ },
  "crunchyroll": {
   "file": "assets/logos/crunchyroll.png",
   "tone": "color",
@@ -690,8 +722,10 @@
  "distrokid": {
   "file": "assets/logos/distrokid.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://distrokid.com/apple-touch-icon.png"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/08/ad/fe/08adfe60-dd04-cbcb-3616-f9e15dbd0724/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+  "app": "DistroKid",
+  "seller": "DistroKid Holdings, LLC"
  },
  "ditto-music": {
   "file": "assets/logos/ditto-music.png",
@@ -859,15 +893,19 @@
  },
  "freecodecamp": {
   "file": "assets/logos/freecodecamp.png",
-  "tone": "dark",
-  "source": "site",
-  "url": "https://www.google.com/s2/favicons?domain=www.freecodecamp.org&sz=256"
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9d/72/46/9d724677-44b7-ea94-cfba-2a0e032d5021/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/512x512bb.jpg",
+  "app": "freeCodeCamp",
+  "seller": "Free Code Camp, Inc."
  },
  "freepik": {
   "file": "assets/logos/freepik.png",
-  "tone": "dark",
-  "source": "site",
-  "url": "https://www.google.com/s2/favicons?domain=www.freepik.com&sz=256"
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8d/32/d0/8d32d010-2216-5155-8ee1-dd863bce9559/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+  "app": "Magnific - AI Video & Image",
+  "seller": "Freepik Company S.L.U."
  },
  "freshbooks": {
   "file": "assets/logos/freshbooks.png",
@@ -878,8 +916,10 @@
  "freshsales": {
   "file": "assets/logos/freshsales.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.google.com/s2/favicons?domain=www.freshworks.com&sz=256"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c9/4e/d1/c94ed1f1-c2a2-a0ad-6635-3f25c13a12de/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+  "app": "Freshsales",
+  "seller": "FRESHWORKS TECHNOLOGIES PRIVATE LIMITED"
  },
  "gamemaker": {
   "file": "assets/logos/gamemaker.png",
@@ -984,6 +1024,14 @@
   "tone": "color",
   "source": "dash",
   "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-analytics.svg"
+ },
+ "google-authenticator": {
+  "file": "assets/logos/google-authenticator.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/70/2b/df/702bdfd3-b008-3dd0-af69-da2c920847a2/app_icon-0-0-1x_U007epad-0-0-0-1-0-0-0-85-220.png/512x512bb.jpg",
+  "app": "Google Authenticator",
+  "seller": "Google LLC"
  },
  "google-calendar": {
   "file": "assets/logos/google-calendar.png",
@@ -1190,8 +1238,10 @@
  "icici-bank": {
   "file": "assets/logos/icici-bank.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.icicibank.com/apple-touch-icon.png"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/1e/c5/1d/1ec51d3c-494c-0961-f03e-e2aa414e2ca8/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "iMobile: Loan, Cards & Banking",
+  "seller": "ICICI Bank Ltd"
  },
  "icloud": {
   "file": "assets/logos/icloud.png",
@@ -1278,8 +1328,10 @@
  "jiohotstar": {
   "file": "assets/logos/jiohotstar.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.google.com/s2/favicons?domain=www.hotstar.com&sz=256"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/84/c1/89/84c18952-9dec-e24b-3e31-284f553e37b3/AppIcon-IN-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "JioHotstar",
+  "seller": "JIOSTAR INDIA PRIVATE LIMITED"
  },
  "jira": {
   "file": "assets/logos/jira.png",
@@ -1351,6 +1403,14 @@
   "app": "LANDR - For Music Makers",
   "seller": "LANDR Audio Inc."
  },
+ "later": {
+  "file": "assets/logos/later.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1b/74/57/1b745754-58d4-fc08-908d-47ce24e1484d/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-85-220.png/512x512bb.jpg",
+  "app": "Later: Social Media Scheduler",
+  "seller": "Victory Square Media Inc."
+ },
  "leetcode": {
   "file": "assets/logos/leetcode.png",
   "tone": "color",
@@ -1394,8 +1454,10 @@
  "linktree": {
   "file": "assets/logos/linktree.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://linktr.ee/_marketing/images/creators/link-in-bio-tool-everything-you-are-in-one-simple-link-f22b2ecd.png"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8d/e0/5c/8de05cc1-a7b0-ce7c-26b5-d89437c5b8fd/linktree-0-0-1x_U007ephone-0-1-sRGB-85-220.png/512x512bb.jpg",
+  "app": "Linktree: Link in Bio Creator",
+  "seller": "Linktree Pty Ltd"
  },
  "lm-studio": {
   "file": "assets/logos/lm-studio.png",
@@ -1438,8 +1500,10 @@
  "makemytrip": {
   "file": "assets/logos/makemytrip.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.google.com/s2/favicons?domain=www.makemytrip.com&sz=256"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c1/88/55/c1885534-165d-0c98-7aad-0a0ff0ac74aa/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg",
+  "app": "MakeMyTrip Flight, Hotel, Bus",
+  "seller": "MakeMyTrip India Pvt. Ltd."
  },
  "mastercard": {
   "file": "assets/logos/mastercard.png",
@@ -1520,8 +1584,10 @@
  "microsoft-entra-id": {
   "file": "assets/logos/microsoft-entra-id.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.google.com/s2/favicons?domain=entra.microsoft.com&sz=256"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/14/75/48/14754808-d06b-705b-0e4c-d2bd6865d697/AppIcon-0-1x_U007emarketing-0-11-0-sRGB-85-220-0.png/512x512bb.jpg",
+  "app": "Microsoft Authenticator",
+  "seller": "Microsoft Corporation"
  },
  "microsoft-excel": {
   "file": "assets/logos/microsoft-excel.png",
@@ -1625,9 +1691,11 @@
  },
  "myntra": {
   "file": "assets/logos/myntra.png",
-  "tone": "light",
-  "source": "site",
-  "url": "https://www.google.com/s2/favicons?domain=www.myntra.com&sz=256"
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7a/fd/a9/7afda981-eb9d-741d-aeba-f0afea40e1da/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Myntra - Fashion Shopping App",
+  "seller": "Myntra Designs Private Limited"
  },
  "n8n": {
   "file": "assets/logos/n8n.png",
@@ -1936,8 +2004,10 @@
  "razorpay": {
   "file": "assets/logos/razorpay.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://razorpay.com/apple-touch-icon.png"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d2/a0/92/d2a092ef-0e14-06c2-c1d2-d4942bc65657/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/512x512bb.jpg",
+  "app": "Razorpay - Accept Payments Now",
+  "seller": "Razorpay Software Private Limited"
  },
  "recraft": {
   "file": "assets/logos/recraft.png",
@@ -2070,8 +2140,10 @@
  "skillshare": {
   "file": "assets/logos/skillshare.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.skillshare.com/apple-touch-icon.png"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/84/0a/a5/840aa54c-fb2f-49b3-c8da-4faf6a4c57d2/AppIcon-0-0-1x_U007emarketing-0-8-0-0-85-220.png/512x512bb.jpg",
+  "app": "Skillshare: Creativity Classes",
+  "seller": "Skillshare, Inc."
  },
  "slack": {
   "file": "assets/logos/slack.png",
@@ -2240,8 +2312,10 @@
  "sync-com": {
   "file": "assets/logos/sync-com.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.sync.com/hubfs/assets-meta/apple-touch-icon.png"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5a/3d/f4/5a3df453-b911-cfc4-46f3-98c5f80725f6/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+  "app": "Sync - Secure cloud storage",
+  "seller": "Sync.com Inc."
  },
  "synology": {
   "file": "assets/logos/synology.png",
@@ -2365,9 +2439,11 @@
  },
  "unitedmasters": {
   "file": "assets/logos/unitedmasters.png",
-  "tone": "dark",
-  "source": "site",
-  "url": "https://v.fastcdn.co/u/2676f833/63414244-0-favicon.svg"
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ea/ce/1f/eace1ff4-342c-82dd-a1d0-09b091049217/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/512x512bb.jpg",
+  "app": "UnitedMasters: Release Music",
+  "seller": "Translation United LLC"
  },
  "unity": {
   "file": "assets/logos/unity.png",
@@ -2408,8 +2484,10 @@
  "vidiq": {
   "file": "assets/logos/vidiq.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://vidiq.com/favicons/android-icon-192x192.png"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2a/21/63/2a216336-67b4-595d-e4d2-033ca0747d9e/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/512x512bb.jpg",
+  "app": "vidIQ for YouTube & Instagram",
+  "seller": "vidIQ, Inc"
  },
  "vimeo": {
   "file": "assets/logos/vimeo.png",
