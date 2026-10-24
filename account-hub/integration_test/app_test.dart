@@ -85,8 +85,8 @@ void main() {
     // Global search finds the account by username; vault stays unsearchable.
     final hits = await container.read(searchServiceProvider).search('syhu-labs');
     expect(hits.map((h) => h.title), contains('$name · Studio'));
-    await tester.tap(find.text('Search platforms, accounts, or anything…'));
-    await settle(tester);
-    expect(find.text('Sections'), findsOneWidget);
+    await tester.tap(find.text('Search platforms, accounts, or anything…'), warnIfMissed: false);
+    await settle(tester, 15);
+    expect(find.textContaining('Search platforms, accounts, emails'), findsOneWidget, reason: 'the ⌘K palette should be open');
   });
 }

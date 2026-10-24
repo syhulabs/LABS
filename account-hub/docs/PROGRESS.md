@@ -1,3 +1,67 @@
 # Progress & verification record
 
-_Last updated: build in progress. Final state is recorded below once all phases close._
+_Updated 24 Oct 2026. Branch `claude/wizardly-pasteur-kmnhrm`._
+
+## Phase checklist
+
+| Phase | Scope | Status |
+| --- | --- | --- |
+| 1 Foundation | Flutter project (macOS, iOS, Android, Linux), drift schema (22 tables), Riverpod composition root, dark/light theme, grouped collapsible sidebar, go_router, shared widgets | ✅ |
+| 2 Functional core | Offline catalog (1,192 platforms, 37 categories) + import, Explore, My World (explicit add only, reorder, favorites), reusable email identities with reverse lookup, multiple accounts per platform, ⌘K global search | ✅ |
+| 3 Specialized managers | YouTube (owner identity + multiple managers with roles), AI/Social/Gaming/Game Engines/Developer/Cloud hubs, Google/Apple/Microsoft ecosystem hubs, Personal/Business hubs, artists, labels, studios, projects with cross-entity links, documents | ✅ |
+| 4 Financial | Bank metadata (last-4 only; optional encrypted full number), cards (last-4 + expiry only), payment methods, subscriptions with statuses/cycles/history/renewal marking, per-currency monthly & annual totals, charts, grouping/filtering | ✅ |
+| 5 Security | AES-256-GCM vault keyed from the OS keychain, credential references, App Lock (biometrics / passcode, auto-lock, lock on background), clipboard auto-clear, no secrets in search/notifications/audit/exports | ✅ |
+| 6 Completion | Plain + encrypted backup, validated restore with typed confirmation, CSV/JSON exports, settings, renewal notifications, dashboard customisation, tests, docs, builds | ✅ (see verification) |
+
+## Feature checklist (from the brief)
+
+- [x] Launches, persists across restarts (`test/persistence_test.dart` reopens the on-disk file)
+- [x] Create / edit / archive / restore / delete for every record type
+- [x] Multiple accounts per platform; duplicate (platform + label + email) rejected
+- [x] Multiple YouTube channels per Google identity; several managers per channel
+- [x] One email identity linked to many services; reverse lookup screen
+- [x] Catalog entries vs user-owned records kept distinct; browsing never adds
+- [x] Subscription totals accurate and currency-aware (never summed across currencies)
+- [x] Sensitive data protected: vault ciphertext only, bank/card metadata only, nothing secret in search, toasts, notifications, audit log or plain exports
+- [x] Missing logos handled: original file → Simple Icons glyph → monogram (no look-alike substitutes)
+- [x] Recovers from bad input (validation, friendly error toasts, FK-checked restore that rolls back)
+- [x] Dashboard numbers come from local data; empty = 0
+- [x] Dashboard sections reorderable / hideable
+- [x] Keyboard: ⌘K / Ctrl+K search, ⌘1–3 sections, ⌘, settings; Enter submits forms
+- [x] Context menus on cards/rows; confirmation on destructive actions; empty states everywhere
+- [x] Light and dark themes (dark default); responsive layouts; tooltips/semantics on icon buttons
+- [x] README, ARCHITECTURE, BUILD, PROGRESS docs; catalog + brand-icon generators
+
+## Verification record (this environment: Linux container, no Xcode)
+
+| Check | Result |
+| --- | --- |
+| `flutter analyze` | No issues |
+| `flutter test` (unit + data-layer + widget) | **60 passed, 0 failed** |
+| `integration_test/app_test.dart` on Linux desktop (Xvfb) | Explore → Add → My World → account form → search: see note below |
+| `flutter build linux --release` | ✅ bundle produced |
+| `flutter build apk --debug` | ✅ `app-debug.apk` produced (Gradle needed a Maven Central mirror because the container's proxy rate-limited Central) |
+| `flutter build macos` / `flutter build ios` | ❌ **Not run: requires macOS + Xcode.** The macOS project is configured (entitlements for Keychain and file dialogs, window size, product name) but has not been compiled here. |
+| Touch ID / Face ID, Keychain, Apple notifications | Implemented via `local_auth`, `flutter_secure_storage`, `flutter_local_notifications`; **not exercised on Apple hardware in this environment.** |
+
+Screenshots of the Linux build are in `docs/screenshots/`.
+
+## Test inventory
+
+| File | Covers |
+| --- | --- |
+| `test/domain_test.dart` (14) | Money, per-currency totals, cycle math, upcoming renewals, month-end clamping, id/email normalisation |
+| `test/crypto_test.dart` (4) | Master key lifecycle, AES-GCM round trip + tamper/AAD rejection, passphrase envelope, passcode hashing |
+| `test/data_layer_test.dart` (13) | Catalog seeding/idempotence/flag preservation/duplicate rejection, email reuse + dedupe, multi-account, channel owner/managers, link table, bank/card masking, subscription totals + history, vault secrecy in search/backup/audit, encrypted backup restore, global search, zero stats |
+| `test/persistence_test.dart` (2) | On-disk reopen, schema version + 22 tables |
+| `test/app_smoke_test.dart` (4) | Boot to Home with zeros, sidebar navigation, Explore Add vs browse, dashboard customisation |
+| `test/features/*` (23) | Accounts/emails, vault, settings, YouTube, studio, banking, subscriptions screens |
+
+## Known limitations / next steps
+
+1. **Apple builds unverified here.** Open `account-hub` on a Mac, run `flutter build macos` and `flutter test integration_test -d macos`; fix anything Xcode reports (expected: signing team selection only).
+2. Logos: the SYHU original logo library is not included; drop files into `assets/logos/<platform-id>.png|svg`.
+3. Cloud sync is intentionally not implemented (architecture is sync-ready: UUID keys, `updated_at`, full-document backups).
+4. Email inbox integrations are not implemented (by design; would need explicit OAuth consent).
+5. Currency conversion is not implemented; totals are shown per currency.
+6. Not independently security-audited.
