@@ -10,6 +10,7 @@ import 'package:syhu_account_hub/app/bootstrap.dart';
 import 'package:syhu_account_hub/app/providers.dart';
 import 'package:syhu_account_hub/data/db/database_connection.dart';
 import 'package:syhu_account_hub/data/secure/key_store.dart';
+import 'package:syhu_account_hub/shared/widgets/app_card.dart';
 
 Future<void> settle(WidgetTester t, [int frames = 8]) async {
   for (var i = 0; i < frames; i++) {
@@ -46,7 +47,7 @@ void main() {
     await tester.enterText(find.byType(TextField).first, 'GitHub');
     await settle(tester, 12);
     expect(find.text('GitHub'), findsWidgets, reason: 'Explore should list GitHub after searching');
-    final addButton = find.descendant(of: find.ancestor(of: find.text('GitHub').first, matching: find.byType(Card).or(find.byType(InkWell))).first, matching: find.widgetWithText(FilledButton, 'Add'));
+    final addButton = find.descendant(of: find.ancestor(of: find.text('GitHub').first, matching: find.byType(AppCard)).first, matching: find.widgetWithText(FilledButton, 'Add'));
     await tester.ensureVisible(find.text('GitHub').first);
     await tester.tap(addButton.evaluate().isEmpty ? find.widgetWithText(FilledButton, 'Add').first : addButton.first);
     await settle(tester, 12);

@@ -33,14 +33,22 @@ void main() {
       await tester.tap(find.widgetWithText(FilledButton, 'Encrypt & save'));
       await Future<void>.delayed(const Duration(milliseconds: 500));
     });
+    // ignore: avoid_print
+    print('STEP save done');
     final items = await data(tester, () => c.read(vaultRepositoryProvider).watchAll().first);
+    // ignore: avoid_print
+    print('STEP items ${items.length}');
     expect(items.length, 1);
     expect(items.single.title, 'OpenAI key');
     expect(String.fromCharCodes(items.single.ciphertext).contains('TOPSECRET'), isFalse);
     final secret = await data(tester, () => c.read(vaultRepositoryProvider).reveal(items.single.id));
     expect(secret.value, 'sk-TOPSECRET-999');
+    // ignore: avoid_print
+    print('STEP revealed');
 
     await pumpScreen(tester, c, const VaultScreen());
+    // ignore: avoid_print
+    print('STEP repumped');
     await settle(tester);
     final card = find.descendant(of: find.byType(AppCard), matching: find.text('OpenAI key'));
     expect(card, findsOneWidget);
@@ -50,6 +58,8 @@ void main() {
     await tester.tap(card);
     await settle(tester);
     expect(find.text('Reveal secret'), findsOneWidget);
+    // ignore: avoid_print
+    print('STEP end');
     expect(find.textContaining('TOPSECRET'), findsNothing);
   });
 
