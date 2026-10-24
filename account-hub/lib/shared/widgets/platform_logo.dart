@@ -17,6 +17,7 @@ class PlatformLogo extends StatelessWidget {
 
   static Set<String>? _availableLogos;
   static Map<String, String> _tones = const {};
+  static Set<String> _squares = const {};
 
   /// Called once at startup with the asset manifest so missing files never
   /// trigger image errors.
@@ -31,6 +32,10 @@ class PlatformLogo extends StatelessWidget {
     _tones = {
       for (final e in manifest.entries)
         if (e.value is Map && (e.value as Map)['tone'] is String) e.key: (e.value as Map)['tone'] as String,
+    };
+    _squares = {
+      for (final e in manifest.entries)
+        if (e.value is Map && (e.value as Map)['shape'] == 'square') e.key,
     };
   }
 
@@ -66,9 +71,11 @@ class PlatformLogo extends StatelessWidget {
           : tone == 'light' && !isDark
               ? const Color(0xFF1F2430)
               : colors.surfaceAlt;
+      // Full-bleed app-style icons fill the tile; standalone marks get breathing room.
+      final scale = _squares.contains(platform.id) ? 1.0 : 0.62;
       final inner = logo.endsWith('.svg')
-          ? SvgPicture.asset(logo, width: size * 0.62, height: size * 0.62)
-          : Image.asset(logo, width: size * 0.62, height: size * 0.62, fit: BoxFit.contain, errorBuilder: (_, _, _) => _monogram(size));
+          ? SvgPicture.asset(logo, width: size * scale, height: size * scale)
+          : Image.asset(logo, width: size * scale, height: size * scale, fit: BoxFit.contain, filterQuality: FilterQuality.medium, errorBuilder: (_, _, _) => _monogram(size));
       child = Center(child: inner);
     } else if (glyph != null) {
       final brand = glyph.color;
