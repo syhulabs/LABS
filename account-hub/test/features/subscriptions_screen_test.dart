@@ -80,7 +80,7 @@ void main() {
     expect(find.text('Adobe Creative Cloud'), findsWidgets);
     expect(find.textContaining('Renewed · next 2026-12-01'), findsOneWidget);
     expect(find.text('Switched to annual billing next year'), findsOneWidget);
-    expect(find.textContaining('Created ·'), findsOneWidget);
+    expect(find.textContaining('Created · ₹1,675.00'), findsOneWidget);
     expect(find.text('3 events'), findsOneWidget);
     expect(find.text('Mark renewed'), findsOneWidget);
     expect(find.text('Add note'), findsOneWidget);

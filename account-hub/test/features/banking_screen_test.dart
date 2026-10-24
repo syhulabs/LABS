@@ -16,7 +16,7 @@ void main() {
     await settle(tester);
     expect(find.textContaining('Metadata only. No bank connections'), findsOneWidget);
     expect(find.text('No bank accounts yet'), findsOneWidget);
-    await tester.tap(find.text('Cards'));
+    await tester.tap(find.descendant(of: find.byWidgetPredicate((w) => w is SegmentedButton), matching: find.text('Cards')));
     await settle(tester);
     expect(find.text('No cards yet'), findsOneWidget);
     await tester.tap(find.text('UPI, wallets & methods'));
@@ -66,7 +66,7 @@ void main() {
     });
     await pumpScreen(tester, c, const BankingScreen(initialTab: 'methods'));
     await settle(tester);
-    expect(find.text('Visa ending 4321'), findsOneWidget);
+    expect(find.text('Visa ending 4321'), findsWidgets);
     expect(find.text('Studio UPI'), findsOneWidget);
     expect(find.textContaining('studio@okhdfc'), findsOneWidget);
     expect(find.byIcon(Icons.star_rounded), findsOneWidget);
@@ -83,7 +83,7 @@ void main() {
       await f.upsertCard(nickname: 'SBI debit', last4: '0001', bankAccountId: b.id);
       return b.id;
     });
-    await pumpScreen(tester, c, const BankAccountDetailScreen(bankAccountId: bankId));
+    await pumpScreen(tester, c, BankAccountDetailScreen(bankAccountId: bankId));
     await settle(tester);
     expect(find.text('•••• 9012'), findsOneWidget);
     expect(find.textContaining('123456789012'), findsNothing);

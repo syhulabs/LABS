@@ -167,8 +167,8 @@ class _Legend extends StatelessWidget {
   Widget build(BuildContext context) => Row(children: [
         Container(width: 10, height: 10, decoration: BoxDecoration(color: color, shape: BoxShape.circle)),
         const SizedBox(width: 8),
-        Text(label, style: context.text.bodyMedium),
-        const Spacer(),
-        Text(value, style: context.text.bodyMedium?.copyWith(fontWeight: FontWeight.w600)),
+        Expanded(child: Text(label, style: context.text.bodyMedium, maxLines: 1, overflow: TextOverflow.ellipsis)),
+        const SizedBox(width: 8),
+        Flexible(child: FittedBox(fit: BoxFit.scaleDown, child: Text(value, style: context.text.bodyMedium?.copyWith(fontWeight: FontWeight.w600)))),
       ]);
 }
