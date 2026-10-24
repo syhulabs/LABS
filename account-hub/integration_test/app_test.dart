@@ -44,10 +44,14 @@ void main() {
     await tester.tap(find.text('Explore').first);
     await settle(tester);
     await tester.enterText(find.byType(TextField).first, 'GitHub');
-    await settle(tester);
-    await tester.tap(find.widgetWithText(FilledButton, 'Add').first);
-    await settle(tester);
-    expect(find.text('In My World'), findsWidgets);
+    await settle(tester, 12);
+    expect(find.text('GitHub'), findsWidgets, reason: 'Explore should list GitHub after searching');
+    final addButton = find.descendant(of: find.ancestor(of: find.text('GitHub').first, matching: find.byType(Card).or(find.byType(InkWell))).first, matching: find.widgetWithText(FilledButton, 'Add'));
+    await tester.ensureVisible(find.text('GitHub').first);
+    await tester.tap(addButton.evaluate().isEmpty ? find.widgetWithText(FilledButton, 'Add').first : addButton.first);
+    await settle(tester, 12);
+    final mine = await container.read(platformRepositoryProvider).watchMyWorld().first;
+    expect(mine.map((p) => p.name), contains('GitHub'), reason: 'Add must put GitHub in My World (got: ${mine.map((p) => p.name).toList()})');
 
     await tester.tap(find.text('My World').first);
     await settle(tester);
