@@ -60,3 +60,9 @@ Settings → Catalog → Import. The file must be JSON with the same shape as `a
 { "version": 2, "categories": [{"id":"ai_assistants","label":"AI Assistants"}],
   "platforms": [{"id":"my-tool","name":"My Tool","categories":["ai_assistants"],"website":"https://…","type":"service","icon":null,"description":"…"}] }
 ```
+
+## Testing notes
+
+- `flutter test` runs unit tests (`test/domain_test.dart`, `test/crypto_test.dart`), data-layer integration tests on real SQLite (`test/data_layer_test.dart`, `test/persistence_test.dart`), app smoke tests and per-feature widget tests (`test/features/`).
+- Widget tests use `test/support/pump_app.dart`. Drift queries and file I/O never complete inside the widget-test fake-async zone, so build the container with `tester.runAsync(createTestContainer)` and run repository calls through `data(tester, () => ...)`. Use `settle()` rather than `pumpAndSettle()` (the dashboard clock never settles). UI actions that trigger AES-GCM (saving a vault item) must also run inside `runAsync`.
+- `integration_test/app_test.dart` drives the real app (on-disk database, keychain key store) on a device or desktop: `flutter test integration_test -d macos` (or `-d linux` under `xvfb-run` on a headless box).
