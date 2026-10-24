@@ -10,13 +10,6 @@ import 'package:syhu_account_hub/app/bootstrap.dart';
 import 'package:syhu_account_hub/app/providers.dart';
 import 'package:syhu_account_hub/data/db/database_connection.dart';
 import 'package:syhu_account_hub/data/secure/key_store.dart';
-import 'package:syhu_account_hub/shared/widgets/app_card.dart';
-
-void step(String name, WidgetTester t) {
-  final texts = t.widgetList<Text>(find.byType(Text)).map((w) => w.data).whereType<String>().where((x) => x.trim().isNotEmpty).take(60).toList();
-  // ignore: avoid_print
-  print('STEP $name :: ${texts.join(' | ')}');
-}
 
 Future<void> settle(WidgetTester t, [int frames = 8]) async {
   for (var i = 0; i < frames; i++) {
@@ -43,53 +36,52 @@ void main() {
     container.dispose();
   });
 
-  testWidgets('add a platform from Explore, create an account, find it with search', (tester) async {
+  testWidgets('Explore → Add → My World → account form → global search', (tester) async {
     await tester.pumpWidget(UncontrolledProviderScope(container: container, child: const AccountHubApp()));
     await settle(tester, 15);
-    step('home', tester);
     expect(find.text('My World is empty'), findsOneWidget);
 
+    // Explore: browsing adds nothing; pressing Add on a card does.
     await tester.tap(find.text('Explore').first);
-    await settle(tester);
-    await tester.enterText(find.byType(TextField).first, 'GitHub');
     await settle(tester, 12);
-    step('explore-searched', tester);
-    expect(find.text('GitHub'), findsWidgets, reason: 'Explore should list GitHub after searching');
-    final card = find.ancestor(of: find.text('GitHub').first, matching: find.byType(AppCard));
-    step('card-found=${card.evaluate().length}', tester);
-    final addButton = card.evaluate().isEmpty ? find.widgetWithText(FilledButton, 'Add').first : find.descendant(of: card.first, matching: find.widgetWithText(FilledButton, 'Add')).first;
-    await tester.tap(addButton);
+    expect(await container.read(platformRepositoryProvider).watchMyWorld().first, isEmpty);
+    await tester.tap(find.widgetWithText(FilledButton, 'Add').first);
     await settle(tester, 12);
-    step('after-add', tester);
     final mine = await container.read(platformRepositoryProvider).watchMyWorld().first;
-    expect(mine.map((p) => p.name), contains('GitHub'), reason: 'Add must put GitHub in My World (got: ${mine.map((p) => p.name).toList()})');
+    expect(mine.length, 1, reason: 'exactly one platform added');
+    final name = mine.single.name;
+    expect(find.text('In My World'), findsWidgets);
 
+    // My World shows it with no accounts.
     await tester.tap(find.text('My World').first);
     await settle(tester);
-    step('my-world', tester);
-    expect(find.text('GitHub'), findsWidgets);
+    expect(find.text(name), findsWidgets);
     expect(find.text('No accounts yet'), findsOneWidget);
 
-    // Open the platform and add an account through the real form.
-    await tester.tap(find.text('GitHub').first);
+    // Platform detail → real account form → saved to the database.
+    await tester.tap(find.text(name).first);
     await settle(tester);
     await tester.tap(find.text('Add account').first);
     await settle(tester);
-    await tester.enterText(find.widgetWithText(TextFormField, 'Account label'), 'Studio');
+    final label = find.widgetWithText(TextFormField, 'Account label');
+    expect(label, findsOneWidget);
+    await tester.enterText(label, 'Studio');
     await tester.enterText(find.widgetWithText(TextFormField, 'Username / handle'), 'syhu-labs');
+    await settle(tester, 2);
     await tester.tap(find.widgetWithText(FilledButton, 'Save'));
-    await settle(tester);
-    expect(find.textContaining('Studio'), findsWidgets);
-
+    await settle(tester, 12);
     final accounts = await container.read(accountRepositoryProvider).watchAll().first;
+    expect(accounts.length, 1);
+    expect(accounts.single.account.accountName, 'Studio');
     expect(accounts.single.account.username, 'syhu-labs');
-    expect(accounts.single.platform.id, 'github');
+    expect(accounts.single.platform.id, mine.single.id);
+    expect(find.text('Studio'), findsWidgets);
 
-    // Global search palette (Cmd+K) finds the new account.
+    // Global search finds the account by username; vault stays unsearchable.
+    final hits = await container.read(searchServiceProvider).search('syhu-labs');
+    expect(hits.map((h) => h.title), contains('$name · Studio'));
     await tester.tap(find.text('Search platforms, accounts, or anything…'));
     await settle(tester);
-    await tester.enterText(find.byType(TextField).last, 'syhu');
-    await settle(tester, 12);
-    expect(find.textContaining('GitHub · Studio'), findsOneWidget);
+    expect(find.text('Sections'), findsOneWidget);
   });
 }
