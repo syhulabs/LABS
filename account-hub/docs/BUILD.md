@@ -43,6 +43,10 @@ flutter test
 - **Android**: `MainActivity` extends `FlutterFragmentActivity` (required by `local_auth`); permissions `USE_BIOMETRIC`, `POST_NOTIFICATIONS`, `RECEIVE_BOOT_COMPLETED`; core-library desugaring is enabled for `flutter_local_notifications`.
 - **Linux**: biometrics are not available, so App Lock uses the passcode. Secrets go to libsecret (GNOME Keyring / KWallet).
 
+## Adding logos
+
+Drop `<catalog-id>.png` (or `.svg`) into `assets/logos/`, or run the fetch scripts in `tool/`. Flutter's incremental build does not notice new files inside an asset *directory*, so after adding logos run `flutter clean` before the next `flutter build` or the bundle keeps the old file list.
+
 ## Regenerating the catalog
 
 ```bash
