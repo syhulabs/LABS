@@ -12,6 +12,12 @@ import 'package:syhu_account_hub/data/db/database_connection.dart';
 import 'package:syhu_account_hub/data/secure/key_store.dart';
 import 'package:syhu_account_hub/shared/widgets/app_card.dart';
 
+void step(String name, WidgetTester t) {
+  final texts = t.widgetList<Text>(find.byType(Text)).map((w) => w.data).whereType<String>().where((x) => x.trim().isNotEmpty).take(60).toList();
+  // ignore: avoid_print
+  print('STEP $name :: ${texts.join(' | ')}');
+}
+
 Future<void> settle(WidgetTester t, [int frames = 8]) async {
   for (var i = 0; i < frames; i++) {
     await t.pump(const Duration(milliseconds: 120));
@@ -40,22 +46,27 @@ void main() {
   testWidgets('add a platform from Explore, create an account, find it with search', (tester) async {
     await tester.pumpWidget(UncontrolledProviderScope(container: container, child: const AccountHubApp()));
     await settle(tester, 15);
+    step('home', tester);
     expect(find.text('My World is empty'), findsOneWidget);
 
     await tester.tap(find.text('Explore').first);
     await settle(tester);
     await tester.enterText(find.byType(TextField).first, 'GitHub');
     await settle(tester, 12);
+    step('explore-searched', tester);
     expect(find.text('GitHub'), findsWidgets, reason: 'Explore should list GitHub after searching');
-    final addButton = find.descendant(of: find.ancestor(of: find.text('GitHub').first, matching: find.byType(AppCard)).first, matching: find.widgetWithText(FilledButton, 'Add'));
-    await tester.ensureVisible(find.text('GitHub').first);
-    await tester.tap(addButton.evaluate().isEmpty ? find.widgetWithText(FilledButton, 'Add').first : addButton.first);
+    final card = find.ancestor(of: find.text('GitHub').first, matching: find.byType(AppCard));
+    step('card-found=${card.evaluate().length}', tester);
+    final addButton = card.evaluate().isEmpty ? find.widgetWithText(FilledButton, 'Add').first : find.descendant(of: card.first, matching: find.widgetWithText(FilledButton, 'Add')).first;
+    await tester.tap(addButton);
     await settle(tester, 12);
+    step('after-add', tester);
     final mine = await container.read(platformRepositoryProvider).watchMyWorld().first;
     expect(mine.map((p) => p.name), contains('GitHub'), reason: 'Add must put GitHub in My World (got: ${mine.map((p) => p.name).toList()})');
 
     await tester.tap(find.text('My World').first);
     await settle(tester);
+    step('my-world', tester);
     expect(find.text('GitHub'), findsWidgets);
     expect(find.text('No accounts yet'), findsOneWidget);
 
