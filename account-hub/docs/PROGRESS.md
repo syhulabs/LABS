@@ -38,7 +38,7 @@ _Updated 24 Oct 2026. Branch `claude/wizardly-pasteur-kmnhrm`._
 | --- | --- |
 | `flutter analyze` | No issues |
 | `flutter test` (unit + data-layer + widget) | **60 passed, 0 failed** |
-| `integration_test/app_test.dart` on Linux desktop (Xvfb) | Explore → Add → My World → account form → search: see note below |
+| `integration_test/app_test.dart` on Linux desktop (Xvfb, real on-disk DB + libsecret) | **1 passed**: Explore → Add → My World → platform detail → account form → saved row verified → global search finds it → ⌘K palette opens |
 | `flutter build linux --release` | ✅ bundle produced |
 | `flutter build apk --debug` | ✅ `app-debug.apk` produced (Gradle needed a Maven Central mirror because the container's proxy rate-limited Central) |
 | `flutter build macos` / `flutter build ios` | ❌ **Not run: requires macOS + Xcode.** The macOS project is configured (entitlements for Keychain and file dialogs, window size, product name) but has not been compiled here. |
