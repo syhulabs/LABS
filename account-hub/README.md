@@ -73,7 +73,9 @@ account-hub/
 
 ## Logos
 
-The catalog ships with brand glyphs from Simple Icons (CC0) tinted with official brand colors. If a glyph is not available, the app shows a monogram tile; it never substitutes a look-alike. Drop original logo files from the SYHU logo library into `assets/logos/<platform-id>.png` (or `.svg`) and they take priority automatically.
+`assets/logos/` holds coloured original marks for 410+ platforms (the full list SYHU asked for), gathered by `tool/fetch_logos.py` and `tool/fetch_appstore_icons.py` from LobeHub's AI icon set, homarr dashboard-icons, gilbarbara/logos, svgl, the brands' own website icons and official App Store artwork. Every file is the brand's published mark rasterised to 256px; nothing is redrawn. `assets/logos/SOURCES.md` lists the source URL per file and `manifest.json` records each mark's tone so dark marks get a light tile in dark mode.
+
+Resolution order in the app: `assets/logos/<platform-id>.png|svg` → Simple Icons glyph tinted with the brand colour → monogram tile. Drop any further originals into `assets/logos/` named by catalog id and they are picked up on the next build.
 
 ## Security notes
 

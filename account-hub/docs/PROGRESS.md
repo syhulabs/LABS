@@ -60,7 +60,7 @@ Screenshots of the Linux build are in `docs/screenshots/`.
 ## Known limitations / next steps
 
 1. **Apple builds unverified here.** Open `account-hub` on a Mac, run `flutter build macos` and `flutter test integration_test -d macos`; fix anything Xcode reports (expected: signing team selection only).
-2. Logos: the SYHU original logo library is not included; drop files into `assets/logos/<platform-id>.png|svg`.
+2. Logos: 410 of the 424 requested brands have coloured originals in `assets/logos/`. Not obtainable from any official source reachable here (they fall back to the Simple Icons glyph or a monogram): Kits AI, TuneCore, ONErpm, Pro Tools, Studio One, Reaper, itch.io, Defold, Ren'Py, Stride, Paytm, Zomato, Streamlabs, HackerRank, QuickBooks. Drop originals into `assets/logos/<catalog-id>.png` to fill them.
 3. Cloud sync is intentionally not implemented (architecture is sync-ready: UUID keys, `updated_at`, full-document backups).
 4. Email inbox integrations are not implemented (by design; would need explicit OAuth consent).
 5. Currency conversion is not implemented; totals are shown per currency.
