@@ -1,3 +1,6 @@
+import 'dart:io' show Platform;
+
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -28,13 +31,21 @@ import 'routes.dart';
 
 final rootNavigatorKey = GlobalKey<NavigatorState>();
 
+String _initialLocation() {
+  if (kIsWeb) return Routes.home;
+  final env = Platform.environment['SYHU_INITIAL_ROUTE'];
+  if (env != null && env.startsWith('/')) return env;
+  return Routes.home;
+}
+
 GoRouter buildRouter() {
   Page<void> page(GoRouterState s, Widget child) => NoTransitionPage(key: s.pageKey, child: child);
   Page<void> sub(GoRouterState s, Widget child) => MaterialPage(key: s.pageKey, child: child);
 
   return GoRouter(
     navigatorKey: rootNavigatorKey,
-    initialLocation: Routes.home,
+    // Dev aid for screenshots/automation on desktop: SYHU_INITIAL_ROUTE=/explore
+    initialLocation: _initialLocation(),
     routes: [
       ShellRoute(
         builder: (context, state, child) => AppShell(child: child),

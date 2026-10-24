@@ -14,7 +14,15 @@ class NotificationService {
 
   final FlutterLocalNotificationsPlugin _plugin;
   bool _initialized = false;
-  bool get isSupported => !kIsWeb && (Platform.isMacOS || Platform.isIOS || Platform.isAndroid || Platform.isLinux);
+  bool get isSupported {
+    if (kIsWeb) return false;
+    if (Platform.isLinux) {
+      // The Linux implementation talks to the session bus; without one (CI,
+      // containers, bare X sessions) the plugin throws asynchronously.
+      return Platform.environment.containsKey('DBUS_SESSION_BUS_ADDRESS');
+    }
+    return Platform.isMacOS || Platform.isIOS || Platform.isAndroid;
+  }
 
   Future<bool> initialize() async {
     if (_initialized || !isSupported) return _initialized;

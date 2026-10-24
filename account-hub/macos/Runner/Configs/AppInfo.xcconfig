@@ -5,10 +5,10 @@
 // 'flutter create' template.
 
 // The application's name. By default this is also the title of the Flutter window.
-PRODUCT_NAME = syhu_account_hub
+PRODUCT_NAME = SYHU Account Hub
 
 // The application's bundle identifier
 PRODUCT_BUNDLE_IDENTIFIER = com.syhulabs.syhuAccountHub
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2026 com.syhulabs. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2026 SYHU LABS. All rights reserved.

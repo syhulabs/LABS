@@ -1,17 +1,85 @@
-# syhu_account_hub
+# SYHU Account Hub
 
-SYHU Account Hub: private, local-first digital ecosystem manager by SYHU LABS.
+A private, local-first manager for your whole digital ecosystem: platforms, accounts, reusable email identities, YouTube channels, artists and labels, projects, developer and gaming accounts, banking metadata, subscriptions and an encrypted vault.
 
-## Getting Started
+Developed by **SYHU LABS**. One Flutter codebase targets **macOS** (primary), **iOS**, **Android**, and Linux desktop.
 
-This project is a starting point for a Flutter application.
+> No online account, no cloud, no telemetry. Everything lives in a single SQLite database on your device. Secrets are AES-GCM encrypted with a key kept in the OS keychain.
 
-A few resources to get you started if this is your first Flutter project:
+## Why Flutter and not SwiftUI
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+The brief asked for a native macOS app *and* iOS *and* Android. SwiftUI cannot ship Android, so the project is built with Flutter: one Dart codebase, native build outputs for every target (`.app`, `.ipa`, `.apk`), platform services through first-party plugins (Keychain / Keystore, Touch ID / Face ID / biometrics, local notifications, file dialogs). The shared business logic (`lib/domain`, `lib/data`) is pure Dart and is covered by tests that run on any OS.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Feature map (22 sections)
+
+| Section | What it does |
+| --- | --- |
+| Home | Customisable dashboard (reorder / hide sections). All numbers come from your data; empty = 0. |
+| My World | Only the platforms you explicitly added. Reorder, favorite, add accounts. |
+| Explore | Offline catalog of 1,190+ platforms in 37 categories. Search, filter, sort, favorites. Browsing never adds anything. Custom platforms. Catalog update import. |
+| Accounts & Emails | Reusable email identities (deduplicated), multiple accounts per platform, reverse lookup "which services use this email", archive / restore / delete. |
+| YouTube | Channels grouped by owning Google identity; a channel can have several managers with roles; artist / organization links. |
+| AI Platforms, Social, Gaming, Game Engines, Developer Tools, Cloud & Storage | Category hubs over your accounts with catalog suggestions (never auto-added). |
+| Music, Artist & Label | Artists, record labels, distribution / streaming accounts. |
+| Studio & Projects | Projects (apps, games, songs, releases, stories, comics, websites, IP), studios and businesses, documents, and links between projects and accounts / emails / subscriptions / channels. |
+| Google / Apple / Microsoft | Ecosystem hubs filtered by vendor. |
+| Banking & Payments | Bank metadata (last 4 digits only in the main DB; optional full number encrypted in the vault), cards (no PAN / CVV / PIN ever), payment methods. No bank connections, no payments. |
+| Subscriptions | Status, cycle, next billing, history, renewal reminders, per-currency monthly / annual totals, charts. Currencies are never silently summed. |
+| Personal / Business | Classification hubs across accounts, emails, subscriptions, projects. |
+| Secure Vault | AES-256-GCM items (passwords, API keys, notes, recovery codes, bank numbers) + references to your password manager. |
+| Settings | Profile, theme, security (App Lock with biometrics / passcode, auto-lock, clipboard clearing), notifications, backup / restore / export, catalog import, data, about. |
+
+Global search: `⌘K` / `Ctrl+K`. Secrets are never indexed.
+
+## Getting started
+
+```bash
+cd account-hub
+flutter pub get
+dart run build_runner build --delete-conflicting-outputs   # regenerates drift code if you change tables
+flutter run -d macos      # or: -d ios, -d android, -d linux
+```
+
+See `docs/BUILD.md` for per-platform requirements and `docs/ARCHITECTURE.md` for the design. `docs/PROGRESS.md` is the feature-completion checklist and verification record.
+
+## Tests
+
+```bash
+flutter test            # unit + data-layer integration + widget tests
+```
+
+## Project layout
+
+```
+account-hub/
+  lib/
+    app/        bootstrap, router, providers (composition root), theme
+    core/       ids, stream helpers, URL launcher
+    domain/     enums, Money, subscription math (pure Dart)
+    data/
+      db/       drift tables + generated database
+      catalog/  offline platform catalog loader / importer
+      repositories/  one per aggregate; audit log; search; stats
+      secure/   key store, crypto, vault, app lock, clipboard
+      backup/   backup / restore / export
+      notifications/
+    features/   one folder per section (screens + forms)
+    shared/     reusable widgets (shell, cards, forms, pickers, logo)
+  assets/catalog/platforms.json   catalog seed (generated by tool/gen_catalog.py)
+  assets/logos/                   drop original brand logos here as <platform-id>.png|svg
+  test/                           unit, integration and widget tests
+  tool/                           catalog + brand-icon generators
+```
+
+## Logos
+
+The catalog ships with brand glyphs from Simple Icons (CC0) tinted with official brand colors. If a glyph is not available, the app shows a monogram tile; it never substitutes a look-alike. Drop original logo files from the SYHU logo library into `assets/logos/<platform-id>.png` (or `.svg`) and they take priority automatically.
+
+## Security notes
+
+- Vault payloads: AES-256-GCM, per-item random nonce, item id bound as associated data, master key stored only in Keychain / Keystore / libsecret.
+- Encrypted backups: PBKDF2-HMAC-SHA256 (600k iterations) → AES-256-GCM.
+- Plain backups and CSV / JSON exports never include vault items.
+- Global search, notifications, audit log and toasts never contain secret values.
+- App Lock uses the platform's biometric / system authentication where available, with a salted passcode fallback. Auto-locks after inactivity and when backgrounded.
+- This application has **not** been independently security-audited.
