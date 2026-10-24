@@ -60,16 +60,16 @@ def main():
     for cid, (term, country, seller) in APPS.items():
         if cid in m: continue
         try:
-            d = json.loads(F.http_get(f"https://itunes.apple.com/search?term={urllib.parse.quote(term)}&country={country}&entity=software&limit=8"))
+            d = json.loads(F.http_get(f"https://itunes.apple.com/search?term={urllib.parse.quote(term)}&country={country}&entity=software&limit=8")[0])
             hit = next((r for r in d.get("results", []) if seller.lower() in (r.get("sellerName", "") + " " + r.get("artistName", "")).lower()), None)
             if not hit: miss.append((cid, "no match")); continue
             art = hit.get("artworkUrl512") or hit["artworkUrl100"].replace("100x100", "512x512")
-            img = Image.open(io.BytesIO(F.http_get(art))).convert("RGBA").resize((256, 256), Image.LANCZOS)
+            img = Image.open(io.BytesIO(F.http_get(art)[0])).convert("RGBA").resize((256, 256), Image.LANCZOS)
             mask = Image.new("L", (256, 256), 0); ImageDraw.Draw(mask).rounded_rectangle((0, 0, 255, 255), radius=56, fill=255); img.putalpha(mask)
             img.save(os.path.join(OUT, f"{cid}.png"), optimize=True)
             m[cid] = {"file": f"assets/logos/{cid}.png", "tone": "color", "source": "appstore", "url": art, "app": hit.get("trackName"), "seller": hit.get("sellerName")}
             ok += 1; print(f"ok {cid:28s} {hit.get('trackName')!s:40.40s} by {hit.get('sellerName')}")
-            time.sleep(1.5)
+            time.sleep(2.5)
         except Exception as e:
             miss.append((cid, str(e)[:60])); time.sleep(3)
     json.dump(dict(sorted(m.items())), open(mpath, "w"), indent=1)
