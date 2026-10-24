@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:syhu_account_hub/app/providers.dart';
 import 'package:syhu_account_hub/features/vault/vault_screen.dart';
+import 'package:syhu_account_hub/shared/widgets/app_card.dart';
 
 import '../support/pump_app.dart';
 
@@ -25,19 +26,28 @@ void main() {
     await tester.enterText(find.widgetWithText(TextFormField, 'Title'), 'OpenAI key');
     await tester.enterText(find.widgetWithText(TextFormField, 'Secret value'), 'sk-TOPSECRET-999');
     await tester.ensureVisible(find.widgetWithText(FilledButton, 'Encrypt & save'));
-    await tester.tap(find.widgetWithText(FilledButton, 'Encrypt & save'));
-    await settle(tester);
-    expect(find.text('OpenAI key'), findsOneWidget);
-    expect(find.textContaining('TOPSECRET'), findsNothing);
-
+    // AES-GCM completes only with real async, so the save runs under runAsync.
+    // Animations started there never finish under the fake clock, so the
+    // screen is pumped fresh afterwards instead of waiting for the dialog.
+    await tester.runAsync(() async {
+      await tester.tap(find.widgetWithText(FilledButton, 'Encrypt & save'));
+      await Future<void>.delayed(const Duration(milliseconds: 500));
+    });
     final items = await data(tester, () => c.read(vaultRepositoryProvider).watchAll().first);
     expect(items.length, 1);
+    expect(items.single.title, 'OpenAI key');
     expect(String.fromCharCodes(items.single.ciphertext).contains('TOPSECRET'), isFalse);
     final secret = await data(tester, () => c.read(vaultRepositoryProvider).reveal(items.single.id));
     expect(secret.value, 'sk-TOPSECRET-999');
 
+    await pumpScreen(tester, c, const VaultScreen());
+    await settle(tester);
+    final card = find.descendant(of: find.byType(AppCard), matching: find.text('OpenAI key'));
+    expect(card, findsOneWidget);
+    expect(find.textContaining('TOPSECRET'), findsNothing);
+
     // The detail sheet shows metadata and only reveals on request.
-    await tester.tap(find.text('OpenAI key'));
+    await tester.tap(card);
     await settle(tester);
     expect(find.text('Reveal secret'), findsOneWidget);
     expect(find.textContaining('TOPSECRET'), findsNothing);
