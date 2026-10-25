@@ -75,7 +75,7 @@ def main(paths):
                         if not isinstance(amt, (int, float)) or isinstance(amt, bool) or amt < 0:
                             problems.append(f"{pid}/{plan_id}/{key}/{ch}: bad amount {amt!r} (dropped)")
                             continue
-                        if key != "default" and cur != markets[key]:
+                        if key != "default" and cur not in (markets[key], "USD"):
                             problems.append(f"{pid}/{plan_id}/{key}/{ch}: currency {cur} is not {markets[key]} (dropped)")
                             continue
                         if not str(price.get("source", "")).startswith("http"):

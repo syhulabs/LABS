@@ -188,7 +188,7 @@ void main() {
             if (country == ServicePlan.defaultKey) continue;
             expect(marketCurrency, contains(country), reason: '${s.platformId}/${p.id}: $country is not a supported market');
             for (final price in p.prices[country]!.values) {
-              expect(price.money.currency, marketCurrency[country], reason: '${s.platformId}/${p.id}/$country billed in wrong currency');
+              expect([marketCurrency[country], 'USD'], contains(price.money.currency), reason: '${s.platformId}/${p.id}/$country billed in wrong currency');
               expect(price.source, startsWith('http'), reason: '${s.platformId}/${p.id}/$country has no source');
               expect(price.money.minor, greaterThanOrEqualTo(0));
             }

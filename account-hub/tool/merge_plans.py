@@ -72,7 +72,7 @@ def main(paths):
                         if len(cur) != 3:
                             problems.append(f"{pid}/{pid2}/{key}/{ch}: bad currency {cur!r} (dropped)")
                             continue
-                        if key != "default" and cur != markets[key]:
+                        if key != "default" and cur not in (markets[key], "USD"):
                             problems.append(f"{pid}/{pid2}/{key}/{ch}: currency {cur} is not {markets[key]} (dropped)")
                             continue
                         if cur in ZERO_DECIMAL:
