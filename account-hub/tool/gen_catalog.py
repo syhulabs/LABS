@@ -324,7 +324,7 @@ add("ReverbNation", ["artist"], "https://www.reverbnation.com", desc="Artist pro
 add("Audius", ["artist","streaming"], "https://audius.co", desc="Decentralized streaming.")
 add("Resso", ["streaming"], "https://www.resso.com", desc="Social music streaming.")
 add("Hungama Music", ["streaming"], "https://www.hungama.com", desc="Indian streaming.")
-add("Sync licensing: Musicbed", ["artist","freelance"], "https://www.musicbed.com", desc="Sync licensing.", id="musicbed")
+add("Musicbed", ["artist","freelance"], "https://www.musicbed.com", desc="Music and film licensing for creators.", id="musicbed")
 add("Pond5", ["artist","video","freelance"], "https://www.pond5.com", desc="Stock media marketplace.")
 add("AudioJungle", ["artist","freelance"], "https://audiojungle.net", icon="envato", desc="Envato music marketplace.")
 add("Artlist for Artists", ["artist","freelance"], "https://artlist.io/artists", desc="Submit music to Artlist.", id="artlist-artists")

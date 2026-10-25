@@ -1,5 +1,5 @@
 {
- "version": 2,
+ "version": 3,
  "generated": "2026-10-24",
  "categories": [
   {
@@ -3435,7 +3435,7 @@
   },
   {
    "id": "musicbed",
-   "name": "Sync licensing: Musicbed",
+   "name": "Musicbed",
    "categories": [
     "artist",
     "freelance"
@@ -3444,7 +3444,7 @@
    "type": "service",
    "vendor": null,
    "icon": null,
-   "description": "Sync licensing."
+   "description": "Music and film licensing for creators."
   },
   {
    "id": "pond5",
