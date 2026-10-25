@@ -48,6 +48,26 @@ class Money implements Comparable<Money> {
         'CAD' => r'C$',
         'SGD' => r'S$',
         'AED' => 'AED ',
+        'MYR' => 'RM ',
+        'IDR' => 'Rp ',
+        'PHP' => '₱',
+        'THB' => '฿',
+        'VND' => '₫',
+        'KRW' => '₩',
+        'CNY' => 'CN¥',
+        'HKD' => r'HK$',
+        'NZD' => r'NZ$',
+        'CHF' => 'CHF ',
+        'SEK' => 'kr ',
+        'NOK' => 'kr ',
+        'DKK' => 'kr ',
+        'PLN' => 'zł ',
+        'TRY' => '₺',
+        'BRL' => r'R$',
+        'MXN' => r'MX$',
+        'ZAR' => 'R ',
+        'SAR' => 'SAR ',
+        'QAR' => 'QAR ',
         _ => '$code ',
       };
 
@@ -88,6 +108,15 @@ class MoneyTotals {
       isEmpty ? '—' : values.map((m) => m.format(compact: compact)).join(' + ');
 }
 
+/// Currencies offered in pickers: SYHU's own first, then South-East Asia and
+/// the Gulf, then the rest. Any ISO code still works in stored data; this list
+/// only controls the dropdowns.
 const supportedCurrencies = <String>[
-  'INR', 'USD', 'EUR', 'GBP', 'JPY', 'AUD', 'CAD', 'SGD', 'AED',
+  'INR', 'USD', 'EUR', 'GBP',
+  'MYR', 'IDR', 'PHP', 'SGD', 'THB', 'VND',
+  'AED', 'SAR', 'QAR',
+  'JPY', 'KRW', 'CNY', 'HKD',
+  'AUD', 'NZD', 'CAD',
+  'CHF', 'SEK', 'NOK', 'DKK', 'PLN', 'TRY',
+  'BRL', 'MXN', 'ZAR',
 ];

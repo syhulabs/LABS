@@ -18,6 +18,24 @@ void main() {
       expect(Money.fromMajor(1500, 'JPY').format(), '¥1,500');
     });
 
+    test('every supported currency has a symbol and formats', () {
+      expect(supportedCurrencies.toSet().length, supportedCurrencies.length, reason: 'no duplicates');
+      // These are conventionally written with their ISO code, so the code
+      // prefix *is* the dedicated symbol.
+      const codePrefixed = {'AED', 'CHF', 'SAR', 'QAR'};
+      for (final c in supportedCurrencies) {
+        if (!codePrefixed.contains(c)) {
+          expect(Money.currencySymbol(c), isNot('$c '), reason: '$c needs a dedicated symbol or prefix');
+        }
+        expect(Money.fromMajor(12.5, c).format(), isNotEmpty);
+      }
+      expect(Money.fromMajor(99, 'MYR').format(), 'RM 99.00');
+      expect(Money.fromMajor(15000, 'IDR').format(), 'Rp 15,000.00');
+      expect(Money.fromMajor(499, 'PHP').format(), '₱499.00');
+      expect(Money.fromMajor(50000, 'KRW').format(), '₩50,000');
+      expect(Money.fromMajor(120000, 'VND').format(), '₫120,000');
+    });
+
     test('refuses to add different currencies', () {
       expect(() => Money.fromMajor(1, 'INR') + Money.fromMajor(1, 'USD'), throwsArgumentError);
     });
