@@ -126,26 +126,37 @@ class ServicePlan {
   Set<PurchaseChannel> channelsFor(String country) => prices[country.toUpperCase() == defaultKey.toUpperCase() ? defaultKey : country.toUpperCase()]?.keys.toSet() ?? const {};
 
   /// Resolves the best price for [country] and [channel]:
-  /// 1. exact country + channel,
-  /// 2. same country, web (then any other channel),
-  /// 3. default price for the channel, then default web / any.
+  /// 1. exact country + channel;
+  /// 2. asking for a store price: the country's web price, then its other
+  ///    store's price (local store prices track each other more closely than
+  ///    a foreign default);
+  /// 3. asking for the web price when the country has none: the default
+  ///    (USD) web price, because web checkout then bills in that currency;
+  /// 4. otherwise the default price for the channel, then default web / any,
+  ///    then whatever the country has.
   /// Returns null when the plan is sold only in other countries (no default
   /// price exists); such plans are simply not shown for this market.
   PlanQuote? quote({required String country, required PurchaseChannel channel}) {
     final cc = country.toUpperCase();
     final local = prices[cc];
-    if (local != null && local.isNotEmpty) {
-      final exact = local[channel];
-      if (exact != null) return PlanQuote(price: exact, match: PlanQuoteMatch.exact, channel: channel, countryKey: cc);
+    final def = prices[defaultKey];
+    final exact = local?[channel];
+    if (exact != null) return PlanQuote(price: exact, match: PlanQuoteMatch.exact, channel: channel, countryKey: cc);
+    if (channel != PurchaseChannel.web && local != null) {
       final alt = _pick(local, channel);
       if (alt != null) return PlanQuote(price: alt.$2, match: PlanQuoteMatch.countryOtherChannel, channel: alt.$1, countryKey: cc);
     }
-    final def = prices[defaultKey];
-    if (def == null || def.isEmpty) return null;
-    final exactDefault = def[channel];
-    if (exactDefault != null) return PlanQuote(price: exactDefault, match: PlanQuoteMatch.defaultPrice, channel: channel, countryKey: defaultKey);
-    final alt = _pick(def, channel)!;
-    return PlanQuote(price: alt.$2, match: PlanQuoteMatch.defaultPrice, channel: alt.$1, countryKey: defaultKey);
+    if (def != null && def.isNotEmpty) {
+      final exactDefault = def[channel];
+      if (exactDefault != null) return PlanQuote(price: exactDefault, match: PlanQuoteMatch.defaultPrice, channel: channel, countryKey: defaultKey);
+      final alt = _pick(def, channel)!;
+      return PlanQuote(price: alt.$2, match: PlanQuoteMatch.defaultPrice, channel: alt.$1, countryKey: defaultKey);
+    }
+    if (local != null) {
+      final alt = _pick(local, channel);
+      if (alt != null) return PlanQuote(price: alt.$2, match: PlanQuoteMatch.countryOtherChannel, channel: alt.$1, countryKey: cc);
+    }
+    return null;
   }
 
   static (PurchaseChannel, PlanPrice)? _pick(Map<PurchaseChannel, PlanPrice> m, PurchaseChannel requested) {

@@ -38,19 +38,20 @@ _Updated 24 Oct 2026. Branch `claude/wizardly-pasteur-kmnhrm`._
 | Check | Result |
 | --- | --- |
 | `flutter analyze` | No issues |
-| `flutter test` (unit + data-layer + widget) | **60 passed, 0 failed** |
+| `flutter test` (unit + data-layer + widget) | **74 passed, 0 failed** (includes the plan-catalog suite that re-validates the bundled price file) |
 | `integration_test/app_test.dart` on Linux desktop (Xvfb, real on-disk DB + libsecret) | **1 passed**: Explore → Add → My World → platform detail → account form → saved row verified → global search finds it → ⌘K palette opens |
 | `flutter build linux --release` | ✅ bundle produced |
 | `flutter build apk --release` | ✅ `app-release.apk` (73.5 MB universal, debug-signed) containing all 1,137 logo PNGs (2.7 MB). Gradle needed a Maven Central mirror because the container's proxy rate-limited Central. |
 | `flutter build macos --release` / `flutter build ios --release --no-codesign` | ✅ Built on a GitHub-hosted Mac (macOS 15, Xcode 16.4, Flutter 3.47.8) by `.github/workflows/apple-builds.yml`, run 1: analyzer clean, 60/60 tests, `SYHU Account Hub.app` (61 MB) and unsigned `Runner.app` (27 MB) uploaded as artifacts. |
 | Touch ID / Face ID, Keychain, Apple notifications | Implemented via `local_auth`, `flutter_secure_storage`, `flutter_local_notifications`; compile on Apple toolchains (CI), **runtime behaviour not yet exercised on Apple hardware.** |
 
-Screenshots of the Linux build are in `docs/screenshots/`.
+Screenshots of the Linux build are in `docs/screenshots/` (`platform-plans.png` shows the country/store plan card, `settings-country.png` the country and store settings).
 
 ## Test inventory
 
 | File | Covers |
 | --- | --- |
+| `test/plan_catalog_test.dart` (12) | Markets, plan parsing/validation, country+store quote fallbacks, import persistence, bundled plans.json integrity |
 | `test/domain_test.dart` (14) | Money, per-currency totals, cycle math, upcoming renewals, month-end clamping, id/email normalisation |
 | `test/crypto_test.dart` (4) | Master key lifecycle, AES-GCM round trip + tamper/AAD rejection, passphrase envelope, passcode hashing |
 | `test/data_layer_test.dart` (13) | Catalog seeding/idempotence/flag preservation/duplicate rejection, email reuse + dedupe, multi-account, channel owner/managers, link table, bank/card masking, subscription totals + history, vault secrecy in search/backup/audit, encrypted backup restore, global search, zero stats |

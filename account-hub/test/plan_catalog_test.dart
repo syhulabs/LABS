@@ -105,6 +105,18 @@ void main() {
       expect(q.caption(PurchaseChannel.android), contains('Web price shown'));
     });
 
+    test('quote: web request in a country with store-only prices uses the default web price', () {
+      final doc = PlanCatalogDocument.fromJson(jsonDecode('{"services":[{"platformId":"claude","plans":[{"id":"pro","name":"Pro","prices":{"default":{"web":{"amount":20,"currency":"USD","source":"https://s"}},"IN":{"ios":{"amount":1999,"currency":"INR","source":"https://a"}}}}]}]}') as Map<String, dynamic>);
+      final pro = doc.services.single.plans.single;
+      final web = pro.quote(country: 'IN', channel: PurchaseChannel.web)!;
+      expect(web.match, PlanQuoteMatch.defaultPrice);
+      expect(web.price.money, Money.fromMajor(20, 'USD'));
+      final android = pro.quote(country: 'IN', channel: PurchaseChannel.android)!;
+      expect(android.match, PlanQuoteMatch.countryOtherChannel, reason: 'a store request prefers the local store price over USD');
+      expect(android.price.money, Money.fromMajor(1999, 'INR'));
+      expect(android.channel, PurchaseChannel.ios);
+    });
+
     test('quote: unknown country falls back to default USD', () {
       final q = individual.quote(country: 'MY', channel: PurchaseChannel.ios)!;
       expect(q.match, PlanQuoteMatch.defaultPrice);
