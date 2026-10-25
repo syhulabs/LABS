@@ -13,6 +13,7 @@ import '../../app/theme/app_theme.dart';
 import '../../data/backup/backup_service.dart';
 import '../../data/db/database_connection.dart';
 import '../../data/repositories/settings_repository.dart';
+import '../../domain/markets.dart';
 import '../../domain/money.dart';
 import '../../shared/widgets/app_card.dart';
 import '../../shared/widgets/confirm_dialog.dart';
@@ -22,6 +23,7 @@ import '../../shared/widgets/page_scaffold.dart';
 import '../../shared/widgets/section_header.dart';
 import '../../shared/widgets/status_chip.dart';
 import '../../shared/widgets/toast.dart';
+import '../subscriptions/plan_picker.dart';
 
 enum _Section {
   profile('Profile & appearance', Icons.person_outline),
@@ -177,7 +179,30 @@ class _ProfileSectionState extends ConsumerState<_ProfileSection> {
             selected: {settings.themeMode},
             onSelectionChanged: (s) => repo.set(SettingsRepository.kThemeMode, s.first),
           ),
-          const SizedBox(height: 18),
+        ]),
+      ),
+      const SizedBox(height: 20),
+      const SectionHeader(title: 'Country & pricing'),
+      AppCard(
+        child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+          AppDropdown<String>(
+            label: 'Country',
+            value: settings.market.code,
+            items: [for (final m in markets) (m.code, m.labelWithCurrency)],
+            onChanged: (v) async {
+              final m = marketByCode(v) ?? defaultMarket;
+              await repo.set(SettingsRepository.kCountry, m.code);
+              await repo.set(SettingsRepository.kDefaultCurrency, m.currency);
+            },
+          ),
+          Text('Plan prices, the default currency and store pricing follow this country. Services with no price list for it show their default (usually USD) price.', style: context.text.bodySmall?.copyWith(color: context.colors.textMuted)),
+          const SizedBox(height: 16),
+          Text('Where you usually subscribe', style: context.text.labelLarge),
+          const SizedBox(height: 8),
+          ChannelSelector(value: settings.purchaseChannel, onChanged: (v) => repo.set(SettingsRepository.kPurchaseChannel, v.name)),
+          const SizedBox(height: 6),
+          Text('App Store and Google Play prices are often higher than the web price for the same plan. Each subscription can still pick its own store.', style: context.text.bodySmall?.copyWith(color: context.colors.textMuted)),
+          const SizedBox(height: 16),
           AppDropdown<String>(
             label: 'Default currency for new subscriptions',
             value: settings.defaultCurrency,
@@ -650,6 +675,8 @@ class _CatalogSection extends ConsumerWidget {
             ),
             OutlinedButton.icon(onPressed: () => context.go(Routes.explore), icon: const Icon(Icons.explore_outlined, size: 18), label: const Text('Open Explore')),
           ]),
+          const SizedBox(height: 18),
+          const _PlanCatalogStatus(),
           const SizedBox(height: 12),
           Text('Format: {"version": N, "categories": [{"id","label"}], "platforms": [{"id","name","categories":[…],"website","type","vendor","icon","description"}]}. Entries are matched by id; your favorites, My World selection and ordering are preserved. Original logo files go in assets/logos/<id>.png or .svg.', style: context.text.bodySmall?.copyWith(color: c.textMuted)),
         ]),
@@ -779,6 +806,56 @@ class _AboutSection extends StatelessWidget {
           Text('Built with Flutter, Riverpod, drift/SQLite, flutter_secure_storage, local_auth, flutter_local_notifications, fl_chart and Simple Icons (CC0 brand glyphs). Brand names and logos belong to their owners.', style: context.text.bodySmall?.copyWith(color: c.textMuted)),
         ]),
       ),
+    ]);
+  }
+}
+
+/// Plan price catalog status and import/reset controls.
+class _PlanCatalogStatus extends ConsumerWidget {
+  const _PlanCatalogStatus();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final c = context.colors;
+    final plans = ref.watch(planCatalogProvider).value;
+    final generated = plans?.generatedAt;
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      Text('Plan prices', style: context.text.titleSmall),
+      const SizedBox(height: 8),
+      Wrap(spacing: 8, runSpacing: 8, children: [
+        StatusChip('${plans?.serviceCount ?? 0} services with plans', color: c.accent, dense: false),
+        if (generated != null) StatusChip('prices as of ${DateFormat.yMMMd().format(generated)}', color: c.textMuted, dense: false),
+        if (plans?.imported != null) StatusChip('${plans!.imported!.services.length} imported', color: c.accentBlue, dense: false),
+      ]),
+      const SizedBox(height: 12),
+      Wrap(spacing: 10, runSpacing: 10, children: [
+        OutlinedButton.icon(
+          onPressed: () async {
+            final files = await FilePicker.pickFiles(dialogTitle: 'Choose a plans JSON file');
+            if (files.isEmpty || !context.mounted) return;
+            try {
+              final raw = await files.first.xFile.readAsString();
+              final n = await ref.read(planCatalogServiceProvider).importFromJsonString(raw);
+              ref.invalidate(planCatalogProvider);
+              if (context.mounted) showToast(context, 'Imported plans for $n services');
+            } catch (e) {
+              if (context.mounted) showToast(context, 'Import failed: ${friendlyError(e)}', error: true);
+            }
+          },
+          icon: const Icon(Icons.price_change_outlined, size: 18),
+          label: const Text('Import plan prices (JSON)…'),
+        ),
+        if (plans?.imported != null)
+          TextButton(
+            onPressed: () async {
+              await ref.read(planCatalogServiceProvider).clearImported();
+              ref.invalidate(planCatalogProvider);
+            },
+            child: const Text('Use bundled prices only'),
+          ),
+      ]),
+      const SizedBox(height: 10),
+      Text('Prices are published list prices keyed by country and store (web / App Store / Google Play), each with its source URL and verification date. They are never fetched live. Format documented in docs/PLANS.md.', style: context.text.bodySmall?.copyWith(color: c.textMuted)),
     ]);
   }
 }

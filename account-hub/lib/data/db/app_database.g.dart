@@ -11525,6 +11525,17 @@ class $SubscriptionsTable extends Subscriptions
     type: DriftSqlType.string,
     requiredDuringInsert: false,
   );
+  static const VerificationMeta _purchaseChannelMeta = const VerificationMeta(
+    'purchaseChannel',
+  );
+  @override
+  late final GeneratedColumn<String> purchaseChannel = GeneratedColumn<String>(
+    'purchase_channel',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
   @override
   List<GeneratedColumn> get $columns => [
     createdAt,
@@ -11548,6 +11559,7 @@ class $SubscriptionsTable extends Subscriptions
     renewalUrl,
     remindersEnabled,
     notes,
+    purchaseChannel,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
@@ -11709,6 +11721,15 @@ class $SubscriptionsTable extends Subscriptions
         notes.isAcceptableOrUnknown(data['notes']!, _notesMeta),
       );
     }
+    if (data.containsKey('purchase_channel')) {
+      context.handle(
+        _purchaseChannelMeta,
+        purchaseChannel.isAcceptableOrUnknown(
+          data['purchase_channel']!,
+          _purchaseChannelMeta,
+        ),
+      );
+    }
     return context;
   }
 
@@ -11802,6 +11823,10 @@ class $SubscriptionsTable extends Subscriptions
         DriftSqlType.string,
         data['${effectivePrefix}notes'],
       ),
+      purchaseChannel: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}purchase_channel'],
+      ),
     );
   }
 
@@ -11833,6 +11858,10 @@ class Subscription extends DataClass implements Insertable<Subscription> {
   final String? renewalUrl;
   final bool remindersEnabled;
   final String? notes;
+
+  /// Where the subscription is billed: web | ios | android (PurchaseChannel).
+  /// Null for rows created before schema v2.
+  final String? purchaseChannel;
   const Subscription({
     required this.createdAt,
     required this.updatedAt,
@@ -11855,6 +11884,7 @@ class Subscription extends DataClass implements Insertable<Subscription> {
     this.renewalUrl,
     required this.remindersEnabled,
     this.notes,
+    this.purchaseChannel,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -11902,6 +11932,9 @@ class Subscription extends DataClass implements Insertable<Subscription> {
     if (!nullToAbsent || notes != null) {
       map['notes'] = Variable<String>(notes);
     }
+    if (!nullToAbsent || purchaseChannel != null) {
+      map['purchase_channel'] = Variable<String>(purchaseChannel);
+    }
     return map;
   }
 
@@ -11948,6 +11981,9 @@ class Subscription extends DataClass implements Insertable<Subscription> {
       notes: notes == null && nullToAbsent
           ? const Value.absent()
           : Value(notes),
+      purchaseChannel: purchaseChannel == null && nullToAbsent
+          ? const Value.absent()
+          : Value(purchaseChannel),
     );
   }
 
@@ -11980,6 +12016,7 @@ class Subscription extends DataClass implements Insertable<Subscription> {
       renewalUrl: serializer.fromJson<String?>(json['renewalUrl']),
       remindersEnabled: serializer.fromJson<bool>(json['remindersEnabled']),
       notes: serializer.fromJson<String?>(json['notes']),
+      purchaseChannel: serializer.fromJson<String?>(json['purchaseChannel']),
     );
   }
   @override
@@ -12007,6 +12044,7 @@ class Subscription extends DataClass implements Insertable<Subscription> {
       'renewalUrl': serializer.toJson<String?>(renewalUrl),
       'remindersEnabled': serializer.toJson<bool>(remindersEnabled),
       'notes': serializer.toJson<String?>(notes),
+      'purchaseChannel': serializer.toJson<String?>(purchaseChannel),
     };
   }
 
@@ -12032,6 +12070,7 @@ class Subscription extends DataClass implements Insertable<Subscription> {
     Value<String?> renewalUrl = const Value.absent(),
     bool? remindersEnabled,
     Value<String?> notes = const Value.absent(),
+    Value<String?> purchaseChannel = const Value.absent(),
   }) => Subscription(
     createdAt: createdAt ?? this.createdAt,
     updatedAt: updatedAt ?? this.updatedAt,
@@ -12060,6 +12099,9 @@ class Subscription extends DataClass implements Insertable<Subscription> {
     renewalUrl: renewalUrl.present ? renewalUrl.value : this.renewalUrl,
     remindersEnabled: remindersEnabled ?? this.remindersEnabled,
     notes: notes.present ? notes.value : this.notes,
+    purchaseChannel: purchaseChannel.present
+        ? purchaseChannel.value
+        : this.purchaseChannel,
   );
   Subscription copyWithCompanion(SubscriptionsCompanion data) {
     return Subscription(
@@ -12106,6 +12148,9 @@ class Subscription extends DataClass implements Insertable<Subscription> {
           ? data.remindersEnabled.value
           : this.remindersEnabled,
       notes: data.notes.present ? data.notes.value : this.notes,
+      purchaseChannel: data.purchaseChannel.present
+          ? data.purchaseChannel.value
+          : this.purchaseChannel,
     );
   }
 
@@ -12132,7 +12177,8 @@ class Subscription extends DataClass implements Insertable<Subscription> {
           ..write('classification: $classification, ')
           ..write('renewalUrl: $renewalUrl, ')
           ..write('remindersEnabled: $remindersEnabled, ')
-          ..write('notes: $notes')
+          ..write('notes: $notes, ')
+          ..write('purchaseChannel: $purchaseChannel')
           ..write(')'))
         .toString();
   }
@@ -12160,6 +12206,7 @@ class Subscription extends DataClass implements Insertable<Subscription> {
     renewalUrl,
     remindersEnabled,
     notes,
+    purchaseChannel,
   ]);
   @override
   bool operator ==(Object other) =>
@@ -12185,7 +12232,8 @@ class Subscription extends DataClass implements Insertable<Subscription> {
           other.classification == this.classification &&
           other.renewalUrl == this.renewalUrl &&
           other.remindersEnabled == this.remindersEnabled &&
-          other.notes == this.notes);
+          other.notes == this.notes &&
+          other.purchaseChannel == this.purchaseChannel);
 }
 
 class SubscriptionsCompanion extends UpdateCompanion<Subscription> {
@@ -12210,6 +12258,7 @@ class SubscriptionsCompanion extends UpdateCompanion<Subscription> {
   final Value<String?> renewalUrl;
   final Value<bool> remindersEnabled;
   final Value<String?> notes;
+  final Value<String?> purchaseChannel;
   final Value<int> rowid;
   const SubscriptionsCompanion({
     this.createdAt = const Value.absent(),
@@ -12233,6 +12282,7 @@ class SubscriptionsCompanion extends UpdateCompanion<Subscription> {
     this.renewalUrl = const Value.absent(),
     this.remindersEnabled = const Value.absent(),
     this.notes = const Value.absent(),
+    this.purchaseChannel = const Value.absent(),
     this.rowid = const Value.absent(),
   });
   SubscriptionsCompanion.insert({
@@ -12257,6 +12307,7 @@ class SubscriptionsCompanion extends UpdateCompanion<Subscription> {
     this.renewalUrl = const Value.absent(),
     this.remindersEnabled = const Value.absent(),
     this.notes = const Value.absent(),
+    this.purchaseChannel = const Value.absent(),
     this.rowid = const Value.absent(),
   }) : id = Value(id),
        serviceName = Value(serviceName);
@@ -12282,6 +12333,7 @@ class SubscriptionsCompanion extends UpdateCompanion<Subscription> {
     Expression<String>? renewalUrl,
     Expression<bool>? remindersEnabled,
     Expression<String>? notes,
+    Expression<String>? purchaseChannel,
     Expression<int>? rowid,
   }) {
     return RawValuesInsertable({
@@ -12306,6 +12358,7 @@ class SubscriptionsCompanion extends UpdateCompanion<Subscription> {
       if (renewalUrl != null) 'renewal_url': renewalUrl,
       if (remindersEnabled != null) 'reminders_enabled': remindersEnabled,
       if (notes != null) 'notes': notes,
+      if (purchaseChannel != null) 'purchase_channel': purchaseChannel,
       if (rowid != null) 'rowid': rowid,
     });
   }
@@ -12332,6 +12385,7 @@ class SubscriptionsCompanion extends UpdateCompanion<Subscription> {
     Value<String?>? renewalUrl,
     Value<bool>? remindersEnabled,
     Value<String?>? notes,
+    Value<String?>? purchaseChannel,
     Value<int>? rowid,
   }) {
     return SubscriptionsCompanion(
@@ -12356,6 +12410,7 @@ class SubscriptionsCompanion extends UpdateCompanion<Subscription> {
       renewalUrl: renewalUrl ?? this.renewalUrl,
       remindersEnabled: remindersEnabled ?? this.remindersEnabled,
       notes: notes ?? this.notes,
+      purchaseChannel: purchaseChannel ?? this.purchaseChannel,
       rowid: rowid ?? this.rowid,
     );
   }
@@ -12426,6 +12481,9 @@ class SubscriptionsCompanion extends UpdateCompanion<Subscription> {
     if (notes.present) {
       map['notes'] = Variable<String>(notes.value);
     }
+    if (purchaseChannel.present) {
+      map['purchase_channel'] = Variable<String>(purchaseChannel.value);
+    }
     if (rowid.present) {
       map['rowid'] = Variable<int>(rowid.value);
     }
@@ -12456,6 +12514,7 @@ class SubscriptionsCompanion extends UpdateCompanion<Subscription> {
           ..write('renewalUrl: $renewalUrl, ')
           ..write('remindersEnabled: $remindersEnabled, ')
           ..write('notes: $notes, ')
+          ..write('purchaseChannel: $purchaseChannel, ')
           ..write('rowid: $rowid')
           ..write(')'))
         .toString();
@@ -24074,6 +24133,7 @@ typedef $$SubscriptionsTableCreateCompanionBuilder =
       Value<String?> renewalUrl,
       Value<bool> remindersEnabled,
       Value<String?> notes,
+      Value<String?> purchaseChannel,
       Value<int> rowid,
     });
 typedef $$SubscriptionsTableUpdateCompanionBuilder =
@@ -24099,6 +24159,7 @@ typedef $$SubscriptionsTableUpdateCompanionBuilder =
       Value<String?> renewalUrl,
       Value<bool> remindersEnabled,
       Value<String?> notes,
+      Value<String?> purchaseChannel,
       Value<int> rowid,
     });
 
@@ -24281,6 +24342,11 @@ class $$SubscriptionsTableFilterComposer
 
   ColumnFilters<String> get notes => $composableBuilder(
     column: $table.notes,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<String> get purchaseChannel => $composableBuilder(
+    column: $table.purchaseChannel,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -24478,6 +24544,11 @@ class $$SubscriptionsTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<String> get purchaseChannel => $composableBuilder(
+    column: $table.purchaseChannel,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   $$PlatformsTableOrderingComposer get platformId {
     final $$PlatformsTableOrderingComposer composer = $composerBuilder(
       composer: this,
@@ -24629,6 +24700,11 @@ class $$SubscriptionsTableAnnotationComposer
   GeneratedColumn<String> get notes =>
       $composableBuilder(column: $table.notes, builder: (column) => column);
 
+  GeneratedColumn<String> get purchaseChannel => $composableBuilder(
+    column: $table.purchaseChannel,
+    builder: (column) => column,
+  );
+
   $$PlatformsTableAnnotationComposer get platformId {
     final $$PlatformsTableAnnotationComposer composer = $composerBuilder(
       composer: this,
@@ -24779,6 +24855,7 @@ class $$SubscriptionsTableTableManager
                 Value<String?> renewalUrl = const Value.absent(),
                 Value<bool> remindersEnabled = const Value.absent(),
                 Value<String?> notes = const Value.absent(),
+                Value<String?> purchaseChannel = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
               }) => SubscriptionsCompanion(
                 createdAt: createdAt,
@@ -24802,6 +24879,7 @@ class $$SubscriptionsTableTableManager
                 renewalUrl: renewalUrl,
                 remindersEnabled: remindersEnabled,
                 notes: notes,
+                purchaseChannel: purchaseChannel,
                 rowid: rowid,
               ),
           createCompanionCallback:
@@ -24827,6 +24905,7 @@ class $$SubscriptionsTableTableManager
                 Value<String?> renewalUrl = const Value.absent(),
                 Value<bool> remindersEnabled = const Value.absent(),
                 Value<String?> notes = const Value.absent(),
+                Value<String?> purchaseChannel = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
               }) => SubscriptionsCompanion.insert(
                 createdAt: createdAt,
@@ -24850,6 +24929,7 @@ class $$SubscriptionsTableTableManager
                 renewalUrl: renewalUrl,
                 remindersEnabled: remindersEnabled,
                 notes: notes,
+                purchaseChannel: purchaseChannel,
                 rowid: rowid,
               ),
           withReferenceMapper: (p0) => p0

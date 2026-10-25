@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:intl/intl.dart';
 
 import '../../app/providers.dart';
 import '../../app/routes.dart';
 import '../../app/theme/app_theme.dart';
 import '../../core/json_list.dart';
 import '../../core/launch.dart';
+import '../../data/catalog/plan_models.dart';
 import '../../data/repositories/account_repository.dart';
+import '../../data/repositories/settings_repository.dart';
 import '../../data/repositories/subscription_repository.dart';
+import '../../domain/markets.dart';
 import '../../shared/widgets/account_tile.dart';
 import '../../shared/widgets/app_card.dart';
 import '../../shared/widgets/confirm_dialog.dart';
@@ -18,6 +22,8 @@ import '../../shared/widgets/platform_logo.dart';
 import '../../shared/widgets/section_header.dart';
 import '../../shared/widgets/toast.dart';
 import '../accounts/account_form.dart';
+import '../subscriptions/plan_picker.dart';
+import '../subscriptions/subscription_form.dart';
 
 /// A platform (catalog entry or custom) with the user's accounts on it.
 class PlatformDetailScreen extends ConsumerWidget {
@@ -35,6 +41,8 @@ class PlatformDetailScreen extends ConsumerWidget {
     final subs = (ref.watch(subscriptionsProvider).value ?? const <SubscriptionView>[]).where((s) => s.sub.platformId == platformId).toList();
     final catalog = ref.watch(catalogServiceProvider);
     final repo = ref.read(platformRepositoryProvider);
+    final settings = ref.watch(settingsProvider).value ?? const <String, dynamic>{};
+    final plans = ref.watch(planCatalogProvider).value?.plansFor(platformId);
     return Scaffold(
       appBar: AppBar(backgroundColor: c.background, title: Text(platform.name), leading: BackButton(onPressed: () => context.canPop() ? context.pop() : context.go(Routes.myWorld))),
       body: PageScaffold(
@@ -106,6 +114,10 @@ class PlatformDetailScreen extends ConsumerWidget {
               ]),
             ),
           ],
+          if (plans != null && plans.plans.isNotEmpty) ...[
+            const SizedBox(height: 20),
+            _PlansCard(plans: plans, market: settings.market, initialChannel: settings.purchaseChannel, onPick: (pick) => showSubscriptionForm(context, ref, presetPlatform: platform, presetPlan: pick)),
+          ],
           if (platform.website != null) ...[
             const SizedBox(height: 20),
             Text(platform.website!, style: context.text.bodySmall?.copyWith(color: c.textMuted)),
@@ -113,5 +125,59 @@ class PlatformDetailScreen extends ConsumerWidget {
         ],
       ),
     );
+  }
+}
+
+/// Published plans for the user's market, re-quoted per store. Tapping a plan
+/// starts a subscription pre-filled with it.
+class _PlansCard extends StatefulWidget {
+  const _PlansCard({required this.plans, required this.market, required this.initialChannel, required this.onPick});
+  final ServicePlans plans;
+  final Market market;
+  final PurchaseChannel initialChannel;
+  final ValueChanged<PlanPick> onPick;
+  @override
+  State<_PlansCard> createState() => _PlansCardState();
+}
+
+class _PlansCardState extends State<_PlansCard> {
+  late PurchaseChannel _channel = widget.initialChannel;
+
+  @override
+  void didUpdateWidget(covariant _PlansCard old) {
+    super.didUpdateWidget(old);
+    if (old.initialChannel != widget.initialChannel) _channel = widget.initialChannel;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final c = context.colors;
+    final m = widget.market;
+    final local = widget.plans.hasLocalPricing(m.code);
+    final verified = widget.plans.lastVerifiedAt;
+    return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+      SectionHeader(
+        title: 'Plans in ${m.name}',
+        subtitle: [
+          local ? 'Published ${m.currency} prices' : 'No ${m.name} price list · default prices shown',
+          if (verified != null) 'verified ${DateFormat.yMMMd().format(verified)}',
+        ].join(' · '),
+        actions: [ChannelSelector(value: _channel, onChanged: (v) => setState(() => _channel = v), dense: true)],
+      ),
+      AppCard(
+        padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+        child: Column(children: [
+          for (final p in widget.plans.plans)
+            if (p.quote(country: m.code, channel: _channel) case final q?) PlanRow(plan: p, quote: q, requested: _channel, dense: true, onTap: () => widget.onPick(PlanPick(p, q, _channel))),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(8, 6, 8, 8),
+            child: Row(children: [
+              Expanded(child: Text('Tap a plan to track it. Change your country or store in Settings → Profile.', style: context.text.bodySmall?.copyWith(color: c.textMuted))),
+              if (widget.plans.pricingUrl != null) TextButton.icon(onPressed: () => openUrl(context, widget.plans.pricingUrl), icon: const Icon(Icons.open_in_new, size: 14), label: const Text('Pricing page')),
+            ]),
+          ),
+        ]),
+      ),
+    ]);
   }
 }

@@ -298,6 +298,9 @@ class Subscriptions extends Table with _Timestamps, _Archivable {
   TextColumn get renewalUrl => text().nullable()();
   BoolColumn get remindersEnabled => boolean().withDefault(const Constant(true))();
   TextColumn get notes => text().nullable()();
+  /// Where the subscription is billed: web | ios | android (PurchaseChannel).
+  /// Null for rows created before schema v2.
+  TextColumn get purchaseChannel => text().nullable()();
 
   @override
   Set<Column> get primaryKey => {id};

@@ -35,7 +35,7 @@ class AppDatabase extends _$AppDatabase {
 
   /// Bump when tables change and add a step in [migration].
   @override
-  int get schemaVersion => 1;
+  int get schemaVersion => 2;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -43,8 +43,10 @@ class AppDatabase extends _$AppDatabase {
           await m.createAll();
         },
         onUpgrade: (m, from, to) async {
-          // Future schema steps go here, e.g.
-          // if (from < 2) await m.addColumn(subscriptions, subscriptions.foo);
+          if (from < 2) {
+            // v2: subscriptions remember which store they are billed through.
+            await m.addColumn(subscriptions, subscriptions.purchaseChannel);
+          }
         },
         beforeOpen: (details) async {
           await customStatement('PRAGMA foreign_keys = ON');

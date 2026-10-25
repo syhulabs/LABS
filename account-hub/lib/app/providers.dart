@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/legacy.dart';
 
 import '../data/backup/backup_service.dart';
 import '../data/catalog/catalog_service.dart';
+import '../data/catalog/plan_catalog_service.dart';
 import '../data/db/app_database.dart';
 import '../data/notifications/notification_service.dart';
 import '../data/repositories/account_repository.dart';
@@ -31,6 +32,7 @@ final keyStoreProvider = Provider<KeyStore>((ref) => throw UnimplementedError('o
 
 final auditRepositoryProvider = Provider((ref) => AuditRepository(ref.watch(databaseProvider)));
 final catalogServiceProvider = Provider((ref) => CatalogService(ref.watch(databaseProvider)));
+final planCatalogServiceProvider = Provider((ref) => PlanCatalogService(ref.watch(databaseProvider)));
 final platformRepositoryProvider = Provider((ref) => PlatformRepository(ref.watch(databaseProvider), ref.watch(auditRepositoryProvider)));
 final emailRepositoryProvider = Provider((ref) => EmailRepository(ref.watch(databaseProvider), ref.watch(auditRepositoryProvider)));
 final accountRepositoryProvider = Provider((ref) => AccountRepository(ref.watch(databaseProvider), ref.watch(auditRepositoryProvider)));
@@ -52,6 +54,13 @@ final notificationServiceProvider = Provider((ref) => NotificationService());
 /// ChangeNotifierProvider disposes the controller itself; do not add a
 /// second onDispose or the notifier is disposed twice.
 final appLockProvider = ChangeNotifierProvider<AppLockController>((ref) => AppLockController(ref.watch(cryptoServiceProvider)));
+
+/// Plan catalog, loaded once; `ref.invalidate` after an import to reload.
+final planCatalogProvider = FutureProvider<PlanCatalogService>((ref) async {
+  final s = ref.watch(planCatalogServiceProvider);
+  if (!s.isLoaded) await s.load();
+  return s;
+});
 
 // ---------- Reactive data streams ----------
 final settingsProvider = StreamProvider<Map<String, dynamic>>((ref) => ref.watch(settingsRepositoryProvider).watchAll());

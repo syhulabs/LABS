@@ -2,6 +2,7 @@ import 'package:drift/drift.dart';
 
 import '../../core/ids.dart';
 import '../../domain/enums.dart';
+import '../../domain/markets.dart';
 import '../../domain/money.dart';
 import '../../domain/subscription_math.dart';
 import '../db/app_database.dart';
@@ -76,6 +77,7 @@ class SubscriptionRepository {
     String? renewalUrl,
     bool remindersEnabled = true,
     String? notes,
+    PurchaseChannel? purchaseChannel,
   }) async {
     if (serviceName.trim().isEmpty) throw ArgumentError('Service name is required');
     if (cycle == BillingCycle.custom && (cycleDays == null || cycleDays <= 0)) throw ArgumentError('Custom cycle needs a number of days');
@@ -99,6 +101,7 @@ class SubscriptionRepository {
       paymentMethodId: Value(paymentMethodId),
       classification: Value(classification.name),
       renewalUrl: Value(_clean(renewalUrl)),
+      purchaseChannel: Value(purchaseChannel?.name),
       remindersEnabled: Value(remindersEnabled),
       notes: Value(_clean(notes)),
       updatedAt: Value(DateTime.now()),

@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-
+import '../../domain/markets.dart';
 import '../db/app_database.dart';
 
 /// Typed access to the key/value settings table. Values are JSON.
@@ -11,6 +11,10 @@ class SettingsRepository {
   static const kDisplayName = 'profile.displayName';
   static const kThemeMode = 'ui.themeMode'; // system | light | dark
   static const kDefaultCurrency = 'finance.defaultCurrency';
+  /// ISO-3166 alpha-2 market the app is set to (drives plan prices).
+  static const kCountry = 'profile.country';
+  /// web | ios | android: where the user usually buys subscriptions.
+  static const kPurchaseChannel = 'subscriptions.purchaseChannel';
   static const kDashboardOrder = 'dashboard.order';
   static const kDashboardHidden = 'dashboard.hidden';
   static const kSidebarCollapsed = 'ui.sidebarCollapsedGroups';
@@ -25,6 +29,9 @@ class SettingsRepository {
   Stream<Map<String, dynamic>> watchAll() => db.select(db.settings).watch().map((rows) {
         final out = <String, dynamic>{};
         for (final r in rows) {
+          // Large documents (imported plan catalogs...) live under `blob.`
+          // and are read directly by their service, never through this map.
+          if (r.key.startsWith('blob.')) continue;
           try {
             out[r.key] = jsonDecode(r.value);
           } catch (_) {
@@ -79,6 +86,11 @@ extension SettingsMapX on Map<String, dynamic> {
   String? get displayName => this[SettingsRepository.kDisplayName] as String?;
   String get themeMode => (this[SettingsRepository.kThemeMode] as String?) ?? 'dark';
   String get defaultCurrency => (this[SettingsRepository.kDefaultCurrency] as String?) ?? 'INR';
+
+  /// Chosen market; before the user picks one it follows the default currency.
+  Market get market => marketByCode(this[SettingsRepository.kCountry] as String?) ?? marketForCurrency(defaultCurrency);
+  String get country => market.code;
+  PurchaseChannel get purchaseChannel => PurchaseChannel.tryParse(this[SettingsRepository.kPurchaseChannel] as String?) ?? PurchaseChannel.web;
   bool get lockEnabled => (this[SettingsRepository.kLockEnabled] as bool?) ?? false;
   int get lockTimeoutSeconds => (this[SettingsRepository.kLockTimeoutSeconds] as num?)?.toInt() ?? 300;
   int get clipboardClearSeconds => (this[SettingsRepository.kClipboardClearSeconds] as num?)?.toInt() ?? 30;

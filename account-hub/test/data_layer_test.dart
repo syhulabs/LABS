@@ -17,6 +17,7 @@ import 'package:syhu_account_hub/data/secure/crypto_service.dart';
 import 'package:syhu_account_hub/data/secure/key_store.dart';
 import 'package:syhu_account_hub/data/secure/vault_repository.dart';
 import 'package:syhu_account_hub/domain/enums.dart';
+import 'package:syhu_account_hub/domain/markets.dart';
 import 'package:syhu_account_hub/domain/money.dart';
 
 import 'support/test_bundle.dart';
@@ -144,6 +145,15 @@ void main() {
     final card = await h.finance.upsertCard(nickname: 'Travel card', last4: '4111111111111111', expMonth: 12, expYear: 2030, kind: CardKind.credit);
     expect(card.last4, '1111');
     expect(() => h.finance.upsertCard(nickname: 'Bad', expMonth: 13), throwsArgumentError);
+  });
+
+  test('subscription remembers the store it is billed through', () async {
+    final sub = await h.subs.upsert(serviceName: 'YouTube Premium', price: Money.fromMajor(149, 'INR'), cycle: BillingCycle.monthly, purchaseChannel: PurchaseChannel.ios);
+    expect(sub.purchaseChannel, 'ios');
+    final again = await h.subs.upsert(id: sub.id, serviceName: 'YouTube Premium', price: Money.fromMajor(149, 'INR'), cycle: BillingCycle.monthly, purchaseChannel: PurchaseChannel.web);
+    expect(again.purchaseChannel, 'web');
+    final legacy = await h.subs.upsert(serviceName: 'Old row', price: Money.fromMajor(1, 'INR'), cycle: BillingCycle.monthly);
+    expect(legacy.purchaseChannel, isNull, reason: 'unknown store stays unknown; never defaulted');
   });
 
   test('subscription totals are currency-aware and history is recorded', () async {

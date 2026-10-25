@@ -209,9 +209,9 @@ class BackupService {
 
   Future<String> exportSubscriptionsCsv() async {
     final rows = await (db.select(db.subscriptions)..where((s) => s.archivedAt.isNull())).get();
-    final b = StringBuffer('service,plan,price,currency,billing_cycle,status,next_billing_date,classification\n');
+    final b = StringBuffer('service,plan,price,currency,billing_cycle,status,next_billing_date,classification,billed_through\n');
     for (final s in rows) {
-      b.writeln([s.serviceName, s.plan, (s.priceMinor / 100).toStringAsFixed(2), s.currency, s.billingCycle, s.status, s.nextBillingDate?.toIso8601String().substring(0, 10), s.classification].map(_csv).join(','));
+      b.writeln([s.serviceName, s.plan, (s.priceMinor / 100).toStringAsFixed(2), s.currency, s.billingCycle, s.status, s.nextBillingDate?.toIso8601String().substring(0, 10), s.classification, s.purchaseChannel].map(_csv).join(','));
     }
     return b.toString();
   }

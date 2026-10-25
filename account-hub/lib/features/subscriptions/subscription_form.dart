@@ -8,6 +8,7 @@ import '../../data/repositories/account_repository.dart';
 import '../../data/repositories/settings_repository.dart';
 import '../../data/repositories/subscription_repository.dart';
 import '../../domain/enums.dart';
+import '../../domain/markets.dart';
 import '../../domain/money.dart';
 import '../../domain/subscription_math.dart';
 import '../../shared/widgets/form_sheet.dart';
@@ -15,6 +16,7 @@ import '../../shared/widgets/pickers.dart';
 import '../../shared/widgets/platform_logo.dart';
 import '../../shared/widgets/toast.dart';
 import '../banking/bank_account_form.dart';
+import 'plan_picker.dart';
 
 /// Re-plans local renewal reminders after any subscription change. Fails soft
 /// on platforms without notification support.
@@ -26,20 +28,32 @@ Future<void> rescheduleReminders(WidgetRef ref) async {
   } catch (_) {}
 }
 
-/// Create / edit a subscription. Returns the saved id.
-Future<String?> showSubscriptionForm(BuildContext context, WidgetRef ref, {SubscriptionView? existing, Platform? presetPlatform}) async {
+/// Create / edit a subscription. Returns the saved id. [presetPlan] pre-fills
+/// plan name, price, currency, cycle and channel from the plan catalog.
+Future<String?> showSubscriptionForm(BuildContext context, WidgetRef ref, {SubscriptionView? existing, Platform? presetPlatform, PlanPick? presetPlan}) async {
   final s = existing?.sub;
   final settings = ref.read(settingsProvider).value ?? const <String, dynamic>{};
   Platform? platform = existing?.platform ?? presetPlatform;
   final service = TextEditingController(text: s?.serviceName ?? platform?.name ?? '');
-  final plan = TextEditingController(text: s?.plan ?? '');
-  final amount = TextEditingController(text: s == null ? '' : Money(s.priceMinor, s.currency).major.toStringAsFixed(Money(s.priceMinor, s.currency).fractionDigits));
+  final plan = TextEditingController(text: s?.plan ?? presetPlan?.plan.name ?? '');
+  final presetMoney = presetPlan?.quote.price.money;
+  final amount = TextEditingController(text: s != null ? Money(s.priceMinor, s.currency).major.toStringAsFixed(Money(s.priceMinor, s.currency).fractionDigits) : presetMoney?.major.toStringAsFixed(presetMoney.fractionDigits) ?? '');
   final cycleDays = TextEditingController(text: s?.cycleDays?.toString() ?? '');
   final renewalUrl = TextEditingController(text: s?.renewalUrl ?? '');
   final notes = TextEditingController(text: s?.notes ?? '');
   final tags = TextEditingController(text: s == null ? '' : (await ref.read(tagRepositoryProvider).watchTagsFor(EntityType.subscription, s.id).first).map((t) => t.name).join(', '));
-  var currency = s?.currency ?? settings.defaultCurrency;
-  var cycle = enumFromName(BillingCycle.values, s?.billingCycle, BillingCycle.monthly);
+  var currency = s?.currency ?? presetMoney?.currency ?? settings.defaultCurrency;
+  var cycle = s != null ? enumFromName(BillingCycle.values, s.billingCycle, BillingCycle.monthly) : (presetPlan?.plan.cycle ?? BillingCycle.monthly);
+  var channel = PurchaseChannel.tryParse(s?.purchaseChannel) ?? presetPlan?.channel ?? settings.purchaseChannel;
+  final market = settings.market;
+  void applyPick(PlanPick pick) {
+    plan.text = pick.plan.name;
+    final m = pick.quote.price.money;
+    amount.text = m.major.toStringAsFixed(m.fractionDigits);
+    currency = m.currency;
+    cycle = pick.plan.cycle;
+    channel = pick.channel;
+  }
   DateTime? startDate = s?.startDate;
   DateTime? nextDate = s?.nextBillingDate;
   DateTime? cancellationDate = s?.cancellationDate;
@@ -55,6 +69,7 @@ Future<String?> showSubscriptionForm(BuildContext context, WidgetRef ref, {Subsc
   return showFormSheet<String>(context, title: existing == null ? 'Add subscription' : 'Edit subscription', maxWidth: 600, builder: (ctx, close) {
     return StatefulBuilder(builder: (ctx, setState) {
       final methods = ref.watch(paymentMethodsProvider).value ?? const <PaymentMethod>[];
+      final plans = ref.watch(planCatalogProvider).value?.plansFor(platform?.id);
       final accounts = (ref.watch(accountsProvider).value ?? const <AccountView>[]).where((a) => platform == null || a.platform.id == platform!.id).toList();
       int? parsedDays() => int.tryParse(cycleDays.text.trim());
       return Form(
@@ -85,8 +100,34 @@ Future<String?> showSubscriptionForm(BuildContext context, WidgetRef ref, {Subsc
           ]),
           if (accounts.isNotEmpty)
             AppDropdown<String>(label: 'Account', value: accountId, allowNull: true, nullLabel: 'Not linked', items: [for (final a in accounts) (a.account.id, '${a.account.accountName}${a.email == null ? '' : ' · ${a.email!.address}'}')], onChanged: (v) => setState(() => accountId = v)),
-          AppTextField(controller: plan, label: 'Plan', hint: 'Premium, Pro, Family…'),
+          Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Expanded(child: AppTextField(controller: plan, label: 'Plan', hint: 'Premium, Pro, Family…')),
+            if (plans != null) ...[
+              const SizedBox(width: 8),
+              Padding(
+                padding: const EdgeInsets.only(top: 4),
+                child: FilledButton.tonalIcon(
+                  onPressed: () async {
+                    final pick = await showPlanPicker(ctx, ref, plans: plans, channel: channel, market: market);
+                    if (pick != null) setState(() => applyPick(pick));
+                  },
+                  icon: const Icon(Icons.list_alt_outlined, size: 16),
+                  label: Text('Choose a plan (${market.code})'),
+                ),
+              ),
+            ],
+          ]),
           FormSectionTitle('Billing'),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 12),
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Text('Billed through', style: ctx.text.labelLarge),
+              const SizedBox(height: 6),
+              ChannelSelector(value: channel, onChanged: (v) => setState(() => channel = v)),
+              const SizedBox(height: 4),
+              Text(plans == null ? 'Store prices often differ from the web price for the same plan.' : 'Switching the store re-quotes the plan when you choose one.', style: TextStyle(color: ctx.colors.textMuted, fontSize: 12)),
+            ]),
+          ),
           MoneyField(amountController: amount, currency: currency, onCurrencyChanged: (v) => setState(() => currency = v)),
           Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Expanded(child: AppDropdown<BillingCycle>(label: 'Billing cycle', value: cycle, items: [for (final c in BillingCycle.values) (c, c.label)], onChanged: (v) => setState(() => cycle = v ?? cycle))),
@@ -170,6 +211,7 @@ Future<String?> showSubscriptionForm(BuildContext context, WidgetRef ref, {Subsc
                       renewalUrl: renewalUrl.text,
                       remindersEnabled: reminders,
                       notes: notes.text,
+                      purchaseChannel: channel,
                     );
                 await ref.read(tagRepositoryProvider).setTags(EntityType.subscription, saved.id, TagsField.parse(tags.text));
                 await rescheduleReminders(ref);

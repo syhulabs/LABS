@@ -10,6 +10,7 @@ import '../../core/launch.dart';
 import '../../data/db/app_database.dart';
 import '../../data/repositories/subscription_repository.dart';
 import '../../domain/enums.dart';
+import '../../domain/markets.dart';
 import '../../domain/subscription_math.dart';
 import '../../shared/widgets/app_card.dart';
 import '../../shared/widgets/confirm_dialog.dart';
@@ -71,6 +72,7 @@ class SubscriptionDetailScreen extends ConsumerWidget {
             Wrap(spacing: 6, runSpacing: 6, children: [
               StatusChip(view.status.label, color: statusColor(context, s.status), dense: false),
               ClassificationChip(s.classification),
+              if (PurchaseChannel.tryParse(s.purchaseChannel) case final ch?) StatusChip('Billed via ${ch.label}', color: c.accentBlue, dense: false, icon: switch (ch) { PurchaseChannel.web => Icons.language, PurchaseChannel.ios => Icons.phone_iphone, PurchaseChannel.android => Icons.android }),
               if (archived) StatusChip('Archived', color: c.textMuted, dense: false),
             ]),
           ])),

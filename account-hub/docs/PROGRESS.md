@@ -22,6 +22,7 @@ _Updated 24 Oct 2026. Branch `claude/wizardly-pasteur-kmnhrm`._
 - [x] One email identity linked to many services; reverse lookup screen
 - [x] Catalog entries vs user-owned records kept distinct; browsing never adds
 - [x] Subscription totals accurate and currency-aware (never summed across currencies)
+- [x] Country + store (web / iOS / Android) aware plan prices with labelled fallbacks to web and default USD (`docs/PLANS.md`)
 - [x] Sensitive data protected: vault ciphertext only, bank/card metadata only, nothing secret in search, toasts, notifications, audit log or plain exports
 - [x] Missing logos handled: original file → Simple Icons glyph → monogram (no look-alike substitutes)
 - [x] Recovers from bad input (validation, friendly error toasts, FK-checked restore that rolls back)
@@ -64,4 +65,5 @@ Screenshots of the Linux build are in `docs/screenshots/`.
 3. Cloud sync is intentionally not implemented (architecture is sync-ready: UUID keys, `updated_at`, full-document backups).
 4. Email inbox integrations are not implemented (by design; would need explicit OAuth consent).
 5. Currency conversion is not implemented; totals are shown per currency.
+6. Plan prices are published list prices with a verification date, not live quotes; markets without a published list for a service fall back to that service's default price and the UI says so.
 6. Not independently security-audited.

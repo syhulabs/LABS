@@ -71,6 +71,10 @@ account-hub/
   tool/                           catalog + brand-icon generators
 ```
 
+## Plan prices by country and store
+
+Settings → Profile sets your **country** (29 markets) and the **store you usually subscribe through** (web, App Store, Google Play). The subscription form's *Choose a plan* button and the *Plans in <country>* card on every platform page quote the service's published plans for that combination, falling back to the country's web price and then to the service's default (USD) price, and say which one you are seeing. Prices live in `assets/catalog/plans.json` with a source URL and verification date per number and are never fetched live; `docs/PLANS.md` documents the format and the update script.
+
 ## Logos
 
 `assets/logos/` holds coloured original marks for 1137 of the 1227 catalog platforms, gathered by `tool/fetch_logos.py` and `tool/fetch_appstore_icons.py` from LobeHub's AI icon set, homarr dashboard-icons, gilbarbara/logos, svgl, the brands' own website icons and official App Store artwork. Every file is the brand's published mark rasterised to 128px; nothing is redrawn. `docs/LOGO_SOURCES.md` lists the source URL per file and `manifest.json` records each mark's tone so dark marks get a light tile in dark mode.

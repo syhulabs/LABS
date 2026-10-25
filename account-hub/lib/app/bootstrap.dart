@@ -19,6 +19,11 @@ Future<void> bootstrap(ProviderContainer container, {bool notifications = true})
     print('Catalog seed failed: $e\n$st');
   }
   try {
+    await container.read(planCatalogServiceProvider).load();
+  } catch (_) {
+    // Plans are reference data; the subscription form works without them.
+  }
+  try {
     final manifest = await AssetManifest.loadFromAssetBundle(rootBundle);
     PlatformLogo.setAvailableLogos(manifest.listAssets());
   } catch (_) {
