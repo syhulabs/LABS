@@ -74,3 +74,19 @@ Settings → Catalog → Import. The file must be JSON with the same shape as `a
 - `flutter test` runs unit tests (`test/domain_test.dart`, `test/crypto_test.dart`), data-layer integration tests on real SQLite (`test/data_layer_test.dart`, `test/persistence_test.dart`), app smoke tests and per-feature widget tests (`test/features/`).
 - Widget tests use `test/support/pump_app.dart`. Drift queries and file I/O never complete inside the widget-test fake-async zone, so build the container with `tester.runAsync(createTestContainer)` and run repository calls through `data(tester, () => ...)`. Use `settle()` rather than `pumpAndSettle()` (the dashboard clock never settles). UI actions that trigger AES-GCM (saving a vault item) must also run inside `runAsync`.
 - `integration_test/app_test.dart` drives the real app (on-disk database, keychain key store) on a device or desktop: `flutter test integration_test -d macos` (or `-d linux` under `xvfb-run` on a headless box).
+
+## TestFlight from CI
+
+The `testflight` job in `.github/workflows/apple-builds.yml` signs the iOS build and uploads it to TestFlight on every push. It stays off until you add these in the repository's **Settings → Secrets and variables → Actions**:
+
+| Kind | Name | Where it comes from |
+| --- | --- | --- |
+| Variable | `TESTFLIGHT_ENABLED` | `true` to switch the job on |
+| Variable | `IOS_BUNDLE_ID` | optional; defaults to `com.syhulabs.syhuAccountHub` |
+| Secret | `ASC_ISSUER_ID` | App Store Connect → Users and Access → Integrations → App Store Connect API (Issuer ID) |
+| Secret | `ASC_KEY_ID` | Key ID of a key you generate there with the **App Manager** role |
+| Secret | `ASC_PRIVATE_KEY` | full contents of the downloaded `AuthKey_XXXX.p8` |
+| Secret | `IOS_DIST_P12_BASE64` | your Apple Distribution certificate exported from Keychain Access as `.p12`, then `base64 -i cert.p12 \| pbcopy` |
+| Secret | `IOS_DIST_P12_PASSWORD` | the password you set when exporting the `.p12` |
+
+One-time setup in App Store Connect: create the app record (My Apps → + → New App) with the same bundle id and name **SYHU Account Hub**. The job then downloads an App Store provisioning profile for that bundle id through the API, builds the IPA with the run number as the build number, and uploads it. Builds appear under TestFlight → iOS Builds a few minutes later; add yourself as an internal tester once.
