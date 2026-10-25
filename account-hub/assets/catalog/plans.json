@@ -1,5 +1,5 @@
 {
- "version": 4,
+ "version": 5,
  "generatedAt": "2026-10-25",
  "services": [
   {
@@ -779,14 +779,6 @@
         "verifiedAt": "2026-10-25"
        }
       },
-      "TH": {
-       "web": {
-        "amount": 456.89,
-        "currency": "THB",
-        "source": "https://www.adobe.com/th_th/creativecloud/plans.html",
-        "verifiedAt": "2026-10-25"
-       }
-      },
       "SE": {
        "web": {
         "amount": 285.0,
@@ -906,14 +898,6 @@
         "verifiedAt": "2026-10-25"
        }
       },
-      "TH": {
-       "web": {
-        "amount": 350.96,
-        "currency": "THB",
-        "source": "https://www.adobe.com/th_th/creativecloud/plans.html",
-        "verifiedAt": "2026-10-25"
-       }
-      },
       "SE": {
        "web": {
         "amount": 311.25,
@@ -934,7 +918,7 @@
     }
    ],
    "pricingUrl": "https://www.adobe.com/creativecloud/plans.html",
-   "notes": "Web only. All prices are the 'annual plan, billed monthly' regular (non-introductory) price per month, incl. local tax where Adobe shows it (IN GST, GB VAT, DE MwSt, AU GST, JP tax). Adobe's plans pages currently show only this billing option for individuals; no annual-prepaid or month-to-month price is published, so only monthly entries are recorded. Intro offers omitted (e.g. US Pro US$34.99/mo first 3 months, IN Pro Rs1,199/mo first year, JP Pro 6,810 yen first 12 months). 'Creative Cloud Pro' is the current name of the former All Apps plan. MY/ID/PH/SG/AE/CA plans pages load prices client-side and could not be read; omitted. Web only (Adobe sells direct). Regular (non-promotional) 'annual, billed monthly' prices recorded; first-year/first-3-month intro discounts ignored. PL: Adobe's Poland store prices in EUR, not PLN - recorded as EUR. KR: Adobe Korea still labels the all-apps plan 'Creative Cloud 모든 앱' (All Apps); no separate Standard tier listed. SE/NO: Standard tier not shown on the pages that rendered. MX, CH, HK, NZ, ZA, SA, QA, VN, CN: Adobe plan pages did not render prices (or showed USD fallback) - omitted."
+   "notes": "Web only. All prices are the 'annual plan, billed monthly' regular (non-introductory) price per month, incl. local tax where Adobe shows it (IN GST, GB VAT, DE MwSt, AU GST, JP tax). Adobe's plans pages currently show only this billing option for individuals; no annual-prepaid or month-to-month price is published, so only monthly entries are recorded. Intro offers omitted (e.g. US Pro US$34.99/mo first 3 months, IN Pro Rs1,199/mo first year, JP Pro 6,810 yen first 12 months). 'Creative Cloud Pro' is the current name of the former All Apps plan. MY/ID/PH/SG/AE/CA plans pages load prices client-side and could not be read; omitted. Web only (Adobe sells direct). Regular (non-promotional) 'annual, billed monthly' prices recorded; first-year/first-3-month intro discounts ignored. PL: Adobe's Poland store prices in EUR, not PLN - recorded as EUR. KR: Adobe Korea still labels the all-apps plan 'Creative Cloud 모든 앱' (All Apps); no separate Standard tier listed. SE/NO: Standard tier not shown on the pages that rendered. MX, CH, HK, NZ, ZA, SA, QA, VN, CN: Adobe plan pages did not render prices (or showed USD fallback) - omitted. Thailand Photography and Photoshop prices removed in audit (2026-10-25): Photography was above Photoshop, the reverse of every other market, and the page could not be re-read."
   },
   {
    "platformId": "adobe-express",
@@ -7149,14 +7133,6 @@
         "verifiedAt": "2026-10-25"
        }
       },
-      "TR": {
-       "ios": {
-        "amount": 73.99,
-        "currency": "TRY",
-        "source": "https://apps.apple.com/tr/app/crunchyroll/id329913454",
-        "verifiedAt": "2026-10-25"
-       }
-      },
       "BR": {
        "ios": {
         "amount": 52.9,
@@ -7230,7 +7206,7 @@
     }
    ],
    "pricingUrl": "https://www.crunchyroll.com/premium",
-   "notes": "crunchyroll.com/premium and the Crunchyroll store render no prices to the fetcher and the 2026 news articles were blocked (403), so 'default'/US web uses the US App Store IAP prices ($9.99/$13.99/$17.99); Engadget (2026-02-02) independently reports the February 2026 US hike as '$10/$14/$18' (rounded) and the Canadian App Store prices match MobileSyrup's reported Canadian web prices, so the US iOS price is taken to equal the web price. Canada web from MobileSyrup (2026-02-03). All other countries are App Store IAP prices. DE 'Fan' omitted (listing labels it only 'Premium Monatsabonnement 8,99 EUR'). JP App Store listing returned 404. Fan annual omitted except where shown (US Fan annual is a limited-time $66.99 promo per reporting). iOS prices from the Crunchyroll app's In-App Purchases list per App Store storefront (apps.apple.com/<cc>/app/crunchyroll/id329913454). In CH, BR and MX the storefront has no 'Fan' entry; the legacy-named monthly 'Premium' subscription (Premium Monatsabonnement / Assinatura Premium Mensal / Suscripcion Premium Mensual) is recorded as fan-monthly. TR Ultimate Fan (TRY 73.99) is listed below Mega Fan (TRY 89.90) on the storefront; recorded as shown but likely stale. Fan annual and Ultimate Fan annual not listed in any storefront. Not available in CN. Web prices omitted (geo-detected site)."
+   "notes": "crunchyroll.com/premium and the Crunchyroll store render no prices to the fetcher and the 2026 news articles were blocked (403), so 'default'/US web uses the US App Store IAP prices ($9.99/$13.99/$17.99); Engadget (2026-02-02) independently reports the February 2026 US hike as '$10/$14/$18' (rounded) and the Canadian App Store prices match MobileSyrup's reported Canadian web prices, so the US iOS price is taken to equal the web price. Canada web from MobileSyrup (2026-02-03). All other countries are App Store IAP prices. DE 'Fan' omitted (listing labels it only 'Premium Monatsabonnement 8,99 EUR'). JP App Store listing returned 404. Fan annual omitted except where shown (US Fan annual is a limited-time $66.99 promo per reporting). iOS prices from the Crunchyroll app's In-App Purchases list per App Store storefront (apps.apple.com/<cc>/app/crunchyroll/id329913454). In CH, BR and MX the storefront has no 'Fan' entry; the legacy-named monthly 'Premium' subscription (Premium Monatsabonnement / Assinatura Premium Mensal / Suscripcion Premium Mensual) is recorded as fan-monthly. TR Ultimate Fan (TRY 73.99) is listed below Mega Fan (TRY 89.90) on the storefront; recorded as shown but likely stale. Fan annual and Ultimate Fan annual not listed in any storefront. Not available in CN. Web prices omitted (geo-detected site). Türkiye Ultimate Fan iOS price removed in audit (2026-10-25): the store lists it below Mega Fan, a stale SKU."
   },
   {
    "platformId": "cursor",
@@ -7456,14 +7432,6 @@
         "amount": 159,
         "currency": "NOK",
         "source": "https://apps.apple.com/no/app/deezer-music-player/id292738169",
-        "verifiedAt": "2026-10-25"
-       }
-      },
-      "TR": {
-       "ios": {
-        "amount": 38.99,
-        "currency": "TRY",
-        "source": "https://apps.apple.com/tr/app/deezer-music-player/id292738169",
         "verifiedAt": "2026-10-25"
        }
       },
@@ -7783,7 +7751,7 @@
     }
    ],
    "pricingUrl": "https://www.deezer.com/us/offers",
-   "notes": "US web prices from deezer.com/us/offers (annual = full yearly amount shown: Premium $107.99, Duo $174.99, Family $218.99). Regional deezer.com/<cc>/offers pages either 404 or geo-serve USD, so other countries' web prices are not verified. iOS prices from App Store IAP lists, which are higher than web in the US ($14.99 vs $11.99). MY/ID/PH/SG/AE App Store lists show two conflicting 'Premium' SKUs each (e.g. SG S$19.98 vs S$21.90) and are omitted rather than guessed. IN App Store listing returned 404 (Deezer not sold in India). deezer.com/<lang>/offers pages are language-only and showed US pricing, so no web prices verified; only App Store in-app purchase prices (ios) recorded, using the country-named products (e.g. 'Deezer Premium Thailand'). Omitted where the listing showed conflicting prices for the same plan (SA Premium, DK Premium, PL Premium). Not sold in KR (listing shows only foreign products) or HK (404); CN not sold. Duo/Student/annual not listed as in-app purchases."
+   "notes": "US web prices from deezer.com/us/offers (annual = full yearly amount shown: Premium $107.99, Duo $174.99, Family $218.99). Regional deezer.com/<cc>/offers pages either 404 or geo-serve USD, so other countries' web prices are not verified. iOS prices from App Store IAP lists, which are higher than web in the US ($14.99 vs $11.99). MY/ID/PH/SG/AE App Store lists show two conflicting 'Premium' SKUs each (e.g. SG S$19.98 vs S$21.90) and are omitted rather than guessed. IN App Store listing returned 404 (Deezer not sold in India). deezer.com/<lang>/offers pages are language-only and showed US pricing, so no web prices verified; only App Store in-app purchase prices (ios) recorded, using the country-named products (e.g. 'Deezer Premium Thailand'). Omitted where the listing showed conflicting prices for the same plan (SA Premium, DK Premium, PL Premium). Not sold in KR (listing shows only foreign products) or HK (404); CN not sold. Duo/Student/annual not listed as in-app purchases. Türkiye Premium iOS price removed in audit (2026-10-25): the store lists 'Deezer Premium for Turkey' at ₺38.99 and 'Deezer Premium' at ₺74.99, so the current price is ambiguous."
   },
   {
    "platformId": "descript",

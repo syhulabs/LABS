@@ -101,7 +101,9 @@ whole file, use the patch form instead:
 python3 tool/patch_plans.py research/wave2-ai.json research/wave2-media.json …
 ```
 
-It adds prices per (service, plan, country, store), replaces an existing
+Before committing, run `python3 tool/audit_plans.py`. It flags tiers priced out of order, yearly prices outside 6–12.5× the monthly price, decimals in JPY/KRW/VND and store prices far from the web price. Regional discounts are real, so a flag means re-read the source, not delete the price.
+
+The patch script adds prices per (service, plan, country, store), replaces an existing
 price only when the patch's `verifiedAt` is the same day or newer, appends
 plans whose id is new, and applies the same validation. Run `flutter clean` before the next build so the
 asset bundle picks up the new file, then `flutter test` (the plan catalog test
@@ -115,7 +117,7 @@ to the service's default price and the UI says so. No Google Play prices are
 on file yet: Play listings only publish price ranges, so none could be
 verified against a stated figure.
 
-Plans as of 2026-10-25 (v4): 64 services, 272 plans.
+Plans as of 2026-10-25 (v5): 64 services, 272 plans.
 
 | service | plans | AE | AU | BR | CA | CH | CN | DE | DK | GB | HK | ID | IN | JP | KR | MX | MY | NO | NZ | PH | PL | QA | SA | SE | SG | TH | TR | US | VN | ZA |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
