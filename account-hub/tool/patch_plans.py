@@ -78,7 +78,7 @@ def main(paths):
                         if key != "default" and cur not in (markets[key], "USD", "EUR"):
                             problems.append(f"{pid}/{plan_id}/{key}/{ch}: currency {cur} is not {markets[key]} (dropped)")
                             continue
-                        if not str(price.get("source", "")).startswith("http"):
+                        if not str(price.get("source", "")).startswith(("http", "observed:")):
                             problems.append(f"{pid}/{plan_id}/{key}/{ch}: no source URL (dropped)")
                             continue
                         if cur in ZERO_DECIMAL:

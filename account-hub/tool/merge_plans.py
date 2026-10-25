@@ -77,7 +77,7 @@ def main(paths):
                             continue
                         if cur in ZERO_DECIMAL:
                             amt = int(round(amt))
-                        if not price.get("source", "").startswith("http"):
+                        if not str(price.get("source", "")).startswith(("http", "observed:")):
                             problems.append(f"{pid}/{pid2}/{key}/{ch}: no source URL (dropped)")
                             continue
                         kept[ch] = {"amount": amt, "currency": cur, "source": price["source"], "verifiedAt": price.get("verifiedAt") or dt.date.today().isoformat()}

@@ -70,6 +70,10 @@ currencies or guesses a local price.
   that country's currency, or USD / EUR when the service bills that country
   in one of those (Netflix in Qatar, Adobe in Poland).
 * Channels are `web`, `ios`, `android`. Omit a channel rather than guess it.
+* `source` is the URL that was read, or `observed: <where>` for a price seen
+  first-hand in a store app. Store apps show prices that public pages do not:
+  the App Store web listing shows only the first 10 in-app items, and Google
+  Play shows only ranges. Keep a screenshot in `docs/price-evidence/`.
 * `amount` is a number in major units (JPY/KRW/VND have no decimals).
 
 Imports are validated before anything is stored: duplicate ids, unknown cycles
@@ -111,7 +115,7 @@ to the service's default price and the UI says so. No Google Play prices are
 on file yet: Play listings only publish price ranges, so none could be
 verified against a stated figure.
 
-Plans as of 2026-10-25 (v3): 64 services, 272 plans.
+Plans as of 2026-10-25 (v4): 64 services, 272 plans.
 
 | service | plans | AE | AU | BR | CA | CH | CN | DE | DK | GB | HK | ID | IN | JP | KR | MX | MY | NO | NZ | PH | PL | QA | SA | SE | SG | TH | TR | US | VN | ZA |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -143,7 +147,7 @@ Plans as of 2026-10-25 (v3): 64 services, 272 plans.
 | epidemic-sound | 4 | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | w | - | - |
 | expressvpn | 3 | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | w | - | - |
 | figma | 3 | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | w | - | - |
-| gemini | 4 | wi | wi | wi | wi | wi | - | wi | wi | wi | i | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi |
+| gemini | 4 | wi | wi | wi | wi | wi | - | wi | wi | wi | i | wi | wia | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi |
 | github-copilot | 3 | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | w | - | - |
 | google-one | 2 | i | i | i | i | i | - | i | i | i | i | - | i | i | - | i | i | i | i | i | i | i | i | i | i | i | i | wi | i | i |
 | grammarly | 3 | i | i | i | i | i | - | i | i | i | i | i | i | i | i | i | i | i | i | i | i | i | i | i | i | i | i | wi | i | i |

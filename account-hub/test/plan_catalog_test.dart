@@ -174,6 +174,18 @@ void main() {
       expect(svc2.serviceCount, bundledCount);
     });
 
+    test('bundled Gemini Ultra India quotes differ by store', () async {
+      final raw = await File('assets/catalog/plans.json').readAsString();
+      final doc = PlanCatalogDocument.fromJson(jsonDecode(raw) as Map<String, dynamic>);
+      final ultra = doc.services.firstWhere((s) => s.platformId == 'gemini').plans.firstWhere((p) => p.id == 'ai-ultra-monthly');
+      final ios = ultra.quote(country: 'IN', channel: PurchaseChannel.ios)!;
+      final android = ultra.quote(country: 'IN', channel: PurchaseChannel.android)!;
+      expect(ios.isExact && android.isExact, isTrue);
+      expect(ios.price.money, Money.fromMajor(8900, 'INR'));
+      expect(android.price.money, Money.fromMajor(6500, 'INR'));
+      expect(ios.price.isObserved, isTrue);
+    });
+
     test('bundled plans.json is valid and only references catalog platforms', () async {
       final raw = await File('assets/catalog/plans.json').readAsString();
       final doc = PlanCatalogDocument.fromJson(jsonDecode(raw) as Map<String, dynamic>);
@@ -189,7 +201,7 @@ void main() {
             expect(marketCurrency, contains(country), reason: '${s.platformId}/${p.id}: $country is not a supported market');
             for (final price in p.prices[country]!.values) {
               expect([marketCurrency[country], 'USD', 'EUR'], contains(price.money.currency), reason: '${s.platformId}/${p.id}/$country billed in wrong currency');
-              expect(price.source, startsWith('http'), reason: '${s.platformId}/${p.id}/$country has no source');
+              expect(price.source!.startsWith('http') || price.source!.startsWith('observed:'), isTrue, reason: '${s.platformId}/${p.id}/$country has no source');
               expect(price.money.minor, greaterThanOrEqualTo(0));
             }
           }

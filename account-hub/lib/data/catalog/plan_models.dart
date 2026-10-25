@@ -11,8 +11,12 @@ class PlanPrice {
   const PlanPrice({required this.money, this.source, this.verifiedAt});
 
   final Money money;
+  /// A URL that was read, or `observed: <where>` for a price seen first-hand
+  /// in a store app (store apps show prices the public web pages do not).
   final String? source;
   final DateTime? verifiedAt;
+
+  bool get isObserved => source?.startsWith('observed:') ?? false;
 
   factory PlanPrice.fromJson(Map<String, dynamic> j) {
     final amount = j['amount'];

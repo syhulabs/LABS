@@ -67,7 +67,7 @@ class PlanRow extends StatelessWidget {
       title: Text(plan.name),
       subtitle: Text([
         plan.cycle.label,
-        if (verified != null) 'verified ${DateFormat.yMMMd().format(verified)}',
+        if (verified != null) '${quote.price.isObserved ? 'seen in store' : 'verified'} ${DateFormat.yMMMd().format(verified)}',
       ].join(' · '), style: TextStyle(color: c.textMuted, fontSize: 12)),
       trailing: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.end, children: [
         Text(quote.price.money.format(), style: context.text.titleMedium?.copyWith(fontWeight: FontWeight.w600)),

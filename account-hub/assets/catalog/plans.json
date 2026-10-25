@@ -1,5 +1,5 @@
 {
- "version": 3,
+ "version": 4,
  "generatedAt": "2026-10-25",
  "services": [
   {
@@ -11926,6 +11926,18 @@
         "currency": "INR",
         "source": "https://gemini.google/subscriptions/?hl=en-IN",
         "verifiedAt": "2026-10-25"
+       },
+       "ios": {
+        "amount": 8900,
+        "currency": "INR",
+        "source": "observed: Gemini app on iPhone, India storefront, upgrade screen 'Google AI Ultra, 20 TB, starting at ₹8,900/mo' (screenshot docs/price-evidence/gemini-ai-ultra-IN-ios-2026-10-25.png)",
+        "verifiedAt": "2026-10-25"
+       },
+       "android": {
+        "amount": 6500,
+        "currency": "INR",
+        "source": "observed: Gemini on Android via Google Play, India, reported by the account owner",
+        "verifiedAt": "2026-10-25"
        }
       },
       "GB": {
@@ -12473,7 +12485,7 @@
     }
    ],
    "pricingUrl": "https://gemini.google/subscriptions/",
-   "notes": "Web prices from gemini.google/<country>/subscriptions/ with that region selected. Google AI Ultra is sold in two tiers ('starting at' tier with 5x AI Pro limits, and a 20x tier); both recorded. iOS prices from each App Store storefront's In-App Purchases list (items named 'Google AI Pro (5 TB)', 'Google AI Plus (400 GB)', 'Google AI Ultra (30 TB)'); the single Ultra iOS item matches the 20x web price in every storefront so it is mapped to the 20x plan. Google AI Plus included as it appears on the same pricing page. Annual plans not shown on the page. Web prices from gemini.google/<cc>/subscriptions/ (Ultra 5x tier -> ai-ultra-monthly, Ultra 20x tier -> ai-ultra-20x-monthly). iOS prices from the Google Gemini App Store listing: 'Google AI Pro (5 TB)', 'Google AI Plus (400 GB)', 'Google AI Ultra (20 TB)' = 5x tier, 'Google AI Ultra (30 TB)' = 20x tier. Annual iOS SKUs and the 'Google AI Plus (2 TB)' SKU are not recorded (no existing plan id). KR web page did not render the AI Pro price. Not sold in CN; HK web page unavailable."
+   "notes": "Web prices from gemini.google/<country>/subscriptions/ with that region selected. Google AI Ultra is sold in two tiers ('starting at' tier with 5x AI Pro limits, and a 20x tier); both recorded. iOS prices from each App Store storefront's In-App Purchases list (items named 'Google AI Pro (5 TB)', 'Google AI Plus (400 GB)', 'Google AI Ultra (30 TB)'); the single Ultra iOS item matches the 20x web price in every storefront so it is mapped to the 20x plan. Google AI Plus included as it appears on the same pricing page. Annual plans not shown on the page. Web prices from gemini.google/<cc>/subscriptions/ (Ultra 5x tier -> ai-ultra-monthly, Ultra 20x tier -> ai-ultra-20x-monthly). iOS prices from the Google Gemini App Store listing: 'Google AI Pro (5 TB)', 'Google AI Plus (400 GB)', 'Google AI Ultra (20 TB)' = 5x tier, 'Google AI Ultra (30 TB)' = 20x tier. Annual iOS SKUs and the 'Google AI Plus (2 TB)' SKU are not recorded (no existing plan id). KR web page did not render the AI Pro price. Not sold in CN; HK web page unavailable. India Ultra: iOS ₹8,900 and Android ₹6,500 per month observed first-hand on 2026-10-25; the public App Store listing shows only its first 10 in-app items, so higher tiers are often missing from App Store research."
   },
   {
    "platformId": "github-copilot",
