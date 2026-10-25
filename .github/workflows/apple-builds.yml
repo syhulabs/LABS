@@ -1,0 +1,71 @@
+name: Apple builds (macOS + iOS)
+
+# Builds SYHU Account Hub for macOS and iOS on a hosted Mac, runs the test
+# suite, and uploads the apps as artifacts. iOS is built unsigned
+# (--no-codesign): install it via Xcode / TestFlight after signing with your
+# team, or run it on a simulator.
+on:
+  push:
+    branches: [main, "claude/**"]
+    paths: ["account-hub/**", ".github/workflows/apple-builds.yml"]
+  workflow_dispatch:
+
+concurrency:
+  group: apple-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  apple:
+    runs-on: macos-15
+    timeout-minutes: 60
+    defaults:
+      run:
+        working-directory: account-hub
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.47.8
+          cache: true
+
+      - name: Toolchain report
+        run: |
+          flutter --version
+          xcodebuild -version
+          flutter doctor -v
+
+      - name: Dependencies
+        run: flutter pub get
+
+      - name: Analyze
+        run: flutter analyze
+
+      - name: Tests
+        run: flutter test --timeout 120s
+
+      - name: Build macOS (release)
+        run: flutter build macos --release
+
+      - name: Build iOS (release, unsigned)
+        run: flutter build ios --release --no-codesign
+
+      - name: Package artifacts
+        run: |
+          mkdir -p dist
+          ditto -c -k --sequesterRsrc --keepParent "build/macos/Build/Products/Release/SYHU Account Hub.app" "dist/SYHU-Account-Hub-macOS.zip"
+          ditto -c -k --sequesterRsrc --keepParent "build/ios/iphoneos/Runner.app" "dist/SYHU-Account-Hub-iOS-unsigned.zip"
+          ls -la dist
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SYHU-Account-Hub-macOS
+          path: account-hub/dist/SYHU-Account-Hub-macOS.zip
+          if-no-files-found: error
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SYHU-Account-Hub-iOS-unsigned
+          path: account-hub/dist/SYHU-Account-Hub-iOS-unsigned.zip
+          if-no-files-found: error
