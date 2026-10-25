@@ -87,7 +87,18 @@ python3 tool/merge_plans.py research/ai.json research/media.json …
 
 The script drops anything that fails validation and prints a warning per
 dropped item, bumps `version`, sets `generatedAt` to today and writes a sorted
-`assets/catalog/plans.json`. Run `flutter clean` before the next build so the
+`assets/catalog/plans.json`.
+
+To add prices for more countries (or refresh some) without rebuilding the
+whole file, use the patch form instead:
+
+```sh
+python3 tool/patch_plans.py research/wave2-ai.json research/wave2-media.json …
+```
+
+It adds prices per (service, plan, country, store), replaces an existing
+price only when the patch's `verifiedAt` is the same day or newer, appends
+plans whose id is new, and applies the same validation. Run `flutter clean` before the next build so the
 asset bundle picks up the new file, then `flutter test` (the plan catalog test
 re-validates the bundled file against the platform catalog and market list).
 
