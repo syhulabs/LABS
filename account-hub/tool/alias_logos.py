@@ -48,7 +48,7 @@ APPS = {
 }
 
 def main():
-    mpath = os.path.join(OUT, "manifest.json"); m = json.load(open(mpath))
+    mpath = os.path.join(ROOT, "tool", "logo_manifest.json"); m = json.load(open(mpath))
     n_alias = 0
     for cid, parent in ALIAS.items():
         if cid in m or parent not in m: continue

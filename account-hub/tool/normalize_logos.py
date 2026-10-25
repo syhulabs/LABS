@@ -9,7 +9,7 @@ from PIL import Image
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 OUT = os.path.join(ROOT, "assets", "logos")
-SIZE = 256
+SIZE = int(os.environ.get("LOGO_SIZE", "128"))  # 128px keeps mobile bundles small; tiles are at most 72 logical px
 
 def analyse(img):
     small = img.resize((64, 64))
@@ -25,7 +25,8 @@ def analyse(img):
     return tone, shape, opaque
 
 def main():
-    m = json.load(open(os.path.join(OUT, "manifest.json")))
+    full_path = os.path.join(ROOT, "tool", "logo_manifest.json")
+    m = json.load(open(full_path))
     changed = 0
     for cid, meta in m.items():
         path = os.path.join(OUT, f"{cid}.png")
@@ -40,11 +41,15 @@ def main():
         canvas = Image.new("RGBA", (SIZE, SIZE), (0, 0, 0, 0))
         canvas.paste(img, ((SIZE - img.width) // 2, (SIZE - img.height) // 2), img)
         tone, shape, opaque = analyse(canvas)
-        canvas.save(path, optimize=True)
+        # 8-bit palette keeps icons crisp at tile size and roughly quarters the bundle weight.
+        canvas.quantize(colors=256, method=Image.Quantize.FASTOCTREE, dither=Image.Dither.NONE).save(path, optimize=True)
         if meta.get("tone") != tone or meta.get("shape") != shape:
             changed += 1
         meta["tone"], meta["shape"] = tone, shape
-    json.dump(dict(sorted(m.items())), open(os.path.join(OUT, "manifest.json"), "w"), indent=1)
+    # Full provenance stays in tool/; the app bundle only ships tone + shape.
+    json.dump(dict(sorted(m.items())), open(full_path, "w"), indent=1)
+    slim = {cid: {"tone": v["tone"], "shape": v["shape"]} for cid, v in sorted(m.items())}
+    json.dump(slim, open(os.path.join(OUT, "manifest.json"), "w"), separators=(",", ":"))
     from collections import Counter
     print(len(m), "normalised;", changed, "tone/shape updates;", Counter(v["tone"] for v in m.values()), Counter(v["shape"] for v in m.values()))
 
