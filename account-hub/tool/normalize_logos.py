@@ -3,8 +3,8 @@
 a 256px canvas, then record tone and shape in manifest.json.
   tone  : dark | light | color   (dark marks get a light tile in dark mode)
   shape : square (full-bleed app-style icon, rendered edge to edge) | mark
-Run: python3 tool/normalize_logos.py"""
-import json, os
+Run: python3 tool/normalize_logos.py [--only id1,id2]  (--only re-processes just those files)"""
+import json, os, sys
 from PIL import Image
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
@@ -27,8 +27,11 @@ def analyse(img):
 def main():
     full_path = os.path.join(ROOT, "tool", "logo_manifest.json")
     m = json.load(open(full_path))
+    only = set(sys.argv[sys.argv.index("--only") + 1].split(",")) if "--only" in sys.argv else None
     changed = 0
     for cid, meta in m.items():
+        if only is not None and cid not in only:
+            continue
         path = os.path.join(OUT, f"{cid}.png")
         img = Image.open(path).convert("RGBA")
         a = img.getchannel("A").point(lambda v: 255 if v > 8 else 0)
@@ -51,7 +54,7 @@ def main():
     slim = {cid: {"tone": v["tone"], "shape": v["shape"]} for cid, v in sorted(m.items())}
     json.dump(slim, open(os.path.join(OUT, "manifest.json"), "w"), separators=(",", ":"))
     from collections import Counter
-    print(len(m), "normalised;", changed, "tone/shape updates;", Counter(v["tone"] for v in m.values()), Counter(v["shape"] for v in m.values()))
+    print(len(only) if only is not None else len(m), "normalised;", changed, "tone/shape updates;", Counter(v["tone"] for v in m.values()), Counter(v["shape"] for v in m.values()))
 
 if __name__ == "__main__":
     main()

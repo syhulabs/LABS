@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Fourth pass: (a) sub-brands that use their parent's mark reuse the parent
-logo file (e.g. Amazon India → Amazon); (b) targeted App Store lookups with an
-explicit seller for banks and regional apps the generic matcher skipped.
+logo file (e.g. Amazon India → Amazon) — only where the product has no mark of
+its own (products with their own icon are set in fix_logo_overrides.py); (b)
+targeted App Store lookups with an explicit seller for banks and regional apps the generic matcher skipped.
 Run: python3 tool/alias_logos.py"""
 import io, json, os, shutil, sys, time, urllib.parse, urllib.request
 from PIL import Image, ImageDraw
@@ -10,16 +11,13 @@ import fetch_logos as F
 
 OUT = F.OUT
 ALIAS = {
-    "amazon-india": "amazon", "amazon-associates": "amazon", "amazon-photos": "amazon", "amazon-pay": "amazon", "kindle-unlimited": "amazon-kindle",
+    "amazon-india": "amazon", "amazon-associates": "amazon", "amazon-pay": "amazon", "kindle-unlimited": "amazon-kindle",
     "kindle-direct-publishing": "amazon", "audible-acx": "audible", "tiktok-for-business": "tiktok", "x-ads": "x",
-    "deezer-for-creators": "deezer", "google-play-pass": "google-play", "google-play-books-partner": "google-play", "google-cloud-console": "google-cloud",
-    "google-takeout": "google-account", "google-admin-console": "google-account", "google-password-manager": "google-account", "stadia": "google-account",
-    "apple-podcasts-connect": "apple-podcasts", "apple-maps-connect": "apple-account", "apple-weather": "apple-account",
-    "microsoft-store": "microsoft-account", "microsoft-forms": "microsoft-365", "msn": "microsoft-account",
-    "epic-publishing": "epic-games", "battle-net-shop": "battle-net", "twitch-affiliate": "twitch", "github-sponsors": "github",
+    "deezer-for-creators": "deezer", "google-cloud-console": "google-cloud", "google-admin-console": "google-account",
+    "apple-podcasts-connect": "apple-podcasts", "epic-publishing": "epic-games", "battle-net-shop": "battle-net", "twitch-affiliate": "twitch", "github-sponsors": "github",
     "nintendo-developer-portal": "nintendo-account", "phonepe-business": "phonepe", "google-pay-for-business": "google-pay", "paytm-payments-bank": "paytm",
-    "zoho-books": "zoho", "citi-india-axis": "citibank", "wechat-pay": "wechat", "geforce-now": "nvidia-account", "ditto-plus": "ditto-music",
-    "amazon-alexa": "amazon", "pub-dev": "flutter", "crates-io": "rust", "super-so": "notion",
+    "citi-india-axis": "citibank", "wechat-pay": "wechat", "geforce-now": "nvidia-account", "ditto-plus": "ditto-music",
+    "pub-dev": "flutter", "crates-io": "rust",
 }
 APPS = {
     "yes-bank": ("YES Bank", "in", "YES BANK"), "federal-bank": ("Federal Bank FedMobile", "in", "Federal Bank"), "bank-of-india": ("BOI Mobile", "in", "Bank of India"),

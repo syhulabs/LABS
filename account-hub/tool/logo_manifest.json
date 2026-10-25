@@ -99,23 +99,25 @@
  "adobe-audition": {
   "file": "assets/logos/adobe-audition.png",
   "tone": "dark",
-  "source": "alias:adobe-creative-cloud",
-  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/adobe-icon.svg",
-  "shape": "mark"
+  "source": "svgl",
+  "url": "https://svgl.app/library/audition.svg",
+  "shape": "square"
  },
  "adobe-creative-cloud": {
   "file": "assets/logos/adobe-creative-cloud.png",
-  "tone": "dark",
-  "source": "gil",
-  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/adobe-icon.svg",
+  "tone": "color",
+  "source": "simple",
+  "url": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/adobecreativecloud.svg",
   "shape": "mark"
  },
  "adobe-express": {
   "file": "assets/logos/adobe-express.png",
   "tone": "dark",
-  "source": "alias:adobe-creative-cloud",
-  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/adobe-icon.svg",
-  "shape": "mark"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/84/11/fb/8411fbee-f068-1351-3917-708646eb310f/AppIconSpark-0-0-1x_U007emarketing-0-8-0-0-0-85-220.png/512x512bb.jpg",
+  "app": "Adobe Express: Create Anything",
+  "seller": "Adobe Inc.",
+  "shape": "square"
  },
  "adobe-firefly": {
   "file": "assets/logos/adobe-firefly.png",
@@ -159,13 +161,6 @@
   "url": "https://svgl.app/library/stock.svg",
   "shape": "square"
  },
- "adobe-substance-3d": {
-  "file": "assets/logos/adobe-substance-3d.png",
-  "tone": "dark",
-  "source": "alias:adobe-creative-cloud",
-  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/adobe-icon.svg",
-  "shape": "mark"
- },
  "aegis-authenticator": {
   "file": "assets/logos/aegis-authenticator.png",
   "tone": "color",
@@ -204,8 +199,10 @@
  "air-india": {
   "file": "assets/logos/air-india.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.google.com/s2/favicons?domain=www.airindia.com&sz=256",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/43/cc/1b/43cc1b1c-ba24-0878-f927-32bedc836ffe/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+  "app": "Air India: Book Flight Tickets",
+  "seller": "Air India Ltd.",
   "shape": "square"
  },
  "airbnb": {
@@ -300,10 +297,12 @@
  },
  "amazon-alexa": {
   "file": "assets/logos/amazon-alexa.png",
-  "tone": "dark",
-  "source": "alias:amazon",
-  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/amazon.svg",
-  "shape": "mark"
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0b/bc/ea/0bbcea06-e51c-dab1-8b72-dde740612117/AppIconRelease-0-1x_U007epad-0-0-0-10-0-0-0-85-220-0.png/512x512bb.jpg",
+  "app": "Amazon Alexa",
+  "seller": "AMZN Mobile LLC",
+  "shape": "square"
  },
  "amazon-associates": {
   "file": "assets/logos/amazon-associates.png",
@@ -365,10 +364,12 @@
  },
  "amazon-photos": {
   "file": "assets/logos/amazon-photos.png",
-  "tone": "dark",
-  "source": "alias:amazon",
-  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/amazon.svg",
-  "shape": "mark"
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/4e/61/a3/4e61a320-b9f8-2f94-1e73-5c47f67861d8/AppIconRelease-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+  "app": "Amazon Photos: Photo & Video",
+  "seller": "AMZN Mobile LLC",
+  "shape": "square"
  },
  "amazon-prime": {
   "file": "assets/logos/amazon-prime.png",
@@ -380,15 +381,17 @@
  "amazon-prime-video": {
   "file": "assets/logos/amazon-prime-video.png",
   "tone": "color",
-  "source": "dash",
-  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/prime-video.svg",
-  "shape": "mark"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2b/f0/ac/2bf0acc8-5fc6-44bf-13b6-9f85937ed415/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/512x512bb.jpg",
+  "app": "Amazon Prime Video",
+  "seller": "AMZN Mobile LLC",
+  "shape": "square"
  },
  "amazon-s3": {
   "file": "assets/logos/amazon-s3.png",
-  "tone": "light",
-  "source": "site",
-  "url": "https://aws.amazon.com/apple-touch-icon.png",
+  "tone": "color",
+  "source": "gil",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/aws-s3.svg",
   "shape": "square"
  },
  "amazon-seller-central": {
@@ -511,7 +514,7 @@
   "file": "assets/logos/apple-arcade.png",
   "tone": "color",
   "source": "site",
-  "url": "https://www.apple.com/apple-touch-icon.png",
+  "url": "https://www.apple.com/v/apple-one/g/images/overview/icon_arcade__bcp3eftw1hhu_large_2x.png",
   "shape": "square"
  },
  "apple-books": {
@@ -526,9 +529,11 @@
  "apple-books-for-authors": {
   "file": "assets/logos/apple-books-for-authors.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://authors.apple.com/wshb/assets/static/maia/favicon-fb97a99df241e4357eb95cf874a421984830b00b548861007658e4b6a443b15c.ico",
-  "shape": "mark"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d3/c1/14/d3c1140b-f2a5-9e50-cacb-aa9b77516f55/booksCalistoga-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Apple Books",
+  "seller": "Apple Inc.",
+  "shape": "square"
  },
  "apple-business-manager": {
   "file": "assets/logos/apple-business-manager.png",
@@ -546,25 +551,13 @@
   "seller": "Apple Inc.",
   "shape": "square"
  },
- "apple-card": {
-  "file": "assets/logos/apple-card.png",
-  "tone": "color",
-  "source": "site",
-  "url": "https://www.apple.com/apple-touch-icon.png",
-  "shape": "square"
- },
- "apple-cash": {
-  "file": "assets/logos/apple-cash.png",
-  "tone": "color",
-  "source": "site",
-  "url": "https://www.apple.com/apple-touch-icon.png",
-  "shape": "square"
- },
  "apple-classroom": {
   "file": "assets/logos/apple-classroom.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.apple.com/apple-touch-icon.png",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/69/c8/4a/69c84a18-56fc-34b1-1863-c5428a11425b/AppIcon-0-1x_U007emarketing-0-0-5-0-0-85-220.png/512x512bb.jpg",
+  "app": "Classroom",
+  "seller": "Apple Inc.",
   "shape": "square"
  },
  "apple-developer-forums": {
@@ -602,23 +595,29 @@
  "apple-freeform": {
   "file": "assets/logos/apple-freeform.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.apple.com/apple-touch-icon.png",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ef/f5/16/eff5162b-ebfc-e04e-061b-574ffe343155/freeform-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+  "app": "Freeform",
+  "seller": "Apple Inc.",
   "shape": "square"
  },
  "apple-health": {
   "file": "assets/logos/apple-health.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.apple.com/apple-touch-icon.png",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c4/38/d1/c438d148-1fe2-67a3-c768-6158621cc13f/healthCalistoga-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Apple Health",
+  "seller": "Apple Inc.",
   "shape": "square"
  },
  "apple-maps-connect": {
   "file": "assets/logos/apple-maps-connect.png",
-  "tone": "dark",
-  "source": "alias:apple-account",
-  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/apple.svg",
-  "shape": "mark"
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ca/4d/f5/ca4df539-d60c-6a55-1423-49723876b1b0/mapsCalistoga-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Apple Maps",
+  "seller": "Apple Inc.",
+  "shape": "square"
  },
  "apple-music": {
   "file": "assets/logos/apple-music.png",
@@ -637,8 +636,10 @@
  "apple-news-plus": {
   "file": "assets/logos/apple-news-plus.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.apple.com/apple-touch-icon.png",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/69/d7/ed/69d7ed5e-45ca-d921-a7ad-cda01b48f55d/newsCalistoga-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Apple News",
+  "seller": "Apple Inc.",
   "shape": "square"
  },
  "apple-notes": {
@@ -654,8 +655,9 @@
   "file": "assets/logos/apple-one.png",
   "tone": "color",
   "source": "site",
-  "url": "https://www.apple.com/apple-touch-icon.png",
-  "shape": "square"
+  "url": "https://www.apple.com/v/apple-arcade/q/images/overview/full_apple_one__ggj3x96swk6e_large_2x.png",
+  "crop": "left",
+  "shape": "mark"
  },
  "apple-passwords": {
   "file": "assets/logos/apple-passwords.png",
@@ -711,9 +713,11 @@
  },
  "apple-research": {
   "file": "assets/logos/apple-research.png",
-  "tone": "color",
-  "source": "site",
-  "url": "https://www.apple.com/apple-touch-icon.png",
+  "tone": "light",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7e/fd/7c/7efd7c67-7fc7-9314-ee54-33d69ca0a396/AppIcon-0-1x_U007ephone-0-1-85-220-0.png/512x512bb.jpg",
+  "app": "Apple Research",
+  "seller": "Apple Inc.",
   "shape": "square"
  },
  "apple-search-ads": {
@@ -763,23 +767,29 @@
  "apple-vision-pro": {
   "file": "assets/logos/apple-vision-pro.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.apple.com/apple-touch-icon.png",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/94/79/72/947972a6-6b1d-7875-51a6-dc9d99f1c7ce/visionpro.companionCalistoga-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+  "app": "Apple Vision Pro",
+  "seller": "Apple Inc.",
   "shape": "square"
  },
  "apple-wallet": {
   "file": "assets/logos/apple-wallet.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.apple.com/apple-touch-icon.png",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/18/81/b7/1881b7e2-7323-4b41-9c34-43911b53c9d6/walletCalistoga-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Apple Wallet",
+  "seller": "Apple Inc.",
   "shape": "square"
  },
  "apple-weather": {
   "file": "assets/logos/apple-weather.png",
-  "tone": "dark",
-  "source": "alias:apple-account",
-  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/apple.svg",
-  "shape": "mark"
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/66/d6/cf/66d6cf2c-91a7-6c10-8bd6-54b2dc7b558e/weatherCalistoga-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Weather",
+  "seller": "Apple Inc.",
+  "shape": "square"
  },
  "applovin": {
   "file": "assets/logos/applovin.png",
@@ -970,7 +980,7 @@
   "file": "assets/logos/azure-openai.png",
   "tone": "color",
   "source": "site",
-  "url": "https://azure.microsoft.com/favicon.ico?v2",
+  "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V23.zip#03438-icon-service-Azure-OpenAI.svg",
   "shape": "square"
  },
  "backblaze": {
@@ -1042,12 +1052,11 @@
  },
  "bank-of-baroda": {
   "file": "assets/logos/bank-of-baroda.png",
-  "tone": "color",
-  "source": "appstore",
-  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a7/d2/9a/a7d29ad1-7374-7532-078e-4afc5dcc4244/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.jpeg/512x512bb.jpg",
-  "app": "bob World:Banking & Experience",
-  "seller": "Bank of Baroda",
-  "shape": "square"
+  "tone": "light",
+  "source": "site",
+  "url": "https://bankofbaroda.bank.in/-/media/project/bob/countrywebsites/india/icons/bob-logo.svg",
+  "crop": "left",
+  "shape": "mark"
  },
  "bank-of-india": {
   "file": "assets/logos/bank-of-india.png",
@@ -1140,10 +1149,12 @@
  },
  "behance": {
   "file": "assets/logos/behance.png",
-  "tone": "dark",
-  "source": "gil",
-  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/behance.svg",
-  "shape": "mark"
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/92/3f/55/923f5559-0cb5-f3ed-e262-6f0e0d4e7d45/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+  "app": "Behance \u2013 Creative Portfolios",
+  "seller": "Adobe Inc.",
+  "shape": "square"
  },
  "believe": {
   "file": "assets/logos/believe.png",
@@ -1403,8 +1414,8 @@
   "file": "assets/logos/bsnl.png",
   "tone": "color",
   "source": "appstore",
-  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ee/37/7f/ee377f57-337b-d873-243f-f47060c1d83c/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg",
-  "app": "BSNL Selfcare",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3e/78/d5/3e78d539-6ecb-330a-62d5-4dfceb8862c1/AppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/512x512bb.jpg",
+  "app": "BSNL DSCM",
   "seller": "Bharat Sanchar Nigam Limited",
   "shape": "square"
  },
@@ -1630,7 +1641,7 @@
   "file": "assets/logos/cinema-4d.png",
   "tone": "color",
   "source": "site",
-  "url": "https://www.maxon.net/app-icons/favicon-196x196.png",
+  "url": "https://mxwebnuxtprod01.blob.core.windows.net/media/images/Products/Cinema-4D/C4D_icon.svg",
   "shape": "mark"
  },
  "circleci": {
@@ -1698,9 +1709,9 @@
  },
  "clickup": {
   "file": "assets/logos/clickup.png",
-  "tone": "dark",
+  "tone": "color",
   "source": "gil",
-  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/clickup.svg",
+  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/clickup-icon.svg",
   "shape": "mark"
  },
  "clip-studio-paint": {
@@ -1741,9 +1752,11 @@
  "cloudflare-warp": {
   "file": "assets/logos/cloudflare-warp.png",
   "tone": "color",
-  "source": "dash",
-  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/cloudflare-zero-trust.svg",
-  "shape": "mark"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d6/f9/f1/d6f9f1f7-0417-3ab7-095d-2988dcc9a11b/AppIcon-0-0-1x_U007emarketing-0-11-0-0-85-220.png/512x512bb.jpg",
+  "app": "1.1.1.1: Faster Internet",
+  "seller": "Cloudflare Inc.",
+  "shape": "square"
  },
  "clubhouse": {
   "file": "assets/logos/clubhouse.png",
@@ -1869,9 +1882,11 @@
  "coursera": {
   "file": "assets/logos/coursera.png",
   "tone": "color",
-  "source": "gil",
-  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/coursera.svg",
-  "shape": "mark"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0f/2d/f4/0f2df45d-7b89-7834-8cba-ca4458efbe7b/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/512x512bb.jpg",
+  "app": "Coursera: Grow your career",
+  "seller": "Coursera, Inc.",
+  "shape": "square"
  },
  "craft": {
   "file": "assets/logos/craft.png",
@@ -2096,8 +2111,10 @@
  "deutsche-bank-india": {
   "file": "assets/logos/deutsche-bank-india.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.google.com/s2/favicons?domain=www.deutschebank.co.in&sz=256",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/df/d8/af/dfd8af57-9e3f-d0de-6a0f-89a2a4c8ad21/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+  "app": "MyBank India-Deutsche Bank",
+  "seller": "Deutsche Bank AG",
   "shape": "square"
  },
  "deviantart": {
@@ -2241,10 +2258,11 @@
  },
  "dorico": {
   "file": "assets/logos/dorico.png",
-  "tone": "color",
+  "tone": "dark",
   "source": "site",
-  "url": "https://www.steinberg.net/apple-touch-icon.png",
-  "shape": "square"
+  "url": "https://ocl-steinberg-live.steinberg.net/_storage/asset/62049/storage/master/Dorico%20Logo%20generic%20red-grey.svg",
+  "crop": "left",
+  "shape": "mark"
  },
  "draft2digital": {
   "file": "assets/logos/draft2digital.png",
@@ -2319,8 +2337,8 @@
  "ea-app": {
   "file": "assets/logos/ea-app.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.ea.com/_next/static/media/favicon.3156aee2.ico",
+  "source": "dash",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/electronic-arts.svg",
   "shape": "mark"
  },
  "ebay": {
@@ -2794,9 +2812,9 @@
  "freepik": {
   "file": "assets/logos/freepik.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.google.com/s2/favicons?domain=www.freepik.com&sz=256",
-  "shape": "square"
+  "source": "simple",
+  "url": "https://cdn.jsdelivr.net/npm/simple-icons@16.25.0/icons/freepik.svg",
+  "shape": "mark"
  },
  "freesound": {
   "file": "assets/logos/freesound.png",
@@ -2925,10 +2943,10 @@
  },
  "ghost": {
   "file": "assets/logos/ghost.png",
-  "tone": "dark",
-  "source": "gil",
-  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/ghost.svg",
-  "shape": "mark"
+  "tone": "color",
+  "source": "site",
+  "url": "https://ghost.org/favicon.png",
+  "shape": "square"
  },
  "gitea": {
   "file": "assets/logos/gitea.png",
@@ -3090,8 +3108,8 @@
   "file": "assets/logos/google-business-profile.png",
   "tone": "color",
   "source": "site",
-  "url": "https://business.google.com/static/images/google-favicon-180.png",
-  "shape": "square"
+  "url": "https://fonts.gstatic.com/s/i/productlogos/google_my_business/v7/192px.svg",
+  "shape": "mark"
  },
  "google-calendar": {
   "file": "assets/logos/google-calendar.png",
@@ -3188,7 +3206,7 @@
   "file": "assets/logos/google-family-link.png",
   "tone": "color",
   "source": "site",
-  "url": "https://www.gstatic.com/marketing-cms/assets/images/f7/f4/e99eb9764786997cf65b997e2373/favicon.png=s180",
+  "url": "https://fonts.gstatic.com/s/i/productlogos/family_link/v5/192px.svg",
   "shape": "mark"
  },
  "google-fit": {
@@ -3251,7 +3269,7 @@
   "file": "assets/logos/google-merchant-center.png",
   "tone": "color",
   "source": "site",
-  "url": "https://business.google.com/static/images/google-favicon-180.png",
+  "url": "https://fonts.gstatic.com/s/i/productlogos/merchant_center/v8/192px.svg",
   "shape": "square"
  },
  "google-messages": {
@@ -3271,8 +3289,8 @@
  "google-password-manager": {
   "file": "assets/logos/google-password-manager.png",
   "tone": "color",
-  "source": "alias:google-account",
-  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google.svg",
+  "source": "site",
+  "url": "https://fonts.gstatic.com/s/i/productlogos/password_manager/v1/192px.svg",
   "shape": "mark"
  },
  "google-pay": {
@@ -3306,8 +3324,8 @@
  "google-play-books-partner": {
   "file": "assets/logos/google-play-books-partner.png",
   "tone": "color",
-  "source": "alias:google-play",
-  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-play.svg",
+  "source": "site",
+  "url": "https://fonts.gstatic.com/s/i/productlogos/play_books/v8/192px.svg",
   "shape": "mark"
  },
  "google-play-console": {
@@ -3327,8 +3345,8 @@
  "google-play-pass": {
   "file": "assets/logos/google-play-pass.png",
   "tone": "color",
-  "source": "alias:google-play",
-  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-play.svg",
+  "source": "site",
+  "url": "https://fonts.gstatic.com/s/i/productlogos/playpass/v7/192px.svg",
   "shape": "mark"
  },
  "google-podcasts-manager": {
@@ -3387,13 +3405,6 @@
   "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-tag-manager.svg",
   "shape": "mark"
  },
- "google-takeout": {
-  "file": "assets/logos/google-takeout.png",
-  "tone": "color",
-  "source": "alias:google-account",
-  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google.svg",
-  "shape": "mark"
- },
  "google-tasks": {
   "file": "assets/logos/google-tasks.png",
   "tone": "color",
@@ -3428,13 +3439,6 @@
   "source": "dash",
   "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google-wallet.svg",
   "shape": "square"
- },
- "google-workspace": {
-  "file": "assets/logos/google-workspace.png",
-  "tone": "color",
-  "source": "gil",
-  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/google-workspace.svg",
-  "shape": "mark"
  },
  "grammarly": {
   "file": "assets/logos/grammarly.png",
@@ -3490,9 +3494,11 @@
  "gusto": {
   "file": "assets/logos/gusto.png",
   "tone": "color",
-  "source": "gil",
-  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/gusto.svg",
-  "shape": "mark"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/18/9d/4a/189d4ac1-dc41-9a5f-3917-e2db6a78162a/ReleaseAppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg",
+  "app": "Gusto Mobile",
+  "seller": "Gusto, inc.",
+  "shape": "square"
  },
  "hacker-news": {
   "file": "assets/logos/hacker-news.png",
@@ -3539,10 +3545,9 @@
  "hdfc-bank": {
   "file": "assets/logos/hdfc-bank.png",
   "tone": "color",
-  "source": "appstore",
-  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f9/02/39/f90239f5-97e2-f1b3-2181-a53f10b0a680/AppIcon-0-0-1x_U007ephone-0-0-0-1-0-sRGB-85-220.png/512x512bb.jpg",
-  "app": "HDFC Bank App: Banking & Cards",
-  "seller": "HDFC Bank Ltd",
+  "source": "site",
+  "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/home-page/hdfc-bank-logo.svg",
+  "crop": "square",
   "shape": "square"
  },
  "headspace": {
@@ -3671,9 +3676,11 @@
  "hubspot": {
   "file": "assets/logos/hubspot.png",
   "tone": "color",
-  "source": "gil",
-  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/hubspot.svg",
-  "shape": "mark"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/03/4f/08/034f0860-2d5f-9ce3-281f-807f353ff2e5/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+  "app": "HubSpot",
+  "seller": "HubSpot",
+  "shape": "square"
  },
  "hugging-face": {
   "file": "assets/logos/hugging-face.png",
@@ -3753,10 +3760,10 @@
  },
  "iconfinder": {
   "file": "assets/logos/iconfinder.png",
-  "tone": "color",
-  "source": "site",
-  "url": "https://www.google.com/s2/favicons?domain=www.iconfinder.com&sz=256",
-  "shape": "square"
+  "tone": "dark",
+  "source": "simple",
+  "url": "https://cdn.jsdelivr.net/npm/simple-icons@16.25.0/icons/iconfinder.svg",
+  "shape": "mark"
  },
  "id-at-xbox": {
   "file": "assets/logos/id-at-xbox.png",
@@ -3800,9 +3807,11 @@
  "idrive": {
   "file": "assets/logos/idrive.png",
   "tone": "color",
-  "source": "dash",
-  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/idrive.svg",
-  "shape": "mark"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d1/c6/f5/d1c6f572-fdb3-bd0c-0c29-3716e11c7fb4/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+  "app": "IDrive Online Backup",
+  "seller": "IDrive Incorporated",
+  "shape": "square"
  },
  "ifttt": {
   "file": "assets/logos/ifttt.png",
@@ -3842,15 +3851,19 @@
  "imessage-facetime": {
   "file": "assets/logos/imessage-facetime.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.apple.com/apple-touch-icon.png",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fc/8d/32/fc8d32a0-86a7-83d8-7045-57b4b3e71a0b/messagesCalistoga-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Messages",
+  "seller": "Apple Inc.",
   "shape": "square"
  },
  "imovie": {
   "file": "assets/logos/imovie.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.apple.com/apple-touch-icon.png",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/55/a7/63/55a76363-cdbd-af06-4165-5bb3773e12c2/AppIcon-0-1x_U007epad-0-1-0-P3-85-220-0.png/512x512bb.jpg",
+  "app": "iMovie",
+  "seller": "Apple Inc.",
   "shape": "square"
  },
  "improvmx": {
@@ -4020,8 +4033,10 @@
  "iwork": {
   "file": "assets/logos/iwork.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.apple.com/apple-touch-icon.png",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8e/c3/22/8ec322df-60dc-407c-aa76-46ddbe61d2b1/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-P3-0-0-85-220-0.png/512x512bb.jpg",
+  "app": "Pages: Create Documents",
+  "seller": "Apple Inc.",
   "shape": "square"
  },
  "izotope": {
@@ -4292,13 +4307,6 @@
   "url": "https://www.native-instruments.com/cdn/shop/files/Native-Instruments-favicon.svg?crop=center&height=32&v=1772641539&width=32",
   "shape": "mark"
  },
- "koo": {
-  "file": "assets/logos/koo.png",
-  "tone": "light",
-  "source": "site",
-  "url": "https://www.google.com/s2/favicons?domain=www.kooapp.com&sz=256",
-  "shape": "square"
- },
  "koofr": {
   "file": "assets/logos/koofr.png",
   "tone": "color",
@@ -4311,11 +4319,10 @@
  "kotak-mahindra-bank": {
   "file": "assets/logos/kotak-mahindra-bank.png",
   "tone": "color",
-  "source": "appstore",
-  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/bc/ce/f5/bccef59a-e6ba-17f7-300c-eb553c46959b/AppIcon-0-0-1x_U007ephone-0-11-0-85-220.png/512x512bb.jpg",
-  "app": "Kotak Bank (New)",
-  "seller": "Kotak Mahindra Bank Ltd.",
-  "shape": "square"
+  "source": "site",
+  "url": "https://www.kotak.bank.in/content/dam/Kotak/svg-icons/navigation/kmbl-logo.svg",
+  "crop": "left",
+  "shape": "mark"
  },
  "krea": {
   "file": "assets/logos/krea.png",
@@ -4456,13 +4463,6 @@
   "tone": "color",
   "source": "site",
   "url": "https://letterboxd.com/apple-touch-icon.png",
-  "shape": "square"
- },
- "levelplay": {
-  "file": "assets/logos/levelplay.png",
-  "tone": "color",
-  "source": "site",
-  "url": "https://www.google.com/s2/favicons?domain=www.is.com&sz=256",
   "shape": "square"
  },
  "lg-thinq": {
@@ -4608,10 +4608,12 @@
  },
  "luma-events": {
   "file": "assets/logos/luma-events.png",
-  "tone": "color",
-  "source": "lobe",
-  "url": "@lobehub/icons-static-svg icons/luma-color.svg",
-  "shape": "mark"
+  "tone": "light",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/00/ff/74/00ff7463-4ce2-f34b-d802-b7c476f1cbd3/AppIcon-0-0-1x_U007ephone-0-0-0-1-0-0-sRGB-0-85-220.png/512x512bb.jpg",
+  "app": "Luma: Events & Invites",
+  "seller": "Luma Labs, Inc.",
+  "shape": "square"
  },
  "lurkit": {
   "file": "assets/logos/lurkit.png",
@@ -4638,7 +4640,7 @@
   "file": "assets/logos/magnific.png",
   "tone": "color",
   "source": "site",
-  "url": "https://www.google.com/s2/favicons?domain=magnific.ai&sz=256",
+  "url": "https://media.magnific.com/magnific-favicons/favicon.svg?v=2",
   "shape": "square"
  },
  "mail-com": {
@@ -4767,8 +4769,8 @@
  "mention": {
   "file": "assets/logos/mention.png",
   "tone": "color",
-  "source": "gil",
-  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/mention.svg",
+  "source": "site",
+  "url": "https://mention.com/wp-content/uploads/2025/03/cropped-favicon-270x270.png",
   "shape": "mark"
  },
  "mercury": {
@@ -4851,22 +4853,15 @@
  "microsoft-365-basic": {
   "file": "assets/logos/microsoft-365-basic.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.microsoft.com/favicon.ico?v2",
-  "shape": "square"
+  "source": "alias:microsoft-365",
+  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft-365.svg",
+  "shape": "mark"
  },
  "microsoft-account": {
   "file": "assets/logos/microsoft-account.png",
   "tone": "color",
   "source": "dash",
   "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft.svg",
-  "shape": "square"
- },
- "microsoft-advertising": {
-  "file": "assets/logos/microsoft-advertising.png",
-  "tone": "color",
-  "source": "site",
-  "url": "https://ads.microsoft.com/favicon.ico",
   "shape": "square"
  },
  "microsoft-authenticator": {
@@ -4939,16 +4934,18 @@
  "microsoft-family-safety": {
   "file": "assets/logos/microsoft-family-safety.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.google.com/s2/favicons?domain=family.microsoft.com&sz=256",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/91/a4/db/91a4db14-d96d-39e2-4b3b-5e39480d572e/AppIcon-prod-1x_U007emarketing-0-6-0-0-85-220-0.png/512x512bb.jpg",
+  "app": "Microsoft Family Safety",
+  "seller": "Microsoft Corporation",
   "shape": "square"
  },
  "microsoft-forms": {
   "file": "assets/logos/microsoft-forms.png",
   "tone": "color",
-  "source": "alias:microsoft-365",
-  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft-365.svg",
-  "shape": "mark"
+  "source": "site",
+  "url": "https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.002/assets/brand-icons/product/svg/forms_48x1.svg",
+  "shape": "square"
  },
  "microsoft-learn": {
   "file": "assets/logos/microsoft-learn.png",
@@ -4988,8 +4985,8 @@
  "microsoft-store": {
   "file": "assets/logos/microsoft-store.png",
   "tone": "color",
-  "source": "alias:microsoft-account",
-  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft.svg",
+  "source": "site",
+  "url": "https://apps.microsoft.com/assets/icons/logo-plated-256x256.png",
   "shape": "square"
  },
  "microsoft-surface": {
@@ -5073,10 +5070,10 @@
  },
  "mixpanel": {
   "file": "assets/logos/mixpanel.png",
-  "tone": "color",
-  "source": "gil",
-  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/mixpanel.svg",
-  "shape": "mark"
+  "tone": "dark",
+  "source": "site",
+  "url": "https://framerusercontent.com/images/j6EPdIw4BKPE9dPx3zrTjkkAM14.png",
+  "shape": "square"
  },
  "mobikwik": {
   "file": "assets/logos/mobikwik.png",
@@ -5106,13 +5103,6 @@
   "tone": "dark",
   "source": "site",
   "url": "https://moises.ai/apple-touch-icon.png",
-  "shape": "square"
- },
- "mojang-studios": {
-  "file": "assets/logos/mojang-studios.png",
-  "tone": "color",
-  "source": "site",
-  "url": "https://www.google.com/s2/favicons?domain=www.minecraft.net&sz=256",
   "shape": "square"
  },
  "monday-com": {
@@ -5153,8 +5143,10 @@
  "msn": {
   "file": "assets/logos/msn.png",
   "tone": "color",
-  "source": "alias:microsoft-account",
-  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft.svg",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/49/25/fd/4925fdf7-27cd-e6e4-472f-a3e4674f3d79/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.jpeg/512x512bb.jpg",
+  "app": "MSN",
+  "seller": "Microsoft Corporation",
   "shape": "square"
  },
  "mubert": {
@@ -5294,13 +5286,6 @@
   "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/neon-tech.svg",
   "shape": "mark"
  },
- "nest": {
-  "file": "assets/logos/nest.png",
-  "tone": "color",
-  "source": "site",
-  "url": "https://www.gstatic.com/store/images/favicons/favicon_gstore_144px_new.png",
-  "shape": "mark"
- },
  "netease-cloud-music": {
   "file": "assets/logos/netease-cloud-music.png",
   "tone": "color",
@@ -5380,9 +5365,11 @@
  },
  "nintendo-switch-online": {
   "file": "assets/logos/nintendo-switch-online.png",
-  "tone": "dark",
-  "source": "site",
-  "url": "https://assets.nintendo.com/image/upload/ncom/icons/fav-icons/apple-touch-icon.png",
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b5/59/33/b55933e1-949c-4a34-a00c-a02f35df610b/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+  "app": "Nintendo Switch App",
+  "seller": "Nintendo Co., Ltd.",
   "shape": "square"
  },
  "nordvpn": {
@@ -5586,9 +5573,11 @@
  "paramount-plus": {
   "file": "assets/logos/paramount-plus.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.paramountplus.com/favicon.ico",
-  "shape": "mark"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3f/8b/f6/3f8bf654-12ad-3d7f-239f-de856b2050cb/P_U002bAppIcon-0-0-1x_U007emarketing-0-8-0-0-85-220.png/512x512bb.jpg",
+  "app": "Paramount+",
+  "seller": "CBS Mobile",
+  "shape": "square"
  },
  "patreon": {
   "file": "assets/logos/patreon.png",
@@ -5761,10 +5750,12 @@
  },
  "pipedrive": {
   "file": "assets/logos/pipedrive.png",
-  "tone": "dark",
-  "source": "gil",
-  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/pipedrive.svg",
-  "shape": "mark"
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9a/62/7b/9a627b20-8af3-11fd-8b45-309664434966/AppIcon-0-0-1x_U007epad-0-1-sRGB-85-220.png/512x512bb.jpg",
+  "app": "Pipedrive \u2013 Sales CRM",
+  "seller": "Pipedrive Inc",
+  "shape": "square"
  },
  "pixabay": {
   "file": "assets/logos/pixabay.png",
@@ -5794,13 +5785,6 @@
   "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/plausible.svg",
   "shape": "mark"
  },
- "playfab": {
-  "file": "assets/logos/playfab.png",
-  "tone": "color",
-  "source": "site",
-  "url": "https://www.google.com/s2/favicons?domain=playfab.com&sz=256",
-  "shape": "square"
- },
  "playlist-push": {
   "file": "assets/logos/playlist-push.png",
   "tone": "color",
@@ -5826,8 +5810,9 @@
   "file": "assets/logos/playstation-plus.png",
   "tone": "color",
   "source": "site",
-  "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps-logo-favicon?$icon-196-196--t$",
-  "shape": "square"
+  "url": "https://gmedia.playstation.com/is/image/SIEPDC/ps-plus-blue-bag-icon-01-22sep20?$native--t$",
+  "crop": "main",
+  "shape": "mark"
  },
  "plex": {
   "file": "assets/logos/plex.png",
@@ -6081,16 +6066,20 @@
  "quizlet": {
   "file": "assets/logos/quizlet.png",
   "tone": "color",
-  "source": "dash",
-  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/quizlet.svg",
-  "shape": "mark"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ac/f3/51/acf351e3-02e4-a575-47cb-bde79d936927/AppIcon-production-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+  "app": "Quizlet: More than Flashcards",
+  "seller": "Quizlet Inc",
+  "shape": "square"
  },
  "quora": {
   "file": "assets/logos/quora.png",
   "tone": "color",
-  "source": "gil",
-  "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/quora.svg",
-  "shape": "mark"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ab/2b/e4/ab2be4f9-775a-ffa2-8faa-c4e334a60795/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+  "app": "Quora",
+  "seller": "Quora, Inc",
+  "shape": "square"
  },
  "qwen": {
   "file": "assets/logos/qwen.png",
@@ -6353,13 +6342,6 @@
   "url": "https://media-rockstargames-com.akamaized.net/favicons/rockstar/favicon-180x180.png",
   "shape": "square"
  },
- "rodin": {
-  "file": "assets/logos/rodin.png",
-  "tone": "dark",
-  "source": "site",
-  "url": "https://hyper3d.ai/apple-touch-icon.png",
-  "shape": "square"
- },
  "routenote": {
   "file": "assets/logos/routenote.png",
   "tone": "color",
@@ -6524,9 +6506,11 @@
  },
  "shortcuts": {
   "file": "assets/logos/shortcuts.png",
-  "tone": "color",
-  "source": "site",
-  "url": "https://support.apple.com/apple-touch-icon.png",
+  "tone": "dark",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/3e/52/07/3e520776-0908-893c-2248-6c9d29a03cc7/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-7.png/512x512bb.jpg",
+  "app": "Shortcuts",
+  "seller": "Apple Inc.",
   "shape": "square"
  },
  "shotcut": {
@@ -6892,8 +6876,8 @@
  "stadia": {
   "file": "assets/logos/stadia.png",
   "tone": "color",
-  "source": "alias:google-account",
-  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/google.svg",
+  "source": "site",
+  "url": "https://fonts.gstatic.com/s/i/productlogos/stadia/v6/192px.svg",
   "shape": "mark"
  },
  "standard-chartered-india": {
@@ -7045,8 +7029,8 @@
  "super-so": {
   "file": "assets/logos/super-so.png",
   "tone": "color",
-  "source": "alias:notion",
-  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/notion.svg",
+  "source": "site",
+  "url": "https://super-site-assets.s3.eu-central-003.backblazeb2.com/186f4256-f467-4f79-8d6f-40defe12b9b4/images/1fedca29-8b6d-4f22-835c-057d23866ff0/logo.svg",
   "shape": "square"
  },
  "surfshark": {
@@ -7335,13 +7319,6 @@
   "url": "https://www.tile.com/apple-touch-icon.png",
   "shape": "square"
  },
- "time-machine": {
-  "file": "assets/logos/time-machine.png",
-  "tone": "color",
-  "source": "site",
-  "url": "https://support.apple.com/apple-touch-icon.png",
-  "shape": "square"
- },
  "times-of-india": {
   "file": "assets/logos/times-of-india.png",
   "tone": "color",
@@ -7372,9 +7349,9 @@
  },
  "toon-boom-harmony": {
   "file": "assets/logos/toon-boom-harmony.png",
-  "tone": "light",
+  "tone": "dark",
   "source": "site",
-  "url": "https://cdn3.toonboom.com/wp-content/uploads/2025/05/20181808/favicon-toonboom-light-96x96.png",
+  "url": "https://cdn3.toonboom.com/wp-content/uploads/2025/05/20181812/favicon-toonboom-dark-96x96.png",
   "shape": "mark"
  },
  "toptal": {
@@ -7428,10 +7405,12 @@
  },
  "trustpilot": {
   "file": "assets/logos/trustpilot.png",
-  "tone": "dark",
-  "source": "svgl",
-  "url": "https://svgl.app/library/trustpilot.svg",
-  "shape": "mark"
+  "tone": "color",
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7b/ca/92/7bca92a4-152b-d071-173a-e472ea642601/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg",
+  "app": "Trustpilot: Reviews & Ratings",
+  "seller": "Trustpilot AS",
+  "shape": "square"
  },
  "tubebuddy": {
   "file": "assets/logos/tubebuddy.png",
@@ -7479,8 +7458,8 @@
   "file": "assets/logos/twine.png",
   "tone": "color",
   "source": "site",
-  "url": "https://twinery.org/favicon-152.png",
-  "shape": "mark"
+  "url": "https://cdn.jsdelivr.net/gh/klembot/twinejs@develop/icons/app-pwa.svg",
+  "shape": "square"
  },
  "twitch": {
   "file": "assets/logos/twitch.png",
@@ -8174,10 +8153,10 @@
  },
  "zapier": {
   "file": "assets/logos/zapier.png",
-  "tone": "dark",
-  "source": "dash",
-  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/zapier.svg",
-  "shape": "mark"
+  "tone": "color",
+  "source": "simple",
+  "url": "https://cdn.jsdelivr.net/npm/simple-icons@16.25.0/icons/zapier.svg",
+  "shape": "square"
  },
  "zara": {
   "file": "assets/logos/zara.png",
@@ -8190,7 +8169,7 @@
   "file": "assets/logos/zbrush.png",
   "tone": "color",
   "source": "site",
-  "url": "https://www.maxon.net/app-icons/favicon-196x196.png",
+  "url": "https://mxwebnuxtprod01.blob.core.windows.net/media/images/Products/ZBrush/ZBrush_icon.svg",
   "shape": "mark"
  },
  "zee5": {
@@ -8231,9 +8210,11 @@
  "zoho-books": {
   "file": "assets/logos/zoho-books.png",
   "tone": "color",
-  "source": "alias:zoho",
-  "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/zoho.svg",
-  "shape": "mark"
+  "source": "appstore",
+  "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0a/b2/9b/0ab29b96-19e5-eabb-51c5-9fd2b734ce21/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-0-85-220.png/512x512bb.jpg",
+  "app": "Accounting App - Zoho Books",
+  "seller": "Zoho Corporation",
+  "shape": "square"
  },
  "zoho-mail": {
   "file": "assets/logos/zoho-mail.png",

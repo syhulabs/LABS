@@ -4,7 +4,9 @@
 only expose the Apple logo) and for brands whose sites block icon fetches.
 The artwork is the developer's published App Store icon; the seller name is
 verified against an expected substring so a look-alike app is never picked.
-Run after fetch_logos.py: python3 tool/fetch_appstore_icons.py"""
+Run after fetch_logos.py: python3 tool/fetch_appstore_icons.py
+Ids whose App Store icon is unsuitable (banners, renamed apps, no app) live in
+fix_logo_overrides.py instead."""
 import io, json, os, sys, time, urllib.parse, urllib.request
 from PIL import Image, ImageDraw
 
@@ -26,7 +28,6 @@ APPS = {
     "apple-developer-program": ("Apple Developer", "us", "Apple", "com.apple.developer"),
     "icloud-drive": ("Files", "us", "Apple", "com.apple.DocumentsApp"),
     "icloud-mail": ("Mail", "us", "Apple", "com.apple.mobilemail"),
-    "apple-arcade": ("Apple Arcade", "us", "Apple", None),
     "final-cut-pro": ("Final Cut Pro", "us", "Apple", "com.apple.finalcut.ipad"),
     "logic-pro": ("Logic Pro", "us", "Apple", "com.apple.logic.ipad"),
     "garageband": ("GarageBand", "us", "Apple", "com.apple.mobilegarageband"),
@@ -35,13 +36,10 @@ APPS = {
     "safari": ("Safari", "us", "Apple", None),
     "app-store-connect": ("App Store Connect", "us", "Apple", "com.apple.AppStoreConnect"),
     "state-bank-of-india": ("YONO SBI", "in", "State Bank of India", None),
-    "hdfc-bank": ("HDFC Bank MobileBanking", "in", "HDFC Bank", None),
     "icici-bank": ("iMobile Pay ICICI", "in", "ICICI Bank", None),
     "axis-bank": ("Axis Mobile", "in", "Axis Bank", None),
-    "kotak-mahindra-bank": ("Kotak Mobile Banking", "in", "Kotak Mahindra Bank", None),
     "indian-bank": ("IndSMART Indian Bank", "in", "Indian Bank", None),
     "canara-bank": ("Canara ai1", "in", "Canara Bank", None),
-    "bank-of-baroda": ("bob World", "in", "Bank of Baroda", None),
     "punjab-national-bank": ("PNB ONE", "in", "Punjab National Bank", None),
     "union-bank-of-india": ("Vyom Union Bank", "in", "Union Bank of India", None),
     "idfc-first-bank": ("IDFC FIRST Bank", "in", "IDFC FIRST Bank", None),
@@ -58,7 +56,6 @@ APPS = {
     "heygen": ("HeyGen", "us", "HeyGen", None),
     "later": ("Later: Social Media Scheduler", "us", "Later", None),
     "beatport": ("Beatport", "us", "Beatport", None),
-    "tunecore": ("TuneCore", "us", "TuneCore", None),
     "ditto-music": ("Ditto Music", "us", "Ditto", None),
     "onerpm": ("ONErpm", "us", "ONErpm", None),
     "pro-tools": ("Pro Tools Sketch", "us", "Avid", None),
@@ -112,11 +109,9 @@ APPS = {
     "line": ("LINE", "us", "LINE", None),
     "wechat": ("WeChat", "us", "Tencent", None),
     "leonardo-ai": ("Leonardo.Ai", "us", "Leonardo", None),
-    "freepik": ("Freepik", "us", "Freepik", None),
     "synthesia": ("Synthesia", "us", "Synthesia", None),
     "character-ai": ("Character.AI", "us", "Character", None),
     "roblox": ("Roblox", "us", "Roblox", None),
-    "ea-app": ("EA SPORTS FC", "us", "Electronic Arts", None),
     "ubisoft-connect": ("Ubisoft Connect", "us", "Ubisoft", None),
     "battle-net": ("Battle.net", "us", "Blizzard", None),
     "gog": ("GOG Galaxy", "us", "GOG", None),
