@@ -40,7 +40,7 @@ dart run build_runner build --delete-conflicting-outputs   # regenerates drift c
 flutter run -d macos      # or: -d ios, -d android, -d linux
 ```
 
-See `docs/BUILD.md` for per-platform requirements and `docs/ARCHITECTURE.md` for the design. `docs/PROGRESS.md` is the feature-completion checklist and verification record.
+macOS and iOS are also built on every push by the GitHub Actions workflow in `.github/workflows/apple-builds.yml` (artifacts on the run page). See `docs/BUILD.md` for per-platform requirements and `docs/ARCHITECTURE.md` for the design. `docs/PROGRESS.md` is the feature-completion checklist and verification record.
 
 ## Tests
 

@@ -36,6 +36,10 @@ flutter analyze
 flutter test
 ```
 
+## Continuous builds for macOS and iOS
+
+`.github/workflows/apple-builds.yml` runs on every push that touches `account-hub/` (and on demand from the Actions tab): it installs Flutter 3.47.8 on a macOS 15 runner, runs the analyzer and tests, builds `SYHU Account Hub.app` and an unsigned iOS `Runner.app`, and uploads both as artifacts (kept 90 days). The macOS zip runs directly (Gatekeeper: right-click → Open the first time). The iOS build is unsigned by design: sign it with your team in Xcode or add signing secrets to the workflow before distributing.
+
 ## Platform notes
 
 - **macOS**: entitlements include `keychain-access-groups` (flutter_secure_storage) and `files.user-selected.read-write` (backup/export dialogs). Touch ID is used when available. Set your team in Xcode → Runner → Signing & Capabilities for a signed build.
