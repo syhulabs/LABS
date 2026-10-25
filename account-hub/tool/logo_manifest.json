@@ -960,6 +960,13 @@
   "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/authy.svg",
   "shape": "mark"
  },
+ "autodesk-3ds-max": {
+  "file": "assets/logos/autodesk-3ds-max.png",
+  "source": "devicon",
+  "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/threedsmax/threedsmax-original.svg",
+  "tone": "color",
+  "shape": "square"
+ },
  "awal": {
   "file": "assets/logos/awal.png",
   "source": "owner",
@@ -1046,7 +1053,7 @@
   "tone": "color",
   "source": "appstore",
   "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/13/ad/c8/13adc877-1abf-2047-2670-5aa244a76a5b/AppIcon-0-0-1x_U007epad-0-0-0-1-0-sRGB-85-220.png/512x512bb.jpg",
-  "app": "BandLab – Music Maker & Beats",
+  "app": "BandLab \u2013 Music Maker & Beats",
   "seller": "BandLab Singapore Pte Ltd",
   "shape": "square"
  },
@@ -1173,7 +1180,7 @@
   "tone": "color",
   "source": "appstore",
   "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/92/3f/55/923f5559-0cb5-f3ed-e262-6f0e0d4e7d45/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
-  "app": "Behance – Creative Portfolios",
+  "app": "Behance \u2013 Creative Portfolios",
   "seller": "Adobe Inc.",
   "shape": "square"
  },
@@ -2972,7 +2979,7 @@
   "tone": "color",
   "source": "appstore",
   "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3c/e6/92/3ce6922b-aaf4-cbcb-bd2f-b64ac8d61542/AppIcon-0-0-1x_U007ephone-0-1-0-0-85-220.png/512x512bb.jpg",
-  "app": "Garmin Connect™",
+  "app": "Garmin Connect\u2122",
   "seller": "Garmin International",
   "shape": "square"
  },
@@ -4220,7 +4227,7 @@
   "tone": "color",
   "source": "appstore",
   "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/03/2e/75/032e752b-d99c-8609-0a2e-782f40dbc5b3/appiconfree-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
-  "app": "JioSaavn – Music & Podcasts",
+  "app": "JioSaavn \u2013 Music & Podcasts",
   "seller": "Saavn Media Limited",
   "shape": "square"
  },
@@ -5245,6 +5252,13 @@
   "url": "https://moises.ai/apple-touch-icon.png",
   "shape": "square"
  },
+ "mojang-studios": {
+  "file": "assets/logos/mojang-studios.png",
+  "source": "simple",
+  "url": "https://cdn.jsdelivr.net/npm/simple-icons/icons/mojangstudios.svg (neutral black; colour not in Simple Icons data)",
+  "tone": "dark",
+  "shape": "mark"
+ },
  "monday-com": {
   "file": "assets/logos/monday-com.png",
   "tone": "color",
@@ -5942,7 +5956,7 @@
   "tone": "color",
   "source": "appstore",
   "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9a/62/7b/9a627b20-8af3-11fd-8b45-309664434966/AppIcon-0-0-1x_U007epad-0-1-sRGB-85-220.png/512x512bb.jpg",
-  "app": "Pipedrive – Sales CRM",
+  "app": "Pipedrive \u2013 Sales CRM",
   "seller": "Pipedrive Inc",
   "shape": "square"
  },
@@ -6172,6 +6186,13 @@
   "source": "site",
   "url": "https://printify.com/pfh/assets/png/favicon-300x300.png",
   "shape": "square"
+ },
+ "pro-tools": {
+  "file": "assets/logos/pro-tools.png",
+  "source": "simple",
+  "url": "https://cdn.jsdelivr.net/npm/simple-icons@16.25.0/icons/protools.svg (#7ACB10)",
+  "tone": "color",
+  "shape": "mark"
  },
  "procreate": {
   "file": "assets/logos/procreate.png",

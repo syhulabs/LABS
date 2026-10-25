@@ -37,6 +37,10 @@ def SIMPLE(slug, hex_, v="16.25.0"):
     return {"kind": "simple", "slug": slug, "hex": hex_, "v": v}
 
 OVERRIDES = {
+    # Gap fills from icon libraries (owner icon pack review, 2026-10-25)
+    "pro-tools": SIMPLE("protools", "7ACB10"),
+    "mojang-studios": URL("simple", "https://cdn.jsdelivr.net/npm/simple-icons/icons/mojangstudios.svg"),
+    "autodesk-3ds-max": URL("devicon", "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/threedsmax/threedsmax-original.svg"),
     # A. subscription services
     "apple-arcade": URL("site", "https://www.apple.com/v/apple-one/g/images/overview/icon_arcade__bcp3eftw1hhu_large_2x.png"),
     "apple-one": URL("site", "https://www.apple.com/v/apple-arcade/q/images/overview/full_apple_one__ggj3x96swk6e_large_2x.png", "left"),
@@ -119,7 +123,6 @@ OVERRIDES = {
 
 DELETE = {
     "koo": "Koo shut down; the file was Wix's favicon and no icon set carries an official Koo mark",
-    "mojang-studios": "only the Minecraft creeper is published (mojang.com redirects to minecraft.net); no Mojang mark in any icon set",
     "nest": "file was the Google Store bag; no official Nest mark file found (Google Home is a different product)",
     "levelplay": "file was the Unity logo; LevelPlay publishes no mark of its own (levelplay.com/is.com serve Unity's icons)",
     "rodin": "the only published mark (hyper3d.ai apple-touch-icon) is itself pixelated",
