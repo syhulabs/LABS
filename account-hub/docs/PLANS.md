@@ -60,13 +60,15 @@ currencies or guesses a local price.
 * `cycle` is one of `weekly | monthly | quarterly | halfYearly | yearly | oneTime`.
   A yearly plan carries the full yearly amount.
 * Country keys are ISO-3166 alpha-2 codes from the supported market list
-  (`lib/domain/markets.dart`), plus `default`. Every plan needs a `default`
-  price. A country price must be in that country's currency.
+  (`lib/domain/markets.dart`), plus `default`. A plan without a `default`
+  price is sold only in the listed countries and is hidden everywhere else
+  rather than shown with an invented USD figure. A country price must be in
+  that country's currency.
 * Channels are `web`, `ios`, `android`. Omit a channel rather than guess it.
 * `amount` is a number in major units (JPY/KRW/VND have no decimals).
 
 Imports are validated before anything is stored: duplicate ids, unknown cycles
-or channels, missing default prices and non-numeric amounts are rejected with
+or channels, plans with no prices and non-numeric amounts are rejected with
 the reason. An imported file overrides bundled services by `platformId` and is
 kept in the local database until *Use bundled prices only* is pressed.
 

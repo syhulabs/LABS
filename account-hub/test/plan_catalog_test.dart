@@ -114,6 +114,13 @@ void main() {
       expect(q.caption(PurchaseChannel.ios), contains('default USD'));
     });
 
+    test('country-only plan is hidden elsewhere instead of priced in USD', () {
+      final doc = PlanCatalogDocument.fromJson(jsonDecode('{"services":[{"platformId":"netflix","plans":[{"id":"mobile","name":"Mobile","prices":{"IN":{"web":{"amount":149,"currency":"INR","source":"https://s"}}}}]}]}') as Map<String, dynamic>);
+      final mobile = doc.services.single.plans.single;
+      expect(mobile.quote(country: 'IN', channel: PurchaseChannel.android)!.price.money, Money.fromMajor(149, 'INR'));
+      expect(mobile.quote(country: 'US', channel: PurchaseChannel.web), isNull);
+    });
+
     test('round-trips through toJson', () {
       final again = PlanCatalogDocument.fromJson(doc.toJson());
       expect(again.services.single.plans.first.quote(country: 'IN', channel: PurchaseChannel.ios)!.price.money, Money.fromMajor(129, 'INR'));
@@ -122,7 +129,7 @@ void main() {
 
     test('rejects malformed documents', () {
       PlanCatalogDocument parse(String s) => PlanCatalogDocument.fromJson(jsonDecode(s) as Map<String, dynamic>);
-      expect(() => parse('{"services":[{"platformId":"a","plans":[{"id":"p","name":"P","prices":{"IN":{"web":{"amount":1,"currency":"INR"}}}}]}]}'), throwsFormatException, reason: 'no default price');
+      expect(() => parse('{"services":[{"platformId":"a","plans":[{"id":"p","name":"P","prices":{}}]}]}'), throwsFormatException, reason: 'no prices at all');
       expect(() => parse('{"services":[{"platformId":"a","plans":[{"id":"p","name":"P","cycle":"fortnightly","prices":{"default":{"web":{"amount":1,"currency":"USD"}}}}]}]}'), throwsFormatException, reason: 'bad cycle');
       expect(() => parse('{"services":[{"platformId":"a","plans":[{"id":"p","name":"P","prices":{"default":{"steam":{"amount":1,"currency":"USD"}}}}]}]}'), throwsFormatException, reason: 'bad channel');
       expect(() => parse('{"services":[{"platformId":"a","plans":[{"id":"p","name":"P","prices":{"default":{"web":{"amount":"1","currency":"USD"}}}}]}]}'), throwsFormatException, reason: 'string amount');

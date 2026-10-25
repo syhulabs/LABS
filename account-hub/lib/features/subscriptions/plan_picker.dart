@@ -104,8 +104,13 @@ Future<PlanPick?> showPlanPicker(BuildContext context, WidgetRef ref, {required 
           style: ctx.text.bodySmall?.copyWith(color: c.textMuted),
         ),
         const SizedBox(height: 8),
-        for (final p in plans.plans)
-          if (p.quote(country: m.code, channel: chosen) case final q?) PlanRow(plan: p, quote: q, requested: chosen, onTap: () => close(PlanPick(p, q, chosen))),
+        ...() {
+          final rows = <Widget>[
+            for (final p in plans.plans)
+              if (p.quote(country: m.code, channel: chosen) case final q?) PlanRow(plan: p, quote: q, requested: chosen, onTap: () => close(PlanPick(p, q, chosen))),
+          ];
+          return rows.isEmpty ? [Padding(padding: const EdgeInsets.symmetric(vertical: 16), child: Text('No published price for ${m.name} on file. Enter the price shown at checkout instead.', style: TextStyle(color: c.textMuted)))] : rows;
+        }(),
         const SizedBox(height: 10),
         Row(children: [
           Expanded(child: Text('Published prices, not live. Taxes and promos vary; the checkout price wins.${plans.notes == null ? '' : ' ${plans.notes}'}', style: ctx.text.bodySmall?.copyWith(color: c.textMuted))),

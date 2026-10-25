@@ -79,7 +79,8 @@ class ServicePlan {
   final BillingCycle cycle;
 
   /// country key -> channel -> price. Country keys are upper-case ISO codes
-  /// or "default".
+  /// or "default". A plan sold only in some countries has no "default" entry
+  /// and is hidden elsewhere rather than shown with an invented price.
   final Map<String, Map<PurchaseChannel, PlanPrice>> prices;
 
   static const defaultKey = 'default';
@@ -105,9 +106,7 @@ class ServicePlan {
       }
       if (channels.isNotEmpty) prices[key] = channels;
     }
-    if (prices[defaultKey] == null || prices[defaultKey]!.isEmpty) {
-      throw FormatException('Plan $id has no default price');
-    }
+    if (prices.isEmpty) throw FormatException('Plan $id has no prices');
     return ServicePlan(id: id, name: name, cycle: cycle, prices: prices);
   }
 
@@ -130,7 +129,8 @@ class ServicePlan {
   /// 1. exact country + channel,
   /// 2. same country, web (then any other channel),
   /// 3. default price for the channel, then default web / any.
-  /// Returns null only for a malformed plan with no default price.
+  /// Returns null when the plan is sold only in other countries (no default
+  /// price exists); such plans are simply not shown for this market.
   PlanQuote? quote({required String country, required PurchaseChannel channel}) {
     final cc = country.toUpperCase();
     final local = prices[cc];

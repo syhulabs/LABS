@@ -167,8 +167,13 @@ class _PlansCardState extends State<_PlansCard> {
       AppCard(
         padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
         child: Column(children: [
-          for (final p in widget.plans.plans)
-            if (p.quote(country: m.code, channel: _channel) case final q?) PlanRow(plan: p, quote: q, requested: _channel, dense: true, onTap: () => widget.onPick(PlanPick(p, q, _channel))),
+          ...() {
+            final rows = <Widget>[
+              for (final p in widget.plans.plans)
+                if (p.quote(country: m.code, channel: _channel) case final q?) PlanRow(plan: p, quote: q, requested: _channel, dense: true, onTap: () => widget.onPick(PlanPick(p, q, _channel))),
+            ];
+            return rows.isEmpty ? [Padding(padding: const EdgeInsets.all(12), child: Text('No published price for ${m.name} on file.', style: TextStyle(color: c.textMuted)))] : rows;
+          }(),
           Padding(
             padding: const EdgeInsets.fromLTRB(8, 6, 8, 8),
             child: Row(children: [

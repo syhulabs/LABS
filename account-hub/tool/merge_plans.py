@@ -83,9 +83,11 @@ def main(paths):
                         kept[ch] = {"amount": amt, "currency": cur, "source": price["source"], "verifiedAt": price.get("verifiedAt") or dt.date.today().isoformat()}
                     if kept:
                         prices[key] = kept
-                if "default" not in prices:
-                    problems.append(f"{pid}/{pid2}: no default price (skipped)")
+                if not prices:
+                    problems.append(f"{pid}/{pid2}: no valid prices (skipped)")
                     continue
+                if "default" not in prices:
+                    problems.append(f"note {pid}/{pid2}: country-only plan ({', '.join(sorted(prices))}); hidden elsewhere")
                 plans.append({"id": pid2, "name": p["name"], "cycle": p.get("cycle", "monthly"), "prices": prices})
             if not plans:
                 problems.append(f"{pid}: no valid plans (skipped)")
