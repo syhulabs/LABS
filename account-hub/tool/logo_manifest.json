@@ -489,6 +489,13 @@
   "url": "https://www.anz.com.au/apple-touch-icon.png",
   "shape": "square"
  },
+ "aol-mail": {
+  "file": "assets/logos/aol-mail.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 002_aol-mail.ico (48px)",
+  "tone": "color",
+  "shape": "square"
+ },
  "app-store": {
   "file": "assets/logos/app-store.png",
   "tone": "color",
@@ -953,6 +960,13 @@
   "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/authy.svg",
   "shape": "mark"
  },
+ "awal": {
+  "file": "assets/logos/awal.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 009_awal.webp (32px)",
+  "tone": "dark",
+  "shape": "mark"
+ },
  "aws": {
   "file": "assets/logos/aws.png",
   "tone": "dark",
@@ -982,6 +996,13 @@
   "source": "site",
   "url": "https://arch-center.azureedge.net/icons/Azure_Public_Service_Icons_V23.zip#03438-icon-service-Azure-OpenAI.svg",
   "shape": "square"
+ },
+ "babylon-js": {
+  "file": "assets/logos/babylon-js.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 010_babylon-js.svg (vector)",
+  "tone": "color",
+  "shape": "mark"
  },
  "backblaze": {
   "file": "assets/logos/backblaze.png",
@@ -1025,7 +1046,7 @@
   "tone": "color",
   "source": "appstore",
   "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/13/ad/c8/13adc877-1abf-2047-2670-5aa244a76a5b/AppIcon-0-0-1x_U007epad-0-0-0-1-0-sRGB-85-220.png/512x512bb.jpg",
-  "app": "BandLab \u2013 Music Maker & Beats",
+  "app": "BandLab – Music Maker & Beats",
   "seller": "BandLab Singapore Pte Ltd",
   "shape": "square"
  },
@@ -1152,7 +1173,7 @@
   "tone": "color",
   "source": "appstore",
   "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/92/3f/55/923f5559-0cb5-f3ed-e262-6f0e0d4e7d45/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
-  "app": "Behance \u2013 Creative Portfolios",
+  "app": "Behance – Creative Portfolios",
   "seller": "Adobe Inc.",
   "shape": "square"
  },
@@ -1183,6 +1204,20 @@
   "source": "site",
   "url": "https://online.berklee.edu/apple-touch-icon.png",
   "shape": "square"
+ },
+ "best-buy": {
+  "file": "assets/logos/best-buy.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 011_best-buy.ico (32px)",
+  "tone": "color",
+  "shape": "mark"
+ },
+ "bevy": {
+  "file": "assets/logos/bevy.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 013_bevy.png (32px)",
+  "tone": "color",
+  "shape": "mark"
  },
  "bhim": {
   "file": "assets/logos/bhim.png",
@@ -1439,6 +1474,13 @@
   "source": "svgl",
   "url": "https://svgl.app/library/bmc.svg",
   "shape": "mark"
+ },
+ "byju-s": {
+  "file": "assets/logos/byju-s.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 014_byju-s.svg (vector)",
+  "tone": "color",
+  "shape": "square"
  },
  "cal-com": {
   "file": "assets/logos/cal-com.png",
@@ -2271,6 +2313,13 @@
   "url": "https://draft2digital-prod-static.s3.amazonaws.com/img/favicon/apple-touch-icon.png",
   "shape": "square"
  },
+ "dragonbones": {
+  "file": "assets/logos/dragonbones.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 021_dragonbones.png (32px)",
+  "tone": "color",
+  "shape": "square"
+ },
  "dreamstudio": {
   "file": "assets/logos/dreamstudio.png",
   "tone": "dark",
@@ -2339,6 +2388,13 @@
   "tone": "color",
   "source": "dash",
   "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/electronic-arts.svg",
+  "shape": "mark"
+ },
+ "eastwest": {
+  "file": "assets/logos/eastwest.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 022_eastwest.ico (32px)",
+  "tone": "color",
   "shape": "mark"
  },
  "ebay": {
@@ -2566,6 +2622,13 @@
   "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/feedly.svg",
   "shape": "mark"
  },
+ "fidelity": {
+  "file": "assets/logos/fidelity.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 025_fidelity.ico (48px)",
+  "tone": "color",
+  "shape": "mark"
+ },
  "figjam": {
   "file": "assets/logos/figjam.png",
   "tone": "dark",
@@ -2747,9 +2810,9 @@
  "fmod": {
   "file": "assets/logos/fmod.png",
   "tone": "dark",
-  "source": "site",
-  "url": "https://www.fmod.com/favicon.ico",
-  "shape": "square"
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 026_fmod.svg (vector)",
+  "shape": "mark"
  },
  "fontshare": {
   "file": "assets/logos/fontshare.png",
@@ -2760,10 +2823,10 @@
  },
  "fortnite": {
   "file": "assets/logos/fortnite.png",
-  "tone": "color",
-  "source": "site",
-  "url": "https://www.google.com/s2/favicons?domain=www.fortnite.com&sz=256",
-  "shape": "square"
+  "tone": "dark",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 027_fortnite-uefn.svg (vector)",
+  "shape": "mark"
  },
  "fourthwall": {
   "file": "assets/logos/fourthwall.png",
@@ -2909,7 +2972,7 @@
   "tone": "color",
   "source": "appstore",
   "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3c/e6/92/3ce6922b-aaf4-cbcb-bd2f-b64ac8d61542/AppIcon-0-0-1x_U007ephone-0-1-0-0-85-220.png/512x512bb.jpg",
-  "app": "Garmin Connect\u2122",
+  "app": "Garmin Connect™",
   "seller": "Garmin International",
   "shape": "square"
  },
@@ -2926,6 +2989,13 @@
   "source": "site",
   "url": "https://gdevelop.io/favicons/apple-touch-icon.png",
   "shape": "square"
+ },
+ "geeksforgeeks": {
+  "file": "assets/logos/geeksforgeeks.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 028_geeksforgeeks.svg (vector)",
+  "tone": "color",
+  "shape": "mark"
  },
  "gemini": {
   "file": "assets/logos/gemini.png",
@@ -3477,6 +3547,13 @@
   "url": "@lobehub/icons-static-svg icons/groq.svg",
   "shape": "mark"
  },
+ "groww": {
+  "file": "assets/logos/groww.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 032_groww.ico (32px)",
+  "tone": "color",
+  "shape": "mark"
+ },
  "guilded": {
   "file": "assets/logos/guilded.png",
   "tone": "color",
@@ -3499,6 +3576,13 @@
   "app": "Gusto Mobile",
   "seller": "Gusto, inc.",
   "shape": "square"
+ },
+ "h-m": {
+  "file": "assets/logos/h-m.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 034_h-m.svg (vector)",
+  "tone": "dark",
+  "shape": "mark"
  },
  "hacker-news": {
   "file": "assets/logos/hacker-news.png",
@@ -3708,6 +3792,13 @@
   "tone": "color",
   "source": "site",
   "url": "https://hypeddit.com/images/favicon.ico",
+  "shape": "mark"
+ },
+ "ibm-cloud": {
+  "file": "assets/logos/ibm-cloud.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 037_ibm-cloud.png (48px)",
+  "tone": "color",
   "shape": "mark"
  },
  "icedrive": {
@@ -4030,6 +4121,13 @@
   "seller": "Indian Railway Catering and Tourism Corporation Limited",
   "shape": "square"
  },
+ "itch-io": {
+  "file": "assets/logos/itch-io.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 041_itch-io.svg (vector)",
+  "tone": "color",
+  "shape": "mark"
+ },
  "iwork": {
   "file": "assets/logos/iwork.png",
   "tone": "color",
@@ -4122,7 +4220,7 @@
   "tone": "color",
   "source": "appstore",
   "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/03/2e/75/032e752b-d99c-8609-0a2e-782f40dbc5b3/appiconfree-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
-  "app": "JioSaavn \u2013 Music & Podcasts",
+  "app": "JioSaavn – Music & Podcasts",
   "seller": "Saavn Media Limited",
   "shape": "square"
  },
@@ -4132,6 +4230,13 @@
   "source": "dash",
   "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/jira.svg",
   "shape": "mark"
+ },
+ "josh": {
+  "file": "assets/logos/josh.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 042_josh.png (98px)",
+  "tone": "dark",
+  "shape": "square"
  },
  "juspay": {
   "file": "assets/logos/juspay.png",
@@ -4157,9 +4262,9 @@
  "kakaotalk": {
   "file": "assets/logos/kakaotalk.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.kakaocorp.com/page/favicon.ico",
-  "shape": "square"
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 044_kakaotalk.svg (vector)",
+  "shape": "mark"
  },
  "karnataka-bank": {
   "file": "assets/logos/karnataka-bank.png",
@@ -4196,6 +4301,13 @@
   "tone": "color",
   "source": "dash",
   "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/keeper-security.svg",
+  "shape": "mark"
+ },
+ "kenney": {
+  "file": "assets/logos/kenney.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 045_kenney.ico (48px)",
+  "tone": "color",
   "shape": "mark"
  },
  "keymailer": {
@@ -4254,6 +4366,13 @@
   "tone": "color",
   "source": "site",
   "url": "https://www.google.com/s2/favicons?domain=kit.com&sz=256",
+  "shape": "square"
+ },
+ "kits-ai": {
+  "file": "assets/logos/kits-ai.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 046_kits-ai.png (32px)",
+  "tone": "color",
   "shape": "square"
  },
  "klarna": {
@@ -4509,6 +4628,13 @@
   "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/linkedin.svg",
   "shape": "square"
  },
+ "linkfire": {
+  "file": "assets/logos/linkfire.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 048_linkfire.svg (vector)",
+  "tone": "color",
+  "shape": "mark"
+ },
  "linktree": {
   "file": "assets/logos/linktree.png",
   "tone": "color",
@@ -4598,6 +4724,13 @@
   "source": "site",
   "url": "https://love2d.org/apple-touch-icon.png",
   "shape": "square"
+ },
+ "lulu": {
+  "file": "assets/logos/lulu.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 049_lulu.png (48px)",
+  "tone": "color",
+  "shape": "mark"
  },
  "luma-ai": {
   "file": "assets/logos/luma-ai.png",
@@ -5098,6 +5231,13 @@
   "url": "https://www.moddb.com/apple-touch-icon.png",
   "shape": "square"
  },
+ "moho": {
+  "file": "assets/logos/moho.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 054_moho.png (32px)",
+  "tone": "color",
+  "shape": "mark"
+ },
  "moises": {
   "file": "assets/logos/moises.png",
   "tone": "dark",
@@ -5428,6 +5568,13 @@
   "url": "https://www.google.com/s2/favicons?domain=nubank.com.br&sz=256",
   "shape": "square"
  },
+ "nvidia-account": {
+  "file": "assets/logos/nvidia-account.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 058_nvidia-account.svg (vector)",
+  "tone": "color",
+  "shape": "mark"
+ },
  "nykaa": {
   "file": "assets/logos/nykaa.png",
   "tone": "color",
@@ -5493,6 +5640,20 @@
   "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft-onenote.svg",
   "shape": "square"
  },
+ "oneplus": {
+  "file": "assets/logos/oneplus.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 059_oneplus.svg (vector)",
+  "tone": "dark",
+  "shape": "mark"
+ },
+ "onerpm": {
+  "file": "assets/logos/onerpm.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 060_onerpm.ico (32px)",
+  "tone": "color",
+  "shape": "mark"
+ },
  "open-3d-engine": {
   "file": "assets/logos/open-3d-engine.png",
   "tone": "dark",
@@ -5528,6 +5689,13 @@
   "url": "@lobehub/icons-static-svg icons/openrouter-color.svg",
   "shape": "mark"
  },
+ "opentoonz": {
+  "file": "assets/logos/opentoonz.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 062_opentoonz.ico (32px)",
+  "tone": "color",
+  "shape": "square"
+ },
  "oracle-cloud": {
   "file": "assets/logos/oracle-cloud.png",
   "tone": "color",
@@ -5549,11 +5717,25 @@
   "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/microsoft-outlook.svg",
   "shape": "mark"
  },
+ "output": {
+  "file": "assets/logos/output.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 063_output.ico (48px)",
+  "tone": "color",
+  "shape": "square"
+ },
  "paddle": {
   "file": "assets/logos/paddle.png",
   "tone": "color",
   "source": "site",
   "url": "https://www.paddle.com/icon4.png?icon4.2505fc7ib2tqc.png?dpl=915f55a4010bc34a8741967daea972f4e7c5658fbde49cf98bf6a2f430fcb047366164623862646265373064326334336162373165323136",
+  "shape": "square"
+ },
+ "pan-india": {
+  "file": "assets/logos/pan-india.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 064_pan-nsdl-utiitsl.png (180px)",
+  "tone": "color",
   "shape": "square"
  },
  "pandora": {
@@ -5621,6 +5803,13 @@
   "tone": "color",
   "source": "site",
   "url": "https://business.paytm.com/s3assets/images/common/touch/chrome-touch-icon-192x192.png?version=1790087750",
+  "shape": "mark"
+ },
+ "paytm-payments-bank": {
+  "file": "assets/logos/paytm-payments-bank.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 065_paytm-payments-bank.svg (vector)",
+  "tone": "dark",
   "shape": "mark"
  },
  "payu": {
@@ -5753,7 +5942,7 @@
   "tone": "color",
   "source": "appstore",
   "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9a/62/7b/9a627b20-8af3-11fd-8b45-309664434966/AppIcon-0-0-1x_U007epad-0-1-sRGB-85-220.png/512x512bb.jpg",
-  "app": "Pipedrive \u2013 Sales CRM",
+  "app": "Pipedrive – Sales CRM",
   "seller": "Pipedrive Inc",
   "shape": "square"
  },
@@ -5783,6 +5972,13 @@
   "tone": "color",
   "source": "dash",
   "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/plausible.svg",
+  "shape": "mark"
+ },
+ "playcanvas": {
+  "file": "assets/logos/playcanvas.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 069_playcanvas.svg (vector)",
+  "tone": "color",
   "shape": "mark"
  },
  "playlist-push": {
@@ -5863,12 +6059,26 @@
   "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/pocketbase.svg",
   "shape": "mark"
  },
+ "podia": {
+  "file": "assets/logos/podia.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 071_podia.png (48px)",
+  "tone": "color",
+  "shape": "square"
+ },
  "poe": {
   "file": "assets/logos/poe.png",
   "tone": "dark",
   "source": "lobe",
   "url": "@lobehub/icons-static-svg icons/poe-color.svg",
   "shape": "mark"
+ },
+ "poki-developers": {
+  "file": "assets/logos/poki-developers.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 072_poki-for-developers.png (180px)",
+  "tone": "color",
+  "shape": "square"
  },
  "polar": {
   "file": "assets/logos/polar.png",
@@ -6175,6 +6385,20 @@
   "seller": "Readwise, Inc",
   "shape": "square"
  },
+ "reallusion": {
+  "file": "assets/logos/reallusion.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 076_reallusion.ico (32px)",
+  "tone": "dark",
+  "shape": "mark"
+ },
+ "reaper": {
+  "file": "assets/logos/reaper.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 077_reaper.ico (32px)",
+  "tone": "color",
+  "shape": "mark"
+ },
  "reason": {
   "file": "assets/logos/reason.png",
   "tone": "dark",
@@ -6217,6 +6441,13 @@
   "url": "https://cdn.prod.website-files.com/685eb01de588fa3e7e23b7c0/68d3919f090a0cf78515d82e_655d0b5f441d17d8e09cf031_Reddit_Favicon_FullColor256.png",
   "shape": "square"
  },
+ "rediffmail": {
+  "file": "assets/logos/rediffmail.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 078_rediffmail.ico (32px)",
+  "tone": "color",
+  "shape": "mark"
+ },
  "reedsy": {
   "file": "assets/logos/reedsy.png",
   "tone": "color",
@@ -6232,6 +6463,13 @@
   "app": "Reliance Digital Shopping App",
   "seller": "Reliance Retail Limited",
   "shape": "square"
+ },
+ "ren-py": {
+  "file": "assets/logos/ren-py.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 079_ren-py.svg (vector)",
+  "tone": "color",
+  "shape": "mark"
  },
  "render": {
   "file": "assets/logos/render.png",
@@ -6398,6 +6636,13 @@
   "tone": "dark",
   "source": "site",
   "url": "https://www.google.com/s2/favicons?domain=www.santander.com&sz=256",
+  "shape": "mark"
+ },
+ "scaler": {
+  "file": "assets/logos/scaler.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 084_scaler.ico (48px)",
+  "tone": "dark",
   "shape": "mark"
  },
  "scenario": {
@@ -6588,8 +6833,8 @@
  "skrill": {
   "file": "assets/logos/skrill.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.skrill.com/typo3conf/ext/sitepackage/Resources/Public/images/icons/apple-touch-icon.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 086_skrill.png (180px)",
   "shape": "square"
  },
  "skype": {
@@ -6655,12 +6900,26 @@
   "url": "https://release-manager.sc-cdn.net/favicon/apple-touch-icon-1024x1024.png",
   "shape": "square"
  },
+ "society6": {
+  "file": "assets/logos/society6.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 088_society6.svg (vector)",
+  "tone": "dark",
+  "shape": "mark"
+ },
  "sofi": {
   "file": "assets/logos/sofi.png",
   "tone": "color",
   "source": "site",
   "url": "https://www.sofi.com/apple-touch-icon.png",
   "shape": "mark"
+ },
+ "sonarworks": {
+  "file": "assets/logos/sonarworks.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 089_sonarworks.ico (32px)",
+  "tone": "light",
+  "shape": "square"
  },
  "songkick": {
   "file": "assets/logos/songkick.png",
@@ -6786,6 +7045,13 @@
   "source": "site",
   "url": "https://esotericsoftware.com/apple-touch-icon-180x180.png",
   "shape": "square"
+ },
+ "spitfire-audio": {
+  "file": "assets/logos/spitfire-audio.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 091_spitfire-audio.png (57px)",
+  "tone": "dark",
+  "shape": "mark"
  },
  "splice": {
   "file": "assets/logos/splice.png",
@@ -6984,6 +7250,13 @@
   "seller": "STREAMYARD, INC",
   "shape": "square"
  },
+ "stride": {
+  "file": "assets/logos/stride.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 093_stride.png (32px)",
+  "tone": "color",
+  "shape": "mark"
+ },
  "stripe": {
   "file": "assets/logos/stripe.png",
   "tone": "color",
@@ -6997,6 +7270,13 @@
   "source": "site",
   "url": "https://images.stripeassets.com/fzn2n1nzq965/4vVgZi0ZMoEzOhkcv7EVwK/8cce6fdcf2733b2ec8e99548908847ed/favicon.png?w=180&h=180",
   "shape": "square"
+ },
+ "studio-one": {
+  "file": "assets/logos/studio-one.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 094_studio-one.png (32px)",
+  "tone": "color",
+  "shape": "mark"
  },
  "substack": {
   "file": "assets/logos/substack.png",
@@ -7076,6 +7356,13 @@
   "app": "Sync - Secure cloud storage",
   "seller": "Sync.com Inc.",
   "shape": "square"
+ },
+ "synfig-studio": {
+  "file": "assets/logos/synfig-studio.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 096_synfig-studio.ico (32px)",
+  "tone": "color",
+  "shape": "mark"
  },
  "synology": {
   "file": "assets/logos/synology.png",
@@ -7242,6 +7529,13 @@
   "url": "https://thenounproject.com/apple-touch-icon.png",
   "shape": "square"
  },
+ "the-orchard": {
+  "file": "assets/logos/the-orchard.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 099_the-orchard.png (57px)",
+  "tone": "dark",
+  "shape": "mark"
+ },
  "things": {
   "file": "assets/logos/things.png",
   "tone": "color",
@@ -7340,6 +7634,13 @@
   "url": "https://cdn.jsdelivr.net/gh/gilbarbara/logos@main/logos/togetherai-icon.svg",
   "shape": "mark"
  },
+ "toneden": {
+  "file": "assets/logos/toneden.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 102_toneden.png (32px)",
+  "tone": "color",
+  "shape": "square"
+ },
  "too-lost": {
   "file": "assets/logos/too-lost.png",
   "tone": "light",
@@ -7426,6 +7727,13 @@
   "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/tumblr.svg",
   "shape": "mark"
  },
+ "tunecore": {
+  "file": "assets/logos/tunecore.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 103_tunecore.png (48px)",
+  "tone": "color",
+  "shape": "mark"
+ },
  "turbosquid": {
   "file": "assets/logos/turbosquid.png",
   "tone": "color",
@@ -7446,6 +7754,13 @@
   "source": "dash",
   "url": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/tuta.svg",
   "shape": "mark"
+ },
+ "tvpaint": {
+  "file": "assets/logos/tvpaint.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 104_tvpaint.png (32px)",
+  "tone": "dark",
+  "shape": "square"
  },
  "twilio": {
   "file": "assets/logos/twilio.png",
@@ -7628,6 +7943,13 @@
   "url": "https://prod-mphs.upgrad.com/hubfs/45938370-0-Gloop-01%20(1).webp",
   "shape": "mark"
  },
+ "upi": {
+  "file": "assets/logos/upi.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 106_upi-npci.png (48px)",
+  "tone": "color",
+  "shape": "mark"
+ },
  "upstash": {
   "file": "assets/logos/upstash.png",
   "tone": "color",
@@ -7655,6 +7977,13 @@
   "source": "site",
   "url": "https://www.copyright.gov/about/images/android-icon-192x192.png",
   "shape": "square"
+ },
+ "uspto": {
+  "file": "assets/logos/uspto.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 107_uspto.ico (32px)",
+  "tone": "color",
+  "shape": "mark"
  },
  "v0": {
   "file": "assets/logos/v0.png",
@@ -7807,6 +8136,13 @@
   "url": "https://www.walmart.com/apple-touch-icon.png",
   "shape": "mark"
  },
+ "wasabi": {
+  "file": "assets/logos/wasabi.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 108_wasabi.ico (32px)",
+  "tone": "color",
+  "shape": "mark"
+ },
  "wattpad": {
   "file": "assets/logos/wattpad.png",
   "tone": "color",
@@ -7956,8 +8292,8 @@
  "wipster": {
   "file": "assets/logos/wipster.png",
   "tone": "color",
-  "source": "site",
-  "url": "https://www.wipster.io/hubfs/favicon-1.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 109_wipster.png (100px)",
   "shape": "square"
  },
  "wise": {
@@ -8007,6 +8343,13 @@
   "tone": "color",
   "source": "site",
   "url": "https://www.worldanvil.com/apple-touch-icon.png",
+  "shape": "square"
+ },
+ "wwise": {
+  "file": "assets/logos/wwise.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 110_wwise.ico (48px)",
+  "tone": "light",
   "shape": "square"
  },
  "wynk-music": {
@@ -8071,6 +8414,13 @@
   "source": "site",
   "url": "https://xferrecords.com/apple-touch-icon.png",
   "shape": "square"
+ },
+ "xiaomi-account": {
+  "file": "assets/logos/xiaomi-account.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 111_xiaomi-account.svg (vector)",
+  "tone": "color",
+  "shape": "mark"
  },
  "y-combinator": {
   "file": "assets/logos/y-combinator.png",
@@ -8198,6 +8548,13 @@
   "tone": "dark",
   "source": "site",
   "url": "https://www.google.com/s2/favicons?domain=www.zeptonow.com&sz=256",
+  "shape": "square"
+ },
+ "zerodha": {
+  "file": "assets/logos/zerodha.png",
+  "source": "owner",
+  "url": "owner-supplied icons.zip (2026-10-25): 113_zerodha.svg (vector)",
+  "tone": "color",
   "shape": "square"
  },
  "zoho": {
