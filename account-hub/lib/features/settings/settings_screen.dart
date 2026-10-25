@@ -191,11 +191,17 @@ class _ProfileSectionState extends ConsumerState<_ProfileSection> {
             items: [for (final m in markets) (m.code, m.labelWithCurrency)],
             onChanged: (v) async {
               final m = marketByCode(v) ?? defaultMarket;
+              final previous = settings.market;
+              final followCurrency = settings.defaultCurrency == previous.currency;
               await repo.set(SettingsRepository.kCountry, m.code);
-              await repo.set(SettingsRepository.kDefaultCurrency, m.currency);
+              if (followCurrency) {
+                await repo.set(SettingsRepository.kDefaultCurrency, m.currency);
+              } else if (context.mounted && settings.defaultCurrency != m.currency) {
+                showToast(context, 'Default currency kept at ${settings.defaultCurrency}. Change it below if you want ${m.currency}.');
+              }
             },
           ),
-          Text('Plan prices, the default currency and store pricing follow this country. Services with no price list for it show their default (usually USD) price.', style: context.text.bodySmall?.copyWith(color: context.colors.textMuted)),
+          Text('Plan prices and store pricing follow this country. The default currency follows too, unless you set a different one below. Services with no price list for it show their default (usually USD) price.', style: context.text.bodySmall?.copyWith(color: context.colors.textMuted)),
           const SizedBox(height: 16),
           Text('Where you usually subscribe', style: context.text.labelLarge),
           const SizedBox(height: 8),
@@ -587,6 +593,7 @@ class _BackupSection extends ConsumerWidget {
       await service.restore(doc);
       if (!context.mounted) return;
       await ref.read(catalogServiceProvider).ensureSeeded();
+      await reloadPlanCatalog(ref);
       if (context.mounted) showToast(context, 'Backup restored (${summary.totalRows} rows)');
     } catch (e) {
       if (context.mounted) showToast(context, 'Restore failed: ${friendlyError(e)}', error: true);
@@ -763,6 +770,7 @@ class _DataSectionState extends ConsumerState<_DataSection> {
               try {
                 await ref.read(databaseProvider).clearAll();
                 await ref.read(catalogServiceProvider).ensureSeeded();
+                await reloadPlanCatalog(ref);
                 if (context.mounted) {
                   showToast(context, 'All data erased');
                   context.go(Routes.home);
@@ -836,7 +844,7 @@ class _PlanCatalogStatus extends ConsumerWidget {
             try {
               final raw = await files.first.xFile.readAsString();
               final n = await ref.read(planCatalogServiceProvider).importFromJsonString(raw);
-              ref.invalidate(planCatalogProvider);
+              await reloadPlanCatalog(ref);
               if (context.mounted) showToast(context, 'Imported plans for $n services');
             } catch (e) {
               if (context.mounted) showToast(context, 'Import failed: ${friendlyError(e)}', error: true);
@@ -849,7 +857,7 @@ class _PlanCatalogStatus extends ConsumerWidget {
           TextButton(
             onPressed: () async {
               await ref.read(planCatalogServiceProvider).clearImported();
-              ref.invalidate(planCatalogProvider);
+              await reloadPlanCatalog(ref);
             },
             child: const Text('Use bundled prices only'),
           ),

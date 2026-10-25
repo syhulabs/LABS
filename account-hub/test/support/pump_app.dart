@@ -6,6 +6,7 @@ import 'package:syhu_account_hub/app/app.dart';
 import 'package:syhu_account_hub/app/providers.dart';
 import 'package:syhu_account_hub/app/theme/app_theme.dart';
 import 'package:syhu_account_hub/data/catalog/catalog_service.dart';
+import 'package:syhu_account_hub/data/catalog/plan_catalog_service.dart';
 import 'package:syhu_account_hub/data/db/app_database.dart';
 import 'package:syhu_account_hub/data/db/database_connection.dart';
 import 'package:syhu_account_hub/data/secure/key_store.dart';
@@ -21,8 +22,13 @@ Future<ProviderContainer> createTestContainer({bool seedCatalog = true}) async {
     databaseProvider.overrideWithValue(db),
     keyStoreProvider.overrideWithValue(InMemoryKeyStore()),
     catalogServiceProvider.overrideWith((ref) => CatalogService(db, bundle: FileAssetBundle())),
+    planCatalogServiceProvider.overrideWith((ref) => PlanCatalogService(db, bundle: FileAssetBundle())),
   ]);
   if (seedCatalog) await container.read(catalogServiceProvider).ensureSeeded();
+  // Load plan prices here (real async): file reads never finish inside a
+  // widget test's fake-async zone. Providers are deliberately NOT read, so
+  // tests still see the app's cold-start path.
+  await container.read(planCatalogServiceProvider).load();
   return container;
 }
 

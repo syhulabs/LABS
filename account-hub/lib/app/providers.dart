@@ -55,12 +55,19 @@ final notificationServiceProvider = Provider((ref) => NotificationService());
 /// second onDispose or the notifier is disposed twice.
 final appLockProvider = ChangeNotifierProvider<AppLockController>((ref) => AppLockController(ref.watch(cryptoServiceProvider)));
 
-/// Plan catalog, loaded once; `ref.invalidate` after an import to reload.
+/// Plan catalog, loaded once. Call [reloadPlanCatalog] after anything that
+/// changes the stored import (import, reset, restore, erase).
 final planCatalogProvider = FutureProvider<PlanCatalogService>((ref) async {
   final s = ref.watch(planCatalogServiceProvider);
   if (!s.isLoaded) await s.load();
   return s;
 });
+
+/// Re-reads the bundled and imported plan documents and notifies listeners.
+Future<void> reloadPlanCatalog(WidgetRef ref) async {
+  await ref.read(planCatalogServiceProvider).load();
+  ref.invalidate(planCatalogProvider);
+}
 
 // ---------- Reactive data streams ----------
 final settingsProvider = StreamProvider<Map<String, dynamic>>((ref) => ref.watch(settingsRepositoryProvider).watchAll());

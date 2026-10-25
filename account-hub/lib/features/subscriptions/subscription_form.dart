@@ -18,6 +18,13 @@ import '../../shared/widgets/toast.dart';
 import '../banking/bank_account_form.dart';
 import 'plan_picker.dart';
 
+/// Store a subscription form starts with. Existing rows keep "not recorded"
+/// (null) until the user picks a store, so editing an old row never stamps a
+/// guess on it; new subscriptions start from the preset plan or the usual
+/// store in Settings.
+PurchaseChannel? initialPurchaseChannel({required bool isExisting, String? stored, PurchaseChannel? preset, required PurchaseChannel usual}) =>
+    isExisting ? PurchaseChannel.tryParse(stored) : (preset ?? usual);
+
 /// Re-plans local renewal reminders after any subscription change. Fails soft
 /// on platforms without notification support.
 Future<void> rescheduleReminders(WidgetRef ref) async {
@@ -33,6 +40,13 @@ Future<void> rescheduleReminders(WidgetRef ref) async {
 Future<String?> showSubscriptionForm(BuildContext context, WidgetRef ref, {SubscriptionView? existing, Platform? presetPlatform, PlanPick? presetPlan}) async {
   final s = existing?.sub;
   final settings = ref.read(settingsProvider).value ?? const <String, dynamic>{};
+  // Load the plan catalog before the sheet opens: the sheet's builder does
+  // not rebuild when a FutureProvider resolves later.
+  try {
+    await ref.read(planCatalogProvider.future);
+  } catch (_) {
+    // Plans are optional reference data.
+  }
   Platform? platform = existing?.platform ?? presetPlatform;
   final service = TextEditingController(text: s?.serviceName ?? platform?.name ?? '');
   final plan = TextEditingController(text: s?.plan ?? presetPlan?.plan.name ?? '');
@@ -44,7 +58,7 @@ Future<String?> showSubscriptionForm(BuildContext context, WidgetRef ref, {Subsc
   final tags = TextEditingController(text: s == null ? '' : (await ref.read(tagRepositoryProvider).watchTagsFor(EntityType.subscription, s.id).first).map((t) => t.name).join(', '));
   var currency = s?.currency ?? presetMoney?.currency ?? settings.defaultCurrency;
   var cycle = s != null ? enumFromName(BillingCycle.values, s.billingCycle, BillingCycle.monthly) : (presetPlan?.plan.cycle ?? BillingCycle.monthly);
-  var channel = PurchaseChannel.tryParse(s?.purchaseChannel) ?? presetPlan?.channel ?? settings.purchaseChannel;
+  var channel = initialPurchaseChannel(isExisting: s != null, stored: s?.purchaseChannel, preset: presetPlan?.channel, usual: settings.purchaseChannel);
   final market = settings.market;
   void applyPick(PlanPick pick) {
     plan.text = pick.plan.name;
@@ -69,7 +83,8 @@ Future<String?> showSubscriptionForm(BuildContext context, WidgetRef ref, {Subsc
   return showFormSheet<String>(context, title: existing == null ? 'Add subscription' : 'Edit subscription', maxWidth: 600, builder: (ctx, close) {
     return StatefulBuilder(builder: (ctx, setState) {
       final methods = ref.watch(paymentMethodsProvider).value ?? const <PaymentMethod>[];
-      final plans = ref.watch(planCatalogProvider).value?.plansFor(platform?.id);
+      final found = ref.read(planCatalogProvider).value?.plansFor(platform?.id);
+      final plans = (found != null && found.plans.isNotEmpty) ? found : null;
       final accounts = (ref.watch(accountsProvider).value ?? const <AccountView>[]).where((a) => platform == null || a.platform.id == platform!.id).toList();
       int? parsedDays() => int.tryParse(cycleDays.text.trim());
       return Form(
@@ -108,7 +123,7 @@ Future<String?> showSubscriptionForm(BuildContext context, WidgetRef ref, {Subsc
                 padding: const EdgeInsets.only(top: 4),
                 child: FilledButton.tonalIcon(
                   onPressed: () async {
-                    final pick = await showPlanPicker(ctx, ref, plans: plans, channel: channel, market: market);
+                    final pick = await showPlanPicker(ctx, ref, plans: plans, channel: channel ?? settings.purchaseChannel, market: market);
                     if (pick != null) setState(() => applyPick(pick));
                   },
                   icon: const Icon(Icons.list_alt_outlined, size: 16),
@@ -125,7 +140,14 @@ Future<String?> showSubscriptionForm(BuildContext context, WidgetRef ref, {Subsc
               const SizedBox(height: 6),
               ChannelSelector(value: channel, onChanged: (v) => setState(() => channel = v)),
               const SizedBox(height: 4),
-              Text(plans == null ? 'Store prices often differ from the web price for the same plan.' : 'Switching the store re-quotes the plan when you choose one.', style: TextStyle(color: ctx.colors.textMuted, fontSize: 12)),
+              Text(
+                channel == null
+                    ? 'Not recorded yet. Pick the store this subscription is billed through.'
+                    : plans == null
+                        ? 'Store prices often differ from the web price for the same plan.'
+                        : 'Switching the store re-quotes the plan when you choose one.',
+                style: TextStyle(color: ctx.colors.textMuted, fontSize: 12),
+              ),
             ]),
           ),
           MoneyField(amountController: amount, currency: currency, onCurrencyChanged: (v) => setState(() => currency = v)),

@@ -11,6 +11,7 @@ and dropped, not patched.
 """
 import datetime as dt
 import json
+import math
 import pathlib
 import re
 import sys
@@ -22,6 +23,34 @@ MARKETS_DART = ROOT / "lib/domain/markets.dart"
 CYCLES = {"weekly", "monthly", "quarterly", "halfYearly", "yearly", "oneTime"}
 CHANNELS = {"web", "ios", "android"}
 ZERO_DECIMAL = {"JPY", "KRW", "VND"}
+
+
+def check_price(price, key, markets):
+    """Validate one price entry. Returns (entry, None) or (None, reason).
+
+    Shared by merge_plans.py and patch_plans.py so both apply the same rules
+    as the app's loader (which rejects the whole file on one bad entry).
+    """
+    if not isinstance(price, dict):
+        return None, "price is not an object"
+    amt, cur = price.get("amount"), str(price.get("currency") or "").upper()
+    if not isinstance(amt, (int, float)) or isinstance(amt, bool) or not math.isfinite(amt) or amt < 0:
+        return None, f"bad amount {amt!r}"
+    if len(cur) != 3 or not cur.isalpha():
+        return None, f"bad currency {cur!r}"
+    if key != "default" and cur not in (markets[key], "USD", "EUR"):
+        return None, f"currency {cur} is not {markets[key]}"
+    source = str(price.get("source") or "")
+    if not source.startswith(("http", "observed:")):
+        return None, "no source URL"
+    if cur in ZERO_DECIMAL:
+        amt = int(round(amt))
+    return {"amount": amt, "currency": cur, "source": source, "verifiedAt": price.get("verifiedAt") or dt.date.today().isoformat()}, None
+
+
+def write_doc(doc):
+    """Write plans.json; refuses NaN/Infinity so the output is valid JSON."""
+    OUT.write_text(json.dumps(doc, ensure_ascii=False, indent=1, allow_nan=False) + "\n")
 
 
 def known_markets():
@@ -65,22 +94,11 @@ def main(paths):
                         if ch not in CHANNELS:
                             problems.append(f"{pid}/{pid2}/{key}: bad channel {ch!r} (dropped)")
                             continue
-                        amt, cur = price.get("amount"), (price.get("currency") or "").upper()
-                        if not isinstance(amt, (int, float)) or isinstance(amt, bool) or amt < 0:
-                            problems.append(f"{pid}/{pid2}/{key}/{ch}: bad amount {amt!r} (dropped)")
+                        entry, why = check_price(price, key, markets)
+                        if why:
+                            problems.append(f"{pid}/{pid2}/{key}/{ch}: {why} (dropped)")
                             continue
-                        if len(cur) != 3:
-                            problems.append(f"{pid}/{pid2}/{key}/{ch}: bad currency {cur!r} (dropped)")
-                            continue
-                        if key != "default" and cur not in (markets[key], "USD", "EUR"):
-                            problems.append(f"{pid}/{pid2}/{key}/{ch}: currency {cur} is not {markets[key]} (dropped)")
-                            continue
-                        if cur in ZERO_DECIMAL:
-                            amt = int(round(amt))
-                        if not str(price.get("source", "")).startswith(("http", "observed:")):
-                            problems.append(f"{pid}/{pid2}/{key}/{ch}: no source URL (dropped)")
-                            continue
-                        kept[ch] = {"amount": amt, "currency": cur, "source": price["source"], "verifiedAt": price.get("verifiedAt") or dt.date.today().isoformat()}
+                        kept[ch] = entry
                     if kept:
                         prices[key] = kept
                 if not prices:
@@ -88,7 +106,11 @@ def main(paths):
                     continue
                 if "default" not in prices:
                     problems.append(f"note {pid}/{pid2}: country-only plan ({', '.join(sorted(prices))}); hidden elsewhere")
-                plans.append({"id": pid2, "name": p["name"], "cycle": p.get("cycle", "monthly"), "prices": prices})
+                name = str(p.get("name") or "").strip()
+                if not name:
+                    problems.append(f"{pid}/{pid2}: plan without name (skipped)")
+                    continue
+                plans.append({"id": pid2, "name": name, "cycle": p.get("cycle", "monthly"), "prices": prices})
             if not plans:
                 problems.append(f"{pid}: no valid plans (skipped)")
                 continue
@@ -99,12 +121,15 @@ def main(paths):
                 entry["notes"] = s["notes"]
             services[pid] = entry
     previous = json.load(OUT.open()) if OUT.exists() else {"version": 0}
+    dropped = sorted({x["platformId"] for x in previous.get("services", [])} - set(services))
+    if dropped:
+        problems.append(f"merge rebuilds the whole file: {len(dropped)} existing services are not in the inputs and will be removed: {', '.join(dropped)}. Use tool/patch_plans.py to add to the file instead.")
     out = {
         "version": int(previous.get("version", 0)) + 1,
         "generatedAt": dt.date.today().isoformat(),
         "services": [services[k] for k in sorted(services)],
     }
-    OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n")
+    write_doc(out)
     countries = {}
     for s in out["services"]:
         for p in s["plans"]:

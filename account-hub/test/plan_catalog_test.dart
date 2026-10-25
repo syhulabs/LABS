@@ -111,6 +111,12 @@ void main() {
       final web = pro.quote(country: 'IN', channel: PurchaseChannel.web)!;
       expect(web.match, PlanQuoteMatch.defaultPrice);
       expect(web.price.money, Money.fromMajor(20, 'USD'));
+      expect(web.localAlternative?.$1, PurchaseChannel.ios, reason: 'the local store price is surfaced, not hidden');
+      expect(web.caption(PurchaseChannel.web), allOf(contains('No local Web price'), contains('iOS ₹1,999.00 on file')));
+      expect(web.caption(PurchaseChannel.web), isNot(contains('No local price on file')));
+      expect(doc.services.single.localChannels('IN'), {PurchaseChannel.ios});
+      expect(doc.services.single.localChannels('US'), isEmpty);
+      expect(doc.services.single.defaultCurrency, 'USD');
       final android = pro.quote(country: 'IN', channel: PurchaseChannel.android)!;
       expect(android.match, PlanQuoteMatch.countryOtherChannel, reason: 'a store request prefers the local store price over USD');
       expect(android.price.money, Money.fromMajor(1999, 'INR'));
@@ -146,6 +152,7 @@ void main() {
       expect(() => parse('{"services":[{"platformId":"a","plans":[{"id":"p","name":"P","prices":{"default":{"steam":{"amount":1,"currency":"USD"}}}}]}]}'), throwsFormatException, reason: 'bad channel');
       expect(() => parse('{"services":[{"platformId":"a","plans":[{"id":"p","name":"P","prices":{"default":{"web":{"amount":"1","currency":"USD"}}}}]}]}'), throwsFormatException, reason: 'string amount');
       expect(() => parse('{"services":[{"platformId":"a","plans":[]},{"platformId":"a","plans":[]}]}'), throwsFormatException, reason: 'duplicate service');
+      expect(parse('{"services":[{"platformId":"a","plans":[]}]}').services, isEmpty, reason: 'a service with no plans is dropped, so no picker opens on an empty list');
       expect(() => parse('{"services":[{"platformId":"a","plans":[{"id":"p","name":"P","prices":{"default":{"web":{"amount":1,"currency":"USD"}}}},{"id":"p","name":"Q","prices":{"default":{"web":{"amount":1,"currency":"USD"}}}}]}]}'), throwsFormatException, reason: 'duplicate plan');
     });
   });

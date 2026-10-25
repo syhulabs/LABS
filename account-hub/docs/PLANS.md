@@ -23,7 +23,8 @@ its own store. For a plan the app looks up, in order:
    *"iOS price shown"*;
 3. when the web price is asked for and the country has none: the service's
    `default` web price (normally USD, which is what web checkout then bills),
-   marked *"default USD"*;
+   marked *"No local Web price on file · default USD shown"*, plus the local
+   store price when one exists (*"iOS ₹1,999 on file"*);
 4. otherwise the `default` price, marked the same way.
 
 Fallbacks are always labelled in the UI; the app never silently converts

@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:drift/drift.dart';
 
 import '../../domain/enums.dart';
+import '../../domain/money.dart';
 import '../db/app_database.dart';
 import '../repositories/audit_repository.dart';
 import '../secure/crypto_service.dart';
@@ -207,11 +208,17 @@ class BackupService {
     return b.toString();
   }
 
+  /// Major-unit amount as text, respecting zero-decimal currencies (JPY...).
+  static String _major(int minor, String currency) {
+    final m = Money(minor, currency);
+    return m.major.toStringAsFixed(m.fractionDigits);
+  }
+
   Future<String> exportSubscriptionsCsv() async {
     final rows = await (db.select(db.subscriptions)..where((s) => s.archivedAt.isNull())).get();
     final b = StringBuffer('service,plan,price,currency,billing_cycle,status,next_billing_date,classification,billed_through\n');
     for (final s in rows) {
-      b.writeln([s.serviceName, s.plan, (s.priceMinor / 100).toStringAsFixed(2), s.currency, s.billingCycle, s.status, s.nextBillingDate?.toIso8601String().substring(0, 10), s.classification, s.purchaseChannel].map(_csv).join(','));
+      b.writeln([s.serviceName, s.plan, _major(s.priceMinor, s.currency), s.currency, s.billingCycle, s.status, s.nextBillingDate?.toIso8601String().substring(0, 10), s.classification, s.purchaseChannel].map(_csv).join(','));
     }
     return b.toString();
   }

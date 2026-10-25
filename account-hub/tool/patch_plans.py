@@ -16,7 +16,7 @@ import pathlib
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from merge_plans import CHANNELS, CYCLES, OUT, PLATFORMS, ZERO_DECIMAL, known_markets  # noqa: E402
+from merge_plans import CHANNELS, CYCLES, OUT, PLATFORMS, check_price, known_markets, write_doc  # noqa: E402
 
 
 def main(paths):
@@ -24,7 +24,7 @@ def main(paths):
     markets = known_markets()
     doc = json.load(OUT.open())
     by_service = {s["platformId"]: s for s in doc["services"]}
-    problems, added, replaced, new_plans = [], 0, 0, 0
+    problems, added, replaced, created = [], 0, 0, []
     for path in paths:
         patch = json.load(open(path))
         for s in patch.get("services", []):
@@ -53,13 +53,13 @@ def main(paths):
                     continue
                 target_plan = plans_by_id.get(plan_id)
                 if target_plan is None:
-                    if not p.get("name"):
+                    if not str(p.get("name") or "").strip():
                         problems.append(f"{pid}/{plan_id}: new plan without name (skipped)")
                         continue
-                    target_plan = {"id": plan_id, "name": p["name"], "cycle": cycle, "prices": {}}
+                    target_plan = {"id": plan_id, "name": p["name"].strip(), "cycle": cycle, "prices": {}}
                     plans_by_id[plan_id] = target_plan
                     target["plans"].append(target_plan)
-                    new_plans += 1
+                    created.append(target_plan)
                 elif target_plan["cycle"] != cycle:
                     problems.append(f"{pid}/{plan_id}: cycle {cycle} differs from existing {target_plan['cycle']} (prices still added)")
                 for country, by_channel in (p.get("prices") or {}).items():
@@ -71,19 +71,10 @@ def main(paths):
                         if ch not in CHANNELS:
                             problems.append(f"{pid}/{plan_id}/{key}: bad channel {ch!r} (dropped)")
                             continue
-                        amt, cur = price.get("amount"), (price.get("currency") or "").upper()
-                        if not isinstance(amt, (int, float)) or isinstance(amt, bool) or amt < 0:
-                            problems.append(f"{pid}/{plan_id}/{key}/{ch}: bad amount {amt!r} (dropped)")
+                        entry, why = check_price(price, key, markets)
+                        if why:
+                            problems.append(f"{pid}/{plan_id}/{key}/{ch}: {why} (dropped)")
                             continue
-                        if key != "default" and cur not in (markets[key], "USD", "EUR"):
-                            problems.append(f"{pid}/{plan_id}/{key}/{ch}: currency {cur} is not {markets[key]} (dropped)")
-                            continue
-                        if not str(price.get("source", "")).startswith(("http", "observed:")):
-                            problems.append(f"{pid}/{plan_id}/{key}/{ch}: no source URL (dropped)")
-                            continue
-                        if cur in ZERO_DECIMAL:
-                            amt = int(round(amt))
-                        entry = {"amount": amt, "currency": cur, "source": price["source"], "verifiedAt": price.get("verifiedAt") or dt.date.today().isoformat()}
                         slot = target_plan["prices"].setdefault(key, {})
                         old = slot.get(ch)
                         if old is None:
@@ -96,10 +87,16 @@ def main(paths):
                         slot[ch] = entry
             # drop plans that ended up with no prices
             target["plans"] = [pl for pl in target["plans"] if pl["prices"]]
+    # a service whose every price was rejected has nothing to quote
+    empty = [s["platformId"] for s in doc["services"] if not s["plans"]]
+    for e in empty:
+        problems.append(f"{e}: no valid plans left (service skipped)")
+    doc["services"] = [s for s in doc["services"] if s["plans"]]
+    new_plans = sum(1 for pl in created if pl["prices"])
     doc["services"].sort(key=lambda s: s["platformId"])
     doc["version"] = int(doc.get("version", 0)) + 1
     doc["generatedAt"] = dt.date.today().isoformat()
-    OUT.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n")
+    write_doc(doc)
     print(f"wrote {OUT} v{doc['version']}: {len(doc['services'])} services, {sum(len(s['plans']) for s in doc['services'])} plans; +{added} prices, {replaced} replaced, {new_plans} new plans")
     for p in problems:
         print("WARN", p)

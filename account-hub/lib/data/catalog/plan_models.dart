@@ -53,10 +53,14 @@ enum PlanQuoteMatch {
 }
 
 class PlanQuote {
-  const PlanQuote({required this.price, required this.match, required this.channel, required this.countryKey});
+  const PlanQuote({required this.price, required this.match, required this.channel, required this.countryKey, this.localAlternative});
 
   final PlanPrice price;
   final PlanQuoteMatch match;
+
+  /// When a default (USD) price is shown although the country has a price for
+  /// another store, that local price, so the UI can mention it.
+  final (PurchaseChannel, PlanPrice)? localAlternative;
 
   /// Channel whose price is shown (may differ from the one requested).
   final PurchaseChannel channel;
@@ -71,7 +75,9 @@ class PlanQuote {
   String? caption(PurchaseChannel requested) => switch (match) {
         PlanQuoteMatch.exact => null,
         PlanQuoteMatch.countryOtherChannel => 'No ${requested.shortLabel} price on file · ${channel.shortLabel} price shown',
-        PlanQuoteMatch.defaultPrice => 'No local price on file · default ${price.money.currency} price',
+        PlanQuoteMatch.defaultPrice => localAlternative == null
+            ? 'No local price on file · default ${price.money.currency} price'
+            : 'No local ${requested.shortLabel} price on file · default ${price.money.currency} shown · ${localAlternative!.$1.shortLabel} ${localAlternative!.$2.money.format()} on file',
       };
 }
 
@@ -151,10 +157,11 @@ class ServicePlan {
       if (alt != null) return PlanQuote(price: alt.$2, match: PlanQuoteMatch.countryOtherChannel, channel: alt.$1, countryKey: cc);
     }
     if (def != null && def.isNotEmpty) {
+      final localAlt = local == null ? null : _pick(local, channel);
       final exactDefault = def[channel];
-      if (exactDefault != null) return PlanQuote(price: exactDefault, match: PlanQuoteMatch.defaultPrice, channel: channel, countryKey: defaultKey);
+      if (exactDefault != null) return PlanQuote(price: exactDefault, match: PlanQuoteMatch.defaultPrice, channel: channel, countryKey: defaultKey, localAlternative: localAlt);
       final alt = _pick(def, channel)!;
-      return PlanQuote(price: alt.$2, match: PlanQuoteMatch.defaultPrice, channel: alt.$1, countryKey: defaultKey);
+      return PlanQuote(price: alt.$2, match: PlanQuoteMatch.defaultPrice, channel: alt.$1, countryKey: defaultKey, localAlternative: localAlt);
     }
     if (local != null) {
       final alt = _pick(local, channel);
@@ -212,6 +219,18 @@ class ServicePlans {
 
   bool hasLocalPricing(String country) => countries.contains(country.toUpperCase());
 
+  /// Stores (web / iOS / Android) with at least one local price in [country].
+  Set<PurchaseChannel> localChannels(String country) => {for (final p in plans) ...p.channelsFor(country)};
+
+  /// Currency of the default prices (normally USD), if any plan has one.
+  String? get defaultCurrency {
+    for (final p in plans) {
+      final d = p.prices[ServicePlan.defaultKey];
+      if (d != null && d.isNotEmpty) return d.values.first.money.currency;
+    }
+    return null;
+  }
+
   /// Most recent verification date across all prices.
   DateTime? get lastVerifiedAt {
     DateTime? latest;
@@ -245,7 +264,9 @@ class PlanCatalogDocument {
     return PlanCatalogDocument(
       version: (j['version'] as num?)?.toInt() ?? 1,
       generatedAt: DateTime.tryParse((j['generatedAt'] as String?) ?? ''),
-      services: services,
+      // A service with no plans has nothing to quote; drop it rather than
+      // let a picker open on an empty list.
+      services: services.where((s) => s.plans.isNotEmpty).toList(),
     );
   }
 

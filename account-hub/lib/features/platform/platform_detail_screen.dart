@@ -153,16 +153,19 @@ class _PlansCardState extends State<_PlansCard> {
   Widget build(BuildContext context) {
     final c = context.colors;
     final m = widget.market;
-    final local = widget.plans.hasLocalPricing(m.code);
     final verified = widget.plans.lastVerifiedAt;
     return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
       SectionHeader(
         title: 'Plans in ${m.name}',
         subtitle: [
-          local ? 'Published ${m.currency} prices' : 'No ${m.name} price list · default prices shown',
+          localPricingSummary(widget.plans, m),
           if (verified != null) 'verified ${DateFormat.yMMMd().format(verified)}',
         ].join(' · '),
-        actions: [ChannelSelector(value: _channel, onChanged: (v) => setState(() => _channel = v), dense: true)],
+        padding: const EdgeInsets.only(bottom: 8),
+      ),
+      Padding(
+        padding: const EdgeInsets.only(bottom: 10),
+        child: Align(alignment: Alignment.centerLeft, child: ChannelSelector(value: _channel, onChanged: (v) => setState(() => _channel = v), dense: true)),
       ),
       AppCard(
         padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),

@@ -147,6 +147,16 @@ void main() {
     expect(() => h.finance.upsertCard(nickname: 'Bad', expMonth: 13), throwsArgumentError);
   });
 
+  test('subscriptions CSV keeps zero-decimal currencies whole', () async {
+    await h.subs.upsert(serviceName: 'YouTube Premium', price: Money.fromMajor(1280, 'JPY'), cycle: BillingCycle.monthly, purchaseChannel: PurchaseChannel.ios);
+    await h.subs.upsert(serviceName: 'Spotify', price: Money.fromMajor(119, 'INR'), cycle: BillingCycle.monthly);
+    final csv = await h.backup.exportSubscriptionsCsv();
+    expect(csv, contains('YouTube Premium,,1280,JPY,monthly'));
+    expect(csv, contains('Spotify,,119.00,INR,monthly'));
+    expect(csv, isNot(contains('12.80')));
+    expect(csv.split('\n').first, endsWith('billed_through'));
+  });
+
   test('subscription remembers the store it is billed through', () async {
     final sub = await h.subs.upsert(serviceName: 'YouTube Premium', price: Money.fromMajor(149, 'INR'), cycle: BillingCycle.monthly, purchaseChannel: PurchaseChannel.ios);
     expect(sub.purchaseChannel, 'ios');
