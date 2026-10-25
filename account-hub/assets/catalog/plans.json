@@ -508,6 +508,70 @@
         "source": "https://www.adobe.com/jp/creativecloud/plans.html",
         "verifiedAt": "2026-10-25"
        }
+      },
+      "BR": {
+       "web": {
+        "amount": 214.0,
+        "currency": "BRL",
+        "source": "https://www.adobe.com/br/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "TR": {
+       "web": {
+        "amount": 1627.2,
+        "currency": "TRY",
+        "source": "https://www.adobe.com/tr/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "PL": {
+       "web": {
+        "amount": 80.61,
+        "currency": "EUR",
+        "source": "https://www.adobe.com/pl/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "DK": {
+       "web": {
+        "amount": 612.5,
+        "currency": "DKK",
+        "source": "https://www.adobe.com/dk/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "KR": {
+       "web": {
+        "amount": 78100,
+        "currency": "KRW",
+        "source": "https://www.adobe.com/kr/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "TH": {
+       "web": {
+        "amount": 1295.77,
+        "currency": "THB",
+        "source": "https://www.adobe.com/th_th/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "SE": {
+       "web": {
+        "amount": 932.5,
+        "currency": "SEK",
+        "source": "https://www.adobe.com/se/creativecloud/all-apps.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "NO": {
+       "web": {
+        "amount": 961.25,
+        "currency": "NOK",
+        "source": "https://www.adobe.com/no/creativecloud/all-apps.html",
+        "verifiedAt": "2026-10-25"
+       }
       }
      }
     },
@@ -569,6 +633,46 @@
         "amount": 6480,
         "currency": "JPY",
         "source": "https://www.adobe.com/jp/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "BR": {
+       "web": {
+        "amount": 169.0,
+        "currency": "BRL",
+        "source": "https://www.adobe.com/br/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "TR": {
+       "web": {
+        "amount": 1268.4,
+        "currency": "TRY",
+        "source": "https://www.adobe.com/tr/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "PL": {
+       "web": {
+        "amount": 64.03,
+        "currency": "EUR",
+        "source": "https://www.adobe.com/pl/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "DK": {
+       "web": {
+        "amount": 487.5,
+        "currency": "DKK",
+        "source": "https://www.adobe.com/dk/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "TH": {
+       "web": {
+        "amount": 1018.64,
+        "currency": "THB",
+        "source": "https://www.adobe.com/th_th/creativecloud/plans.html",
         "verifiedAt": "2026-10-25"
        }
       }
@@ -634,6 +738,70 @@
         "source": "https://www.adobe.com/jp/creativecloud/plans.html",
         "verifiedAt": "2026-10-25"
        }
+      },
+      "BR": {
+       "web": {
+        "amount": 55.0,
+        "currency": "BRL",
+        "source": "https://www.adobe.com/br/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "TR": {
+       "web": {
+        "amount": 478.8,
+        "currency": "TRY",
+        "source": "https://www.adobe.com/tr/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "PL": {
+       "web": {
+        "amount": 24.59,
+        "currency": "EUR",
+        "source": "https://www.adobe.com/pl/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "DK": {
+       "web": {
+        "amount": 186.25,
+        "currency": "DKK",
+        "source": "https://www.adobe.com/dk/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "KR": {
+       "web": {
+        "amount": 26400,
+        "currency": "KRW",
+        "source": "https://www.adobe.com/kr/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "TH": {
+       "web": {
+        "amount": 456.89,
+        "currency": "THB",
+        "source": "https://www.adobe.com/th_th/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "SE": {
+       "web": {
+        "amount": 285.0,
+        "currency": "SEK",
+        "source": "https://www.adobe.com/se/products/photoshop.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "NO": {
+       "web": {
+        "amount": 293.75,
+        "currency": "NOK",
+        "source": "https://www.adobe.com/no/products/photoshop.html",
+        "verifiedAt": "2026-10-25"
+       }
       }
      }
     },
@@ -697,12 +865,76 @@
         "source": "https://www.adobe.com/jp/creativecloud/plans.html",
         "verifiedAt": "2026-10-25"
        }
+      },
+      "BR": {
+       "web": {
+        "amount": 65.0,
+        "currency": "BRL",
+        "source": "https://www.adobe.com/br/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "TR": {
+       "web": {
+        "amount": 549.6,
+        "currency": "TRY",
+        "source": "https://www.adobe.com/tr/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "PL": {
+       "web": {
+        "amount": 26.86,
+        "currency": "EUR",
+        "source": "https://www.adobe.com/pl/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "DK": {
+       "web": {
+        "amount": 200.0,
+        "currency": "DKK",
+        "source": "https://www.adobe.com/dk/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "KR": {
+       "web": {
+        "amount": 30800,
+        "currency": "KRW",
+        "source": "https://www.adobe.com/kr/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "TH": {
+       "web": {
+        "amount": 350.96,
+        "currency": "THB",
+        "source": "https://www.adobe.com/th_th/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "SE": {
+       "web": {
+        "amount": 311.25,
+        "currency": "SEK",
+        "source": "https://www.adobe.com/se/products/photoshop.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "NO": {
+       "web": {
+        "amount": 320.0,
+        "currency": "NOK",
+        "source": "https://www.adobe.com/no/products/photoshop.html",
+        "verifiedAt": "2026-10-25"
+       }
       }
      }
     }
    ],
    "pricingUrl": "https://www.adobe.com/creativecloud/plans.html",
-   "notes": "Web only. All prices are the 'annual plan, billed monthly' regular (non-introductory) price per month, incl. local tax where Adobe shows it (IN GST, GB VAT, DE MwSt, AU GST, JP tax). Adobe's plans pages currently show only this billing option for individuals; no annual-prepaid or month-to-month price is published, so only monthly entries are recorded. Intro offers omitted (e.g. US Pro US$34.99/mo first 3 months, IN Pro Rs1,199/mo first year, JP Pro 6,810 yen first 12 months). 'Creative Cloud Pro' is the current name of the former All Apps plan. MY/ID/PH/SG/AE/CA plans pages load prices client-side and could not be read; omitted."
+   "notes": "Web only. All prices are the 'annual plan, billed monthly' regular (non-introductory) price per month, incl. local tax where Adobe shows it (IN GST, GB VAT, DE MwSt, AU GST, JP tax). Adobe's plans pages currently show only this billing option for individuals; no annual-prepaid or month-to-month price is published, so only monthly entries are recorded. Intro offers omitted (e.g. US Pro US$34.99/mo first 3 months, IN Pro Rs1,199/mo first year, JP Pro 6,810 yen first 12 months). 'Creative Cloud Pro' is the current name of the former All Apps plan. MY/ID/PH/SG/AE/CA plans pages load prices client-side and could not be read; omitted. Web only (Adobe sells direct). Regular (non-promotional) 'annual, billed monthly' prices recorded; first-year/first-3-month intro discounts ignored. PL: Adobe's Poland store prices in EUR, not PLN - recorded as EUR. KR: Adobe Korea still labels the all-apps plan 'Creative Cloud 모든 앱' (All Apps); no separate Standard tier listed. SE/NO: Standard tier not shown on the pages that rendered. MX, CH, HK, NZ, ZA, SA, QA, VN, CN: Adobe plan pages did not render prices (or showed USD fallback) - omitted."
   },
   {
    "platformId": "adobe-express",
@@ -744,12 +976,60 @@
         "source": "https://www.adobe.com/uk/express/pricing",
         "verifiedAt": "2026-10-25"
        }
+      },
+      "BR": {
+       "web": {
+        "amount": 23.0,
+        "currency": "BRL",
+        "source": "https://www.adobe.com/br/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "TR": {
+       "web": {
+        "amount": 238.8,
+        "currency": "TRY",
+        "source": "https://www.adobe.com/tr/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "PL": {
+       "web": {
+        "amount": 12.29,
+        "currency": "EUR",
+        "source": "https://www.adobe.com/pl/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "DK": {
+       "web": {
+        "amount": 92.5,
+        "currency": "DKK",
+        "source": "https://www.adobe.com/dk/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "KR": {
+       "web": {
+        "amount": 13200,
+        "currency": "KRW",
+        "source": "https://www.adobe.com/kr/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "TH": {
+       "web": {
+        "amount": 190.46,
+        "currency": "THB",
+        "source": "https://www.adobe.com/th_th/creativecloud/plans.html",
+        "verifiedAt": "2026-10-25"
+       }
       }
      }
     }
    ],
    "pricingUrl": "https://www.adobe.com/express/pricing",
-   "notes": "Web only. Premium is sold month-to-month ('No annual commitment, billed monthly'); no yearly price is published on the US, IN or UK pages, so no yearly plan is recorded. DE/AU/JP/CA/SG pricing pages rendered USD or no price, so omitted."
+   "notes": "Web only. Premium is sold month-to-month ('No annual commitment, billed monthly'); no yearly price is published on the US, IN or UK pages, so no yearly plan is recorded. DE/AU/JP/CA/SG pricing pages rendered USD or no price, so omitted. Prices taken from the Adobe Express Premium card on each country's Creative Cloud plans page (web). PL is priced in EUR by Adobe. Localized /express/pricing pages returned 404."
   },
   {
    "platformId": "amazon-prime",
@@ -2799,6 +3079,118 @@
         "source": "https://apps.apple.com/ae/app/canva-ai-photo-video-editor/id897446215",
         "verifiedAt": "2026-10-25"
        }
+      },
+      "TH": {
+       "ios": {
+        "amount": 230.0,
+        "currency": "THB",
+        "source": "https://apps.apple.com/th/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "VN": {
+       "ios": {
+        "amount": 150000,
+        "currency": "VND",
+        "source": "https://apps.apple.com/vn/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "SA": {
+       "ios": {
+        "amount": 50.0,
+        "currency": "SAR",
+        "source": "https://apps.apple.com/sa/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "QA": {
+       "ios": {
+        "amount": 70.0,
+        "currency": "QAR",
+        "source": "https://apps.apple.com/qa/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "KR": {
+       "ios": {
+        "amount": 9900,
+        "currency": "KRW",
+        "source": "https://apps.apple.com/kr/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "NZ": {
+       "ios": {
+        "amount": 20.0,
+        "currency": "NZD",
+        "source": "https://apps.apple.com/nz/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "CH": {
+       "ios": {
+        "amount": 16.0,
+        "currency": "CHF",
+        "source": "https://apps.apple.com/ch/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "NO": {
+       "ios": {
+        "amount": 200.0,
+        "currency": "NOK",
+        "source": "https://apps.apple.com/no/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "DK": {
+       "ios": {
+        "amount": 110.0,
+        "currency": "DKK",
+        "source": "https://apps.apple.com/dk/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "PL": {
+       "ios": {
+        "amount": 50.0,
+        "currency": "PLN",
+        "source": "https://apps.apple.com/pl/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "TR": {
+       "ios": {
+        "amount": 239.99,
+        "currency": "TRY",
+        "source": "https://apps.apple.com/tr/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "BR": {
+       "ios": {
+        "amount": 35.0,
+        "currency": "BRL",
+        "source": "https://apps.apple.com/br/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "MX": {
+       "ios": {
+        "amount": 150.0,
+        "currency": "MXN",
+        "source": "https://apps.apple.com/mx/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "ZA": {
+       "ios": {
+        "amount": 109.99,
+        "currency": "ZAR",
+        "source": "https://apps.apple.com/za/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
       }
      }
     },
@@ -2902,6 +3294,110 @@
         "source": "https://apps.apple.com/ae/app/canva-ai-photo-video-editor/id897446215",
         "verifiedAt": "2026-10-25"
        }
+      },
+      "TH": {
+       "ios": {
+        "amount": 1850.0,
+        "currency": "THB",
+        "source": "https://apps.apple.com/th/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "VN": {
+       "ios": {
+        "amount": 1300000,
+        "currency": "VND",
+        "source": "https://apps.apple.com/vn/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "SA": {
+       "ios": {
+        "amount": 450.0,
+        "currency": "SAR",
+        "source": "https://apps.apple.com/sa/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "KR": {
+       "ios": {
+        "amount": 99000,
+        "currency": "KRW",
+        "source": "https://apps.apple.com/kr/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "NZ": {
+       "ios": {
+        "amount": 179.99,
+        "currency": "NZD",
+        "source": "https://apps.apple.com/nz/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "CH": {
+       "ios": {
+        "amount": 128.0,
+        "currency": "CHF",
+        "source": "https://apps.apple.com/ch/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "NO": {
+       "ios": {
+        "amount": 1600.0,
+        "currency": "NOK",
+        "source": "https://apps.apple.com/no/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "DK": {
+       "ios": {
+        "amount": 880.0,
+        "currency": "DKK",
+        "source": "https://apps.apple.com/dk/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "PL": {
+       "ios": {
+        "amount": 449.99,
+        "currency": "PLN",
+        "source": "https://apps.apple.com/pl/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "TR": {
+       "ios": {
+        "amount": 1919.99,
+        "currency": "TRY",
+        "source": "https://apps.apple.com/tr/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "BR": {
+       "ios": {
+        "amount": 289.9,
+        "currency": "BRL",
+        "source": "https://apps.apple.com/br/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "MX": {
+       "ios": {
+        "amount": 1210.0,
+        "currency": "MXN",
+        "source": "https://apps.apple.com/mx/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "ZA": {
+       "ios": {
+        "amount": 900.0,
+        "currency": "ZAR",
+        "source": "https://apps.apple.com/za/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
       }
      }
     },
@@ -2923,6 +3419,126 @@
         "amount": 25,
         "currency": "USD",
         "source": "https://www.canva.com/learn/canva-pro-vs-canva-enterprise/",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "TH": {
+       "ios": {
+        "amount": 320.0,
+        "currency": "THB",
+        "source": "https://apps.apple.com/th/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "VN": {
+       "ios": {
+        "amount": 210000,
+        "currency": "VND",
+        "source": "https://apps.apple.com/vn/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "SA": {
+       "ios": {
+        "amount": 70.0,
+        "currency": "SAR",
+        "source": "https://apps.apple.com/sa/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "QA": {
+       "ios": {
+        "amount": 100.0,
+        "currency": "QAR",
+        "source": "https://apps.apple.com/qa/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "KR": {
+       "ios": {
+        "amount": 13900,
+        "currency": "KRW",
+        "source": "https://apps.apple.com/kr/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "HK": {
+       "ios": {
+        "amount": 170.0,
+        "currency": "HKD",
+        "source": "https://apps.apple.com/hk/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "NZ": {
+       "ios": {
+        "amount": 28.0,
+        "currency": "NZD",
+        "source": "https://apps.apple.com/nz/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "CH": {
+       "ios": {
+        "amount": 21.0,
+        "currency": "CHF",
+        "source": "https://apps.apple.com/ch/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "SE": {
+       "ios": {
+        "amount": 210.0,
+        "currency": "SEK",
+        "source": "https://apps.apple.com/se/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "NO": {
+       "ios": {
+        "amount": 270.0,
+        "currency": "NOK",
+        "source": "https://apps.apple.com/no/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "DK": {
+       "ios": {
+        "amount": 160.0,
+        "currency": "DKK",
+        "source": "https://apps.apple.com/dk/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "PL": {
+       "ios": {
+        "amount": 70.0,
+        "currency": "PLN",
+        "source": "https://apps.apple.com/pl/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "TR": {
+       "ios": {
+        "amount": 339.99,
+        "currency": "TRY",
+        "source": "https://apps.apple.com/tr/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "MX": {
+       "ios": {
+        "amount": 210.0,
+        "currency": "MXN",
+        "source": "https://apps.apple.com/mx/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "ZA": {
+       "ios": {
+        "amount": 159.99,
+        "currency": "ZAR",
+        "source": "https://apps.apple.com/za/app/canva-ai-photo-video-editor/id897446215",
         "verifiedAt": "2026-10-25"
        }
       }
@@ -2948,12 +3564,108 @@
         "source": "https://www.canva.com/learn/canva-pro-vs-canva-enterprise/",
         "verifiedAt": "2026-10-25"
        }
+      },
+      "TH": {
+       "ios": {
+        "amount": 3200.0,
+        "currency": "THB",
+        "source": "https://apps.apple.com/th/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "VN": {
+       "ios": {
+        "amount": 2099000,
+        "currency": "VND",
+        "source": "https://apps.apple.com/vn/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "SA": {
+       "ios": {
+        "amount": 700.0,
+        "currency": "SAR",
+        "source": "https://apps.apple.com/sa/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "QA": {
+       "ios": {
+        "amount": 1000.0,
+        "currency": "QAR",
+        "source": "https://apps.apple.com/qa/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "HK": {
+       "ios": {
+        "amount": 1700.0,
+        "currency": "HKD",
+        "source": "https://apps.apple.com/hk/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "NZ": {
+       "ios": {
+        "amount": 279.99,
+        "currency": "NZD",
+        "source": "https://apps.apple.com/nz/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "CH": {
+       "ios": {
+        "amount": 210.0,
+        "currency": "CHF",
+        "source": "https://apps.apple.com/ch/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "DK": {
+       "ios": {
+        "amount": 1600.0,
+        "currency": "DKK",
+        "source": "https://apps.apple.com/dk/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "PL": {
+       "ios": {
+        "amount": 700.0,
+        "currency": "PLN",
+        "source": "https://apps.apple.com/pl/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "TR": {
+       "ios": {
+        "amount": 3399.99,
+        "currency": "TRY",
+        "source": "https://apps.apple.com/tr/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "MX": {
+       "ios": {
+        "amount": 2100.0,
+        "currency": "MXN",
+        "source": "https://apps.apple.com/mx/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "ZA": {
+       "ios": {
+        "amount": 1599.99,
+        "currency": "ZAR",
+        "source": "https://apps.apple.com/za/app/canva-ai-photo-video-editor/id897446215",
+        "verifiedAt": "2026-10-25"
+       }
       }
      }
     }
    ],
    "pricingUrl": "https://www.canva.com/pricing/",
-   "notes": "NEEDS VERIFICATION. canva.com (pricing, help and learn pages) returned HTTP 403 to every direct fetch this session. The USD web prices (Pro US$18 month-to-month / US$144 per year billed yearly; Business US$25 / US$250) come from the search-engine index of Canva's own Learn article 'Canva Enterprise vs Business vs Pro'; another indexed copy of canva.com/pricing showed 'US$180/year' for Pro, so the current web price is uncertain. iOS prices were read directly from each country's App Store listing. Each App Store listing shows several 'Canva Pro - Monthly'/'Yearly' SKUs that differ by a few cents (e.g. IN Rs499 vs Rs500, GB 12.99 vs 13.00, DE 11.99 vs 12.00, AU 19.99 vs 20.00, SG 17.98 vs 18.00, MY 29.90 vs 30.00, PH 299 vs 300, AE 47.99 vs 48.00, IN yearly 3,999 vs 4,000, GB yearly 99.99 vs 100.00, MY yearly 249.90 vs 250.00, PH yearly 2,490 vs 2,500, CA monthly 18.99 vs 18.00, CA yearly 149.99 vs 141.99); the most-repeated SKU is recorded. US iOS omitted because the listing shows three different Pro Monthly prices (US$14.99/15.00/18.00) and two Yearly (US$119.99/143.99). JP iOS yearly omitted (8,300 vs 11,800 yen conflict). 'Canva Teams' is now sold as 'Canva Business'; per-person Business web price not recorded beyond the US default note."
+   "notes": "NEEDS VERIFICATION. canva.com (pricing, help and learn pages) returned HTTP 403 to every direct fetch this session. The USD web prices (Pro US$18 month-to-month / US$144 per year billed yearly; Business US$25 / US$250) come from the search-engine index of Canva's own Learn article 'Canva Enterprise vs Business vs Pro'; another indexed copy of canva.com/pricing showed 'US$180/year' for Pro, so the current web price is uncertain. iOS prices were read directly from each country's App Store listing. Each App Store listing shows several 'Canva Pro - Monthly'/'Yearly' SKUs that differ by a few cents (e.g. IN Rs499 vs Rs500, GB 12.99 vs 13.00, DE 11.99 vs 12.00, AU 19.99 vs 20.00, SG 17.98 vs 18.00, MY 29.90 vs 30.00, PH 299 vs 300, AE 47.99 vs 48.00, IN yearly 3,999 vs 4,000, GB yearly 99.99 vs 100.00, MY yearly 249.90 vs 250.00, PH yearly 2,490 vs 2,500, CA monthly 18.99 vs 18.00, CA yearly 149.99 vs 141.99); the most-repeated SKU is recorded. US iOS omitted because the listing shows three different Pro Monthly prices (US$14.99/15.00/18.00) and two Yearly (US$119.99/143.99). JP iOS yearly omitted (8,300 vs 11,800 yen conflict). 'Canva Teams' is now sold as 'Canva Business'; per-person Business web price not recorded beyond the US default note. iOS App Store in-app purchase prices only (canva.com pricing pages returned 403). App Store lists several 'Canva Pro - Monthly/Yearly' SKUs per storefront; the value shared by at least two SKUs was recorded, and storefronts with three different values (HK, SE Pro; QA Pro yearly) were omitted. BR storefront lists 'Canva Pro+' instead of Business - omitted."
   },
   {
    "platformId": "capcut",
@@ -3065,6 +3777,134 @@
         "source": "https://apps.apple.com/ae/app/capcut-video-editor/id1500855883",
         "verifiedAt": "2026-10-25"
        }
+      },
+      "TH": {
+       "ios": {
+        "amount": 150.0,
+        "currency": "THB",
+        "source": "https://apps.apple.com/th/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "VN": {
+       "ios": {
+        "amount": 117000,
+        "currency": "VND",
+        "source": "https://apps.apple.com/vn/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "SA": {
+       "ios": {
+        "amount": 29.99,
+        "currency": "SAR",
+        "source": "https://apps.apple.com/sa/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "QA": {
+       "ios": {
+        "amount": 29.99,
+        "currency": "QAR",
+        "source": "https://apps.apple.com/qa/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "KR": {
+       "ios": {
+        "amount": 9900,
+        "currency": "KRW",
+        "source": "https://apps.apple.com/kr/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "HK": {
+       "ios": {
+        "amount": 58.0,
+        "currency": "HKD",
+        "source": "https://apps.apple.com/hk/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "NZ": {
+       "ios": {
+        "amount": 19.99,
+        "currency": "NZD",
+        "source": "https://apps.apple.com/nz/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "CH": {
+       "ios": {
+        "amount": 14.0,
+        "currency": "CHF",
+        "source": "https://apps.apple.com/ch/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "SE": {
+       "ios": {
+        "amount": 179.0,
+        "currency": "SEK",
+        "source": "https://apps.apple.com/se/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "NO": {
+       "ios": {
+        "amount": 179.0,
+        "currency": "NOK",
+        "source": "https://apps.apple.com/no/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "DK": {
+       "ios": {
+        "amount": 119.0,
+        "currency": "DKK",
+        "source": "https://apps.apple.com/dk/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "PL": {
+       "ios": {
+        "amount": 69.99,
+        "currency": "PLN",
+        "source": "https://apps.apple.com/pl/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "TR": {
+       "ios": {
+        "amount": 199.99,
+        "currency": "TRY",
+        "source": "https://apps.apple.com/tr/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "BR": {
+       "ios": {
+        "amount": 32.9,
+        "currency": "BRL",
+        "source": "https://apps.apple.com/br/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "MX": {
+       "ios": {
+        "amount": 165.0,
+        "currency": "MXN",
+        "source": "https://apps.apple.com/mx/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "ZA": {
+       "ios": {
+        "amount": 99.99,
+        "currency": "ZAR",
+        "source": "https://apps.apple.com/za/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
       }
      }
     },
@@ -3088,12 +3928,116 @@
         "source": "https://www.capcut.com/pricing",
         "verifiedAt": "2026-10-25"
        }
+      },
+      "TH": {
+       "ios": {
+        "amount": 909.0,
+        "currency": "THB",
+        "source": "https://apps.apple.com/th/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "VN": {
+       "ios": {
+        "amount": 700000,
+        "currency": "VND",
+        "source": "https://apps.apple.com/vn/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "SA": {
+       "ios": {
+        "amount": 299.99,
+        "currency": "SAR",
+        "source": "https://apps.apple.com/sa/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "QA": {
+       "ios": {
+        "amount": 249.99,
+        "currency": "QAR",
+        "source": "https://apps.apple.com/qa/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "KR": {
+       "ios": {
+        "amount": 89000,
+        "currency": "KRW",
+        "source": "https://apps.apple.com/kr/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "HK": {
+       "ios": {
+        "amount": 488.0,
+        "currency": "HKD",
+        "source": "https://apps.apple.com/hk/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "NZ": {
+       "ios": {
+        "amount": 149.99,
+        "currency": "NZD",
+        "source": "https://apps.apple.com/nz/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "SE": {
+       "ios": {
+        "amount": 1495.0,
+        "currency": "SEK",
+        "source": "https://apps.apple.com/se/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "DK": {
+       "ios": {
+        "amount": 999.0,
+        "currency": "DKK",
+        "source": "https://apps.apple.com/dk/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "TR": {
+       "ios": {
+        "amount": 1199.99,
+        "currency": "TRY",
+        "source": "https://apps.apple.com/tr/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "BR": {
+       "ios": {
+        "amount": 234.9,
+        "currency": "BRL",
+        "source": "https://apps.apple.com/br/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "MX": {
+       "ios": {
+        "amount": 1499.0,
+        "currency": "MXN",
+        "source": "https://apps.apple.com/mx/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "ZA": {
+       "ios": {
+        "amount": 599.99,
+        "currency": "ZAR",
+        "source": "https://apps.apple.com/za/app/capcut-video-editor/id1500855883",
+        "verifiedAt": "2026-10-25"
+       }
       }
      }
     }
    ],
    "pricingUrl": "https://www.capcut.com/pricing",
-   "notes": "Web prices from capcut.com/pricing (USD, 'displayed pricing is for reference only'). iOS prices are the 'Pro Monthly Subscription' in-app purchase on each country's App Store listing. The App Store listings also show a 'Standard Monthly Subscription' (cheaper tier) and an unlabelled 'Yearly Subscription' / 'Standard Yearly Subscription' whose tier cannot be identified, so iOS yearly is omitted. CapCut is not available on the India App Store (listing returns 404), so IN is omitted. Android (Google Play) prices not published as exact amounts; omitted."
+   "notes": "Web prices from capcut.com/pricing (USD, 'displayed pricing is for reference only'). iOS prices are the 'Pro Monthly Subscription' in-app purchase on each country's App Store listing. The App Store listings also show a 'Standard Monthly Subscription' (cheaper tier) and an unlabelled 'Yearly Subscription' / 'Standard Yearly Subscription' whose tier cannot be identified, so iOS yearly is omitted. CapCut is not available on the India App Store (listing returns 404), so IN is omitted. Android (Google Play) prices not published as exact amounts; omitted. iOS App Store in-app purchase prices. The App Store now lists a 'Standard Monthly Subscription' (mapped to the existing CapCut Pro monthly id) and a higher 'Pro Monthly Subscription' tier (not on file - omitted). Yearly uses 'Standard Yearly Subscription' where labelled, otherwise the single 'Yearly Subscription' SKU listed (SA, QA, KR, HK, NZ, SE, DK)."
   },
   {
    "platformId": "chatgpt",
@@ -12072,6 +13016,134 @@
         "source": "https://apps.apple.com/ae/app/grammarly-ai-writing-keyboard/id1158877342",
         "verifiedAt": "2026-10-25"
        }
+      },
+      "TH": {
+       "ios": {
+        "amount": 989.0,
+        "currency": "THB",
+        "source": "https://apps.apple.com/th/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "VN": {
+       "ios": {
+        "amount": 699000,
+        "currency": "VND",
+        "source": "https://apps.apple.com/vn/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "SA": {
+       "ios": {
+        "amount": 117.99,
+        "currency": "SAR",
+        "source": "https://apps.apple.com/sa/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "QA": {
+       "ios": {
+        "amount": 109.99,
+        "currency": "QAR",
+        "source": "https://apps.apple.com/qa/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "KR": {
+       "ios": {
+        "amount": 37000,
+        "currency": "KRW",
+        "source": "https://apps.apple.com/kr/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "HK": {
+       "ios": {
+        "amount": 233.0,
+        "currency": "HKD",
+        "source": "https://apps.apple.com/hk/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "NZ": {
+       "ios": {
+        "amount": 49.99,
+        "currency": "NZD",
+        "source": "https://apps.apple.com/nz/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "CH": {
+       "ios": {
+        "amount": 32.0,
+        "currency": "CHF",
+        "source": "https://apps.apple.com/ch/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "SE": {
+       "ios": {
+        "amount": 339.0,
+        "currency": "SEK",
+        "source": "https://apps.apple.com/se/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "NO": {
+       "ios": {
+        "amount": 319.0,
+        "currency": "NOK",
+        "source": "https://apps.apple.com/no/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "DK": {
+       "ios": {
+        "amount": 245.0,
+        "currency": "DKK",
+        "source": "https://apps.apple.com/dk/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "PL": {
+       "ios": {
+        "amount": 139.99,
+        "currency": "PLN",
+        "source": "https://apps.apple.com/pl/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "TR": {
+       "ios": {
+        "amount": 184.99,
+        "currency": "TRY",
+        "source": "https://apps.apple.com/tr/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "BR": {
+       "ios": {
+        "amount": 114.9,
+        "currency": "BRL",
+        "source": "https://apps.apple.com/br/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "MX": {
+       "ios": {
+        "amount": 609.0,
+        "currency": "MXN",
+        "source": "https://apps.apple.com/mx/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "ZA": {
+       "ios": {
+        "amount": 479.99,
+        "currency": "ZAR",
+        "source": "https://apps.apple.com/za/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
       }
      }
     },
@@ -12181,6 +13253,102 @@
         "amount": 59.99,
         "currency": "USD",
         "source": "https://apps.apple.com/us/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "TH": {
+       "ios": {
+        "amount": 1900.0,
+        "currency": "THB",
+        "source": "https://apps.apple.com/th/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "VN": {
+       "ios": {
+        "amount": 1399000,
+        "currency": "VND",
+        "source": "https://apps.apple.com/vn/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "SA": {
+       "ios": {
+        "amount": 234.99,
+        "currency": "SAR",
+        "source": "https://apps.apple.com/sa/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "KR": {
+       "ios": {
+        "amount": 74000,
+        "currency": "KRW",
+        "source": "https://apps.apple.com/kr/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "HK": {
+       "ios": {
+        "amount": 473.0,
+        "currency": "HKD",
+        "source": "https://apps.apple.com/hk/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "NZ": {
+       "ios": {
+        "amount": 101.99,
+        "currency": "NZD",
+        "source": "https://apps.apple.com/nz/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "CH": {
+       "ios": {
+        "amount": 65.0,
+        "currency": "CHF",
+        "source": "https://apps.apple.com/ch/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "SE": {
+       "ios": {
+        "amount": 695.0,
+        "currency": "SEK",
+        "source": "https://apps.apple.com/se/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "PL": {
+       "ios": {
+        "amount": 279.99,
+        "currency": "PLN",
+        "source": "https://apps.apple.com/pl/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "BR": {
+       "ios": {
+        "amount": 224.9,
+        "currency": "BRL",
+        "source": "https://apps.apple.com/br/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "MX": {
+       "ios": {
+        "amount": 1159.0,
+        "currency": "MXN",
+        "source": "https://apps.apple.com/mx/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "ZA": {
+       "ios": {
+        "amount": 979.99,
+        "currency": "ZAR",
+        "source": "https://apps.apple.com/za/app/grammarly-ai-writing-keyboard/id1158877342",
         "verifiedAt": "2026-10-25"
        }
       }
@@ -12300,12 +13468,140 @@
         "source": "https://apps.apple.com/ae/app/grammarly-ai-writing-keyboard/id1158877342",
         "verifiedAt": "2026-10-25"
        }
+      },
+      "TH": {
+       "ios": {
+        "amount": 4500.0,
+        "currency": "THB",
+        "source": "https://apps.apple.com/th/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "VN": {
+       "ios": {
+        "amount": 3199000,
+        "currency": "VND",
+        "source": "https://apps.apple.com/vn/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "SA": {
+       "ios": {
+        "amount": 549.99,
+        "currency": "SAR",
+        "source": "https://apps.apple.com/sa/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "QA": {
+       "ios": {
+        "amount": 509.99,
+        "currency": "QAR",
+        "source": "https://apps.apple.com/qa/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "KR": {
+       "ios": {
+        "amount": 175000,
+        "currency": "KRW",
+        "source": "https://apps.apple.com/kr/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "HK": {
+       "ios": {
+        "amount": 1088.0,
+        "currency": "HKD",
+        "source": "https://apps.apple.com/hk/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "NZ": {
+       "ios": {
+        "amount": 239.99,
+        "currency": "NZD",
+        "source": "https://apps.apple.com/nz/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "CH": {
+       "ios": {
+        "amount": 150.0,
+        "currency": "CHF",
+        "source": "https://apps.apple.com/ch/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "SE": {
+       "ios": {
+        "amount": 1649.0,
+        "currency": "SEK",
+        "source": "https://apps.apple.com/se/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "NO": {
+       "ios": {
+        "amount": 1490.0,
+        "currency": "NOK",
+        "source": "https://apps.apple.com/no/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "DK": {
+       "ios": {
+        "amount": 1149.0,
+        "currency": "DKK",
+        "source": "https://apps.apple.com/dk/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "PL": {
+       "ios": {
+        "amount": 649.99,
+        "currency": "PLN",
+        "source": "https://apps.apple.com/pl/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "TR": {
+       "ios": {
+        "amount": 899.99,
+        "currency": "TRY",
+        "source": "https://apps.apple.com/tr/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "BR": {
+       "ios": {
+        "amount": 529.9,
+        "currency": "BRL",
+        "source": "https://apps.apple.com/br/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "MX": {
+       "ios": {
+        "amount": 2699.0,
+        "currency": "MXN",
+        "source": "https://apps.apple.com/mx/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
+      },
+      "ZA": {
+       "ios": {
+        "amount": 2299.99,
+        "currency": "ZAR",
+        "source": "https://apps.apple.com/za/app/grammarly-ai-writing-keyboard/id1158877342",
+        "verifiedAt": "2026-10-25"
+       }
       }
      }
     }
    ],
    "pricingUrl": "https://www.grammarly.com/plans",
-   "notes": "Web (grammarly.com/pro, USD): Pro is $12/member/month billed annually (recorded as $144/yr) or $30 when billed monthly; no quarterly web price is published, so the quarterly plan's 'default' uses the US App Store price and is marked as such. iOS prices are from each App Store listing. Listings outside US/IN show two SKUs per plan name; the more-repeated one is recorded and the alternates were: GB Monthly 25.99 / Annual 121.99; DE Monthly 29.99 / Annual 139.99; AU Monthly 42.99 / Annual 199.99; CA Monthly 36.99 / Annual 174.99; SG Monthly 42.98 / Annual 198.98; JP Monthly 3,300 / Annual 15,400; MY Monthly RM129.90 / Annual RM599.90; ID Monthly Rp479,000 / Annual Rp2,199,000 (PH and AE listings show a single price per plan). IDR amounts shown by Apple as 'Rp 429ribu' / 'Rp 1,999juta' are recorded as 429,000 / 1,999,000. 'Mobile Only' annual/monthly SKUs omitted. Grammarly bills web customers in USD worldwide, so no non-US web prices recorded."
+   "notes": "Web (grammarly.com/pro, USD): Pro is $12/member/month billed annually (recorded as $144/yr) or $30 when billed monthly; no quarterly web price is published, so the quarterly plan's 'default' uses the US App Store price and is marked as such. iOS prices are from each App Store listing. Listings outside US/IN show two SKUs per plan name; the more-repeated one is recorded and the alternates were: GB Monthly 25.99 / Annual 121.99; DE Monthly 29.99 / Annual 139.99; AU Monthly 42.99 / Annual 199.99; CA Monthly 36.99 / Annual 174.99; SG Monthly 42.98 / Annual 198.98; JP Monthly 3,300 / Annual 15,400; MY Monthly RM129.90 / Annual RM599.90; ID Monthly Rp479,000 / Annual Rp2,199,000 (PH and AE listings show a single price per plan). IDR amounts shown by Apple as 'Rp 429ribu' / 'Rp 1,999juta' are recorded as 429,000 / 1,999,000. 'Mobile Only' annual/monthly SKUs omitted. Grammarly bills web customers in USD worldwide, so no non-US web prices recorded. iOS App Store in-app purchase prices (Monthly / Quarterly / Annual Plan SKUs). Where the storefront listed two different prices for the same SKU name (quarterly in QA, NO, DK, TR) the value was omitted. 'Mobile Only' SKUs ignored. Web prices are USD and already on file."
   },
   {
    "platformId": "hbo-max",

@@ -22,7 +22,7 @@ _Updated 24 Oct 2026. Branch `claude/wizardly-pasteur-kmnhrm`._
 - [x] One email identity linked to many services; reverse lookup screen
 - [x] Catalog entries vs user-owned records kept distinct; browsing never adds
 - [x] Subscription totals accurate and currency-aware (never summed across currencies)
-- [x] Country + store (web / iOS / Android) aware plan prices with labelled fallbacks to web and default USD (`docs/PLANS.md`)
+- [x] Country + store (web / iOS / Android) aware plan prices for all 29 markets (3,588 verified price points, 64 services) with labelled fallbacks (`docs/PLANS.md`)
 - [x] Sensitive data protected: vault ciphertext only, bank/card metadata only, nothing secret in search, toasts, notifications, audit log or plain exports
 - [x] Missing logos handled: original file → Simple Icons glyph → monogram (no look-alike substitutes)
 - [x] Recovers from bad input (validation, friendly error toasts, FK-checked restore that rolls back)

@@ -67,8 +67,8 @@ currencies or guesses a local price.
   (`lib/domain/markets.dart`), plus `default`. A plan without a `default`
   price is sold only in the listed countries and is hidden everywhere else
   rather than shown with an invented USD figure. A country price must be in
-  that country's currency, or USD when the service bills that country in USD
-  (Netflix in Qatar, for example).
+  that country's currency, or USD / EUR when the service bills that country
+  in one of those (Netflix in Qatar, Adobe in Poland).
 * Channels are `web`, `ios`, `android`. Omit a channel rather than guess it.
 * `amount` is a number in major units (JPY/KRW/VND have no decimals).
 
@@ -116,8 +116,8 @@ Plans as of 2026-10-25 (v3): 64 services, 272 plans.
 | service | plans | AE | AU | BR | CA | CH | CN | DE | DK | GB | HK | ID | IN | JP | KR | MX | MY | NO | NZ | PH | PL | QA | SA | SE | SG | TH | TR | US | VN | ZA |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1password | 2 | i | i | - | wi | - | i | wi | i | i | i | - | i | i | - | - | i | i | i | i | i | i | i | i | i | i | i | wi | i | i |
-| adobe-creative-cloud | 4 | - | w | - | - | - | - | w | - | w | - | - | w | w | - | - | - | - | - | - | - | - | - | - | - | - | - | w | - | - |
-| adobe-express | 1 | - | - | - | - | - | - | - | - | w | - | - | w | - | - | - | - | - | - | - | - | - | - | - | - | - | - | w | - | - |
+| adobe-creative-cloud | 4 | - | w | w | - | - | - | w | w | w | - | - | w | w | w | - | - | w | - | - | w | - | - | w | - | w | w | w | - | - |
+| adobe-express | 1 | - | - | w | - | - | - | - | w | w | - | - | w | - | w | - | - | - | - | - | w | - | - | - | - | w | w | w | - | - |
 | amazon-prime | 4 | - | - | w | - | - | - | - | - | - | - | - | w | - | - | w | - | - | - | - | w | - | - | - | - | - | w | w | - | w |
 | apple-arcade | 2 | - | w | w | w | w | - | w | w | w | - | w | - | w | w | w | w | w | w | w | w | - | - | w | - | w | - | w | w | - |
 | apple-music | 3 | w | w | w | w | w | w | w | w | w | w | w | w | w | w | w | w | w | w | w | w | - | w | w | w | w | w | w | w | - |
@@ -125,8 +125,8 @@ Plans as of 2026-10-25 (v3): 64 services, 272 plans.
 | apple-tv-plus | 1 | - | w | w | w | w | - | w | w | w | w | w | - | w | w | w | w | w | w | w | w | - | - | w | - | w | - | w | w | w |
 | artlist | 1 | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | w | - | - |
 | bitwarden | 2 | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | w | - | - |
-| canva | 4 | i | i | - | i | - | - | i | - | i | - | i | i | i | - | - | i | - | - | i | - | - | - | - | i | - | - | w | - | - |
-| capcut | 2 | i | i | - | i | - | - | i | - | i | - | i | - | i | - | - | i | - | - | i | - | - | - | - | i | - | - | wi | - | - |
+| canva | 4 | i | i | i | i | i | - | i | i | i | i | i | i | i | i | i | i | i | i | i | i | i | i | i | i | i | i | w | i | i |
+| capcut | 2 | i | i | i | i | i | - | i | i | i | i | i | - | i | i | i | i | i | i | i | i | i | i | i | i | i | i | wi | i | i |
 | chatgpt | 5 | i | i | wi | i | i | - | i | i | i | - | i | wi | i | i | i | i | i | i | i | i | i | i | i | i | i | i | wi | i | i |
 | claude | 4 | i | i | i | i | i | - | i | i | i | - | i | i | i | i | i | i | i | i | i | i | i | i | i | i | i | i | wi | i | i |
 | crunchyroll | 6 | i | i | i | wi | i | - | i | i | i | i | i | i | - | i | i | i | i | i | i | i | i | i | i | i | i | i | wi | i | i |
@@ -146,7 +146,7 @@ Plans as of 2026-10-25 (v3): 64 services, 272 plans.
 | gemini | 4 | wi | wi | wi | wi | wi | - | wi | wi | wi | i | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi | wi |
 | github-copilot | 3 | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | w | - | - |
 | google-one | 2 | i | i | i | i | i | - | i | i | i | i | - | i | i | - | i | i | i | i | i | i | i | i | i | i | i | i | wi | i | i |
-| grammarly | 3 | i | i | - | i | - | - | i | - | i | - | i | i | i | - | - | i | - | - | i | - | - | - | - | i | - | - | wi | - | - |
+| grammarly | 3 | i | i | i | i | i | - | i | i | i | i | i | i | i | i | i | i | i | i | i | i | i | i | i | i | i | i | wi | i | i |
 | hbo-max | 9 | - | wi | w | - | - | - | wi | w | w | w | i | - | - | - | w | i | w | w | i | w | - | - | w | i | w | w | wi | - | - |
 | icloud-plus | 5 | w | w | w | w | w | w | w | w | w | w | w | w | w | w | w | w | w | w | w | w | w | w | w | w | w | w | w | w | w |
 | jetbrains | 4 | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | w | - | - |
