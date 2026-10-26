@@ -1,0 +1,88 @@
+local RoundState = requireShared("Logic/RoundState")
+
+local RULES = { roundsUntilSunrise = 3, shapeshifterWinsAtFriendsAlive = 2, actionsPerBlackout = 1 }
+
+local function newGame(friendCount)
+	local state = RoundState.new(RULES)
+	state:addPlayer(100, "Fake", "Shapeshifter")
+	for i = 1, friendCount do
+		state:addPlayer(i, "Friend" .. i, "Friend")
+	end
+	return state
+end
+
+describe("RoundState", function()
+	it("has no winner at the start", function()
+		local winner = newGame(5):checkWinner()
+		expect(winner).toBeNil()
+	end)
+
+	it("friends win when the shapeshifter is voted out", function()
+		local state = newGame(5)
+		state:eliminate(100)
+		local winner, reason = state:checkWinner()
+		expect(winner).toBe("Friends")
+		expect(reason).toBe("Caught")
+	end)
+
+	it("friends win when the shapeshifter leaves the server", function()
+		local state = newGame(5)
+		state:removePlayer(100)
+		local winner, reason = state:checkWinner()
+		expect(winner).toBe("Friends")
+		expect(reason).toBe("ShapeshifterLeft")
+	end)
+
+	it("shapeshifter wins when only two friends remain", function()
+		local state = newGame(5)
+		state:eliminate(1)
+		state:eliminate(2)
+		expect(state:checkWinner()).toBeNil()
+		state:eliminate(3)
+		local winner, reason = state:checkWinner()
+		expect(winner).toBe("Shapeshifter")
+		expect(reason).toBe("Outnumbered")
+	end)
+
+	it("shapeshifter wins at sunrise", function()
+		local state = newGame(5)
+		state:completeMeeting()
+		state:completeMeeting()
+		expect(state:checkWinner()).toBeNil()
+		state:completeMeeting()
+		local winner, reason = state:checkWinner()
+		expect(winner).toBe("Shapeshifter")
+		expect(reason).toBe("Sunrise")
+	end)
+
+	it("a tiny game does not end instantly", function()
+		local state = newGame(2)
+		expect(state:checkWinner()).toBeNil()
+		state:eliminate(1)
+		expect(state:checkWinner()).toBe("Shapeshifter")
+	end)
+
+	it("only the living shapeshifter can use blackout actions, once", function()
+		local state = newGame(5)
+		expect(state:useAction(100)).toBe(false)
+		state:startBlackout()
+		expect(state:useAction(1)).toBe(false)
+		expect(state:useAction(100)).toBe(true)
+		expect(state:useAction(100)).toBe(false)
+		state:startBlackout()
+		state:eliminate(100)
+		expect(state:useAction(100)).toBe(false)
+	end)
+
+	it("lists alive players in join order", function()
+		local state = newGame(3)
+		state:eliminate(2)
+		expect(state:aliveIds()).toEqual({ 100, 1, 3 })
+	end)
+
+	it("eliminating twice returns nil the second time", function()
+		local state = newGame(3)
+		expect(state:eliminate(1)).toBeTruthy()
+		expect(state:eliminate(1)).toBeNil()
+	end)
+end)
