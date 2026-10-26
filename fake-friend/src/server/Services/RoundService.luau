@@ -147,12 +147,13 @@ end
 
 -- True once a side has won or every participant has left.
 local function gameOver(): boolean
-	if winner or abandoned then
-		return true
-	end
 	local s = state
 	if not s then
+		-- No game running, so the lobby, countdown and results screens always run their full time.
 		return false
+	end
+	if winner or abandoned then
+		return true
 	end
 	local anyone = false
 	for _, player in participants do
