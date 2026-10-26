@@ -19,6 +19,7 @@ local SPECS = {
 	"tests/specs/RateLimiter.spec.luau",
 	"tests/specs/SessionLock.spec.luau",
 	"tests/specs/CosmeticLogic.spec.luau",
+	"tests/specs/GameFlow.spec.luau",
 }
 
 -- Fake instance paths ----------------------------------------------------

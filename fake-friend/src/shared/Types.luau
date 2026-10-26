@@ -20,4 +20,4 @@ export type Phase =
 -- 0-indexed RNG compatible with Random:NextInteger(min, max).
 export type Rng = (min: number, max: number) -> number
 
-return nil
+return {}
