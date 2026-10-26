@@ -45,7 +45,7 @@ function MemoryService.share(player: Player, index: number): boolean
 	flags[index] = true
 	RemoteService.fireAll(
 		"MemoryShared",
-		{ userId = player.UserId, name = player.DisplayName, text = list[index] }
+		{ userId = player.UserId, name = player.DisplayName, text = list[index], index = index }
 	)
 	return true
 end
