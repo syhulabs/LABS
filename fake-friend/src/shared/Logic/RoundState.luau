@@ -132,9 +132,13 @@ function RoundState.endBlackout(self: RoundState)
 	self.actionsLeft = 0
 end
 
+function RoundState.canAct(self: RoundState, id: number): boolean
+	return self:isAlive(id) and self:isShapeshifter(id) and self.actionsLeft > 0
+end
+
 -- Consumes one shapeshifter action if the player is allowed to act.
 function RoundState.useAction(self: RoundState, id: number): boolean
-	if not self:isAlive(id) or not self:isShapeshifter(id) or self.actionsLeft <= 0 then
+	if not self:canAct(id) then
 		return false
 	end
 	self.actionsLeft -= 1

@@ -3,7 +3,6 @@
 
 local Types = require(script.Parent.Parent.Types)
 type Phase = Types.Phase
-type Winner = Types.Winner
 
 local PhaseLogic = {}
 
@@ -31,8 +30,9 @@ local IN_GAME: { [Phase]: boolean } = {
 	VoteResult = true,
 }
 
-function PhaseLogic.next(phase: Phase, winner: Winner?): Phase
-	if winner and IN_GAME[phase] then
+-- `gameEnded` is true once a side has won or everyone has left.
+function PhaseLogic.next(phase: Phase, gameEnded: boolean?): Phase
+	if gameEnded and IN_GAME[phase] then
 		return "Results"
 	end
 	return NEXT[phase]

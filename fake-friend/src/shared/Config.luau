@@ -27,6 +27,7 @@ Config.ShapeshifterActionsPerBlackout = 1
 Config.ItemsPerPlayer = 1
 Config.MemoriesPerPlayer = 2
 Config.AllowSelfVote = false
+Config.RevealRoleOnVote = true -- Announce whether the player sent home was the shapeshifter.
 
 -- Blackout ---------------------------------------------------------------
 Config.FlashlightRange = 16
