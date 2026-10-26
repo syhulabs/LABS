@@ -1,0 +1,5 @@
+std = "roblox+testenv"
+
+[lints]
+# Services are intentionally shadowed in a few small scopes.
+shadowing = "allow"

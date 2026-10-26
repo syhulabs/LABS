@@ -1,0 +1,20 @@
+# Globals the offline test runner (tests/run.luau) injects into spec files.
+base: roblox
+globals:
+  describe:
+    args:
+      - type: string
+      - type: function
+  it:
+    args:
+      - type: string
+      - type: function
+  expect:
+    args:
+      - type: any
+  seededRng:
+    args:
+      - type: number
+  requireShared:
+    args:
+      - type: string
